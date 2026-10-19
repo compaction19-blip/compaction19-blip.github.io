@@ -1,0 +1,89 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>새AI실험노트 · AI 실험 아카이브 & 추천 AI 도구</title>
+<meta name="description" content="유튜브 쇼츠 '새AI실험노트'에서 AI들에게 던진 문제 원문과 실제 답변 전체 기록">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--line:#2a313c;--fg:#e6edf3;--dim:#8b949e;--acc:#ffd166;--ok:#3ddc84;--ng:#ff5c5c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.55}
+main{max-width:560px;margin:0 auto;padding:20px 16px 60px}
+header h1{font-size:22px;margin:4px 0}header p{color:var(--dim);margin:0 0 18px;font-size:14px}
+.box{background:linear-gradient(135deg,#1f2a44,#2a1f3d);border:1px solid #3b4a6b;border-radius:16px;padding:16px;margin-bottom:22px}
+.box h2{margin:0 0 12px;font-size:18px}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tool{display:block;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--fg);text-decoration:none}
+.tool b{display:block;color:var(--acc);font-size:15px}.tool span{font-size:12px;color:var(--dim)}
+article{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:18px}
+.date{color:var(--acc);font-size:13px;font-weight:700}h2{font-size:19px;margin:4px 0 10px}h3{font-size:15px;margin:18px 0 6px}
+.yt{display:inline-block;background:#ff0033;color:#fff;text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:700;font-size:14px}
+pre{white-space:pre-wrap;word-break:break-word;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:13px;margin:6px 0}
+ul{padding-left:20px;margin:4px 0}table{width:100%;border-collapse:collapse}td{padding:8px 4px;border-bottom:1px solid var(--line)}
+td.sc{text-align:right;color:var(--acc);font-weight:700}i{font-style:normal;display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;border-radius:6px;margin-right:4px;font-size:13px;font-weight:700;color:#0b0f16}
+i.ok{background:var(--ok)}i.ng{background:var(--ng)}.verdict{font-weight:700}.note{color:var(--dim);font-size:12px}
+.cbox{background:linear-gradient(135deg,#2b2112,#1d1a10);border:1px solid #6b5420;border-radius:16px;padding:16px;margin:0 0 22px}.cbox h2{margin:0 0 10px;font-size:17px}
+article .cbox{margin:16px 0 0;padding:12px}article .cbox h2{font-size:15px}
+.qa{font-size:14px;margin:0 0 12px}.cp{display:block;background:#ffd166;color:#151515;text-decoration:none;font-weight:800;padding:13px 14px;border-radius:12px;margin:8px 0;font-size:15px;text-align:center}
+.disc{color:var(--dim);font-size:11px;margin:10px 0 0}em{font-style:normal;font-size:10px;background:#ffd166;color:#111;border-radius:4px;padding:1px 4px;margin-left:4px;vertical-align:middle}.exl{color:#ff9f9f;font-size:13px;margin:10px 0 0}
+details{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:8px 0;background:#0f1520}summary{cursor:pointer;font-weight:700}summary small{color:var(--dim);font-weight:400}
+footer{color:var(--dim);font-size:12px;text-align:center;margin-top:30px}
+</style></head><body><main>
+<header><h1>🧪 새AI실험노트 아카이브</h1><p>쇼츠에서 AI들에게 던진 문제 원문과 실제 답변 전체 기록 · 매일 자동 업데이트</p></header>
+<section class="box"><h2>🔥 실험에 사용된 필수 AI 도구 모음</h2><div class="tools"><a class="tool" href="https://chatgpt.com/" target="_blank" rel="noopener"><b>ChatGPT</b><span>대본 작성 · 실험 대상</span></a>
+<a class="tool" href="https://claude.ai/" target="_blank" rel="noopener"><b>Claude</b><span>엔진 코드 자가 수정 · 실험 대상</span></a>
+<a class="tool" href="https://gemini.google.com/" target="_blank" rel="noopener"><b>Gemini</b><span>영상 검수 · 실험 대상</span></a>
+<a class="tool" href="https://cursor.com/" target="_blank" rel="noopener"><b>Grok (Cursor)</b><span>주제 발굴 · 경쟁 분석</span></a>
+<a class="tool" href="https://typecast.ai/" target="_blank" rel="noopener"><b>타입캐스트</b><span>AI 내레이션 &#x27;필재&#x27;</span></a>
+<a class="tool" href="https://pixabay.com/videos/" target="_blank" rel="noopener"><b>Pixabay</b><span>무료 배경 스톡 영상</span></a>
+<a class="tool" href="https://aside.com/" target="_blank" rel="noopener"><b>Aside</b><span>브라우저 자동화(업로드·수집)</span></a></div></section>
+<section class="box"><h2>🤝 추천 AI 도구 (제휴)</h2><div class="tools"><a class="tool" href="https://try.elevenlabs.io/5mmhvk860sq6" target="_blank" rel="sponsored noopener"><b>ElevenLabs <em>제휴</em></b><span>자연스러운 AI 음성·더빙 (우리 채널은 현재 타입캐스트 사용)</span></a></div><p class="disc">이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</p></section>
+
+<article id="2026-10-18">
+<div class="date">2026-10-18</div><h2>정답표가 틀렸다, 카드 문제의 숨은 조건</h2>
+<a class="yt" href="https://youtube.com/shorts/v6vgdgJF3oo" target="_blank" rel="noopener">▶ 쇼츠 보기</a>
+<h3>📝 AI에게 보낸 프롬프트 원문</h3><pre>아래 3문제에 번호별로 짧게 답해라.
+1. 카드 네 장이 탁자에 있다. 보이는 면은 A, B, 3, 8이다. 각 카드 반대쪽에는 알파벳 하나 또는 정수가 있다. 규칙: &#x27;한 면에 모음이 있으면 반대 면은 짝수여야 한다.&#x27; 모음은 A, E, I, O, U 다섯 개뿐이다. 이 규칙이 네 장 모두에서 성립하는지 확인하려면 반드시 뒤집어야 하는 카드만 모두 골라라. 보이는 면의 기호만 쉼표로 구분해 적어라.
+2. 1 이상 1000 이하의 정수 가운데, 십진수 표기에 숫자 7이 한 번이라도 들어가는 수는 몇 개인가? 77이나 707처럼 7이 여러 번 나와도 그 수는 1개로 센다. 정수 하나만 적어라.
+3. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+a = (1, 2, [3])
+try:
+    a[2] += [4]
+    print(&quot;OK&quot;, a)
+except TypeError:
+    print(&quot;TypeError&quot;, a)</pre>
+<h3>✅ 정답(실험 전에 고정)</h3><ul><li>카드 네 장이 탁자에 있다. 보이는 면은 A, B, 3, 8이다. 각 카드 반대쪽에는 알파벳 하나 또는 정수가 있다. 규칙: &#x27;한 면에 모음이 있으면 반대 면은 짝수여야 한다.&#x27; 모음은 A, E, I, O, U 다섯 개뿐이다. 이 규칙이 네 장 모두에서 성립하는지 확인하려면 반드시 뒤집어야 하는 카드만 모두 골라라. 보이는 면의 기호만 쉼표로 구분해 적어라. → <b>A, 3</b></li><li>1 이상 1000 이하의 정수 가운데, 십진수 표기에 숫자 7이 한 번이라도 들어가는 수는 몇 개인가? 77이나 707처럼 7이 여러 번 나와도 그 수는 1개로 센다. 정수 하나만 적어라. → <b>271</b></li><li>파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+a = (1, 2, [3])
+try:
+    a[2] += [4]
+    print(&quot;OK&quot;, a)
+except TypeError:
+    print(&quot;TypeError&quot;, a) → <b>TypeError (1, 2, [3, 4])</b></li></ul>
+<h3>📊 결과</h3><table><tr><td>GPT</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Claude</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Gemini</td><td><i class="ng">X</i><i class="ng">X</i><i class="ng">X</i></td><td class="sc">0/3</td></tr></table>
+<p class="verdict">정답표 정정: 카드 문제는 뒷면에 알파벳도 올 수 있어 B(뒷면이 모음이면 규칙 위반)도 뒤집어야 하므로 정답은 A, B, 3(파이썬 전수 검증). 처음 정답표(A, 3)가 틀렸고, GPT와 Claude는 둘 다 3/3. Gemini는 최종 답 미확보로 채점 보류.</p><p class="note">문제 세트 2개를 시험해 마지막 세트를 소개(앞 세트는 동점)</p>
+<p class="note">같은 질문 1회, 재시도 0회 · 카드 문제 정답표를 A, 3 → A, B, 3으로 정정(뒷면에 알파벳 허용, 파이썬 전수 검증) · Gemini는 최종 답 미확보로 채점 보류 · 1회 실험 결과이며 전체 성능 순위가 아닙니다.</p>
+<h3>💬 3대 AI 실제 답변</h3><details><summary>GPT 실제 답변 전체 <small>GPT-6.1 Sol High (Work 모드)</small></summary><pre>1. A,B,3
+2. 271
+3. TypeError (1, 2, [3, 4])</pre><p class="exl">🤔 오답 후 "왜 틀렸는지" 물었을 때의 답변(변명) 전문</p><pre>저는 “반대쪽에는 알파벳 하나 또는 정수가 있다”를 문자끼리 마주 보는 카드도 가능하다는 뜻으로 해석했습니다. 그러면 B 뒷면에 A가 있을 경우, 모음 A의 반대 면이 짝수가 아니므로 규칙을 위반해 B도 확인해야 합니다. 반면 의도하신 표준 카드 선택 문제처럼 각 카드가 한쪽은 알파벳, 다른 쪽은 정수라는 전제라면, 모음 뒤의 짝수 여부와 홀수 뒤의 모음 여부만 확인하면 되므로 정답은 A, 3입니다.</pre></details><details><summary>Claude 실제 답변 전체 <small>Claude Opus 5.5 중간</small></summary><pre>1. A, B, 3
+2. 271
+3. TypeError (1, 2, [3, 4])</pre><p class="exl">🤔 오답 후 "왜 틀렸는지" 물었을 때의 답변(변명) 전문</p><pre>B를 포함한 이유는 이 문제의 두 조건 때문입니다. 규칙이 &quot;한 면에 모음이 있으면 반대 면은 짝수여야 한다&quot;로, 보이는 면뿐 아니라 어느 면에든 적용되고, 각 카드의 뒷면에는 정수뿐 아니라 알파벳도 올 수 있습니다. 그래서 B의 뒷면이 E 같은 모음이라면, 그 모음 면의 반대쪽이 B(짝수가 아님)가 되어 규칙이 깨집니다. 따라서 B도 뒤집어 확인해야 합니다. 같은 논리로 3은 뒷면이 모음이면 위반이므로 뒤집어야 하고, A는 뒷면이 홀수나 문자면 위반이므로 뒤집어야 합니다. 반면 8은 뒷면이 모음이어도 반대쪽이 짝수 8이라 규칙을 지키고, 뒷면이 다른 것이어도 문제가 없으므로 뒤집을 필요가 없습니다. 고전적인 웨이슨 선택 과제처럼 &quot;한쪽은 문자, 다른 쪽은 숫자&quot;라는 전제가 있었다면 정답은 A, 3이 맞지만, 이 문제는 뒷면에 문자도 허용하므로 A, B, 3이 맞다고 생각합니다.</pre></details><details><summary>Gemini 실제 답변 전체 <small>Gemini Argon (화면 표시: Argon, 버전 번호 별도 미표시)</small></summary><pre></pre></details>
+<section class="cbox"><h2>💰 오늘 실험과 어울리는 추천템</h2><p class="qa">GPT와 Claude는 함정을 다 피했어요. 정답표 고치며 기다리는 밤엔 커피, 퇴근 후엔 열라면이에요.</p><a class="cp" href="https://link.coupang.com/a/hURsWB33aS" target="_blank" rel="sponsored noopener">☕ 채점 기다리며 한 잔 (카누 마일드 로스트)</a><a class="cp" href="https://link.coupang.com/a/hVBEAvqsLY" target="_blank" rel="sponsored noopener">🍜 퇴근 후 모니터 앞에서 야식 (오뚜기 열라면)</a><p class="disc">이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</p></section>
+</article><article id="2026-10-17">
+<div class="date">2026-10-17</div><h2>2.5가 2? 세 AI의 함정 문제 대결</h2>
+<a class="yt" href="https://youtube.com/shorts/EEpMKzD0DZg" target="_blank" rel="noopener">▶ 쇼츠 보기</a>
+<h3>📝 AI에게 보낸 프롬프트 원문</h3><pre>아래 3문제에 번호별로 짧게 답해라.
+1. 파이썬 3의 내장 함수 round(2.5)가 실제로 반환하는 값을 숫자 하나만 적어라. 학교식 사사오입이 아니라 파이썬 3 round의 반환값이다.
+2. 야구 배트와 공의 가격 합은 1100원이다. 배트는 공보다 1000원 더 비싸다. 공의 가격은 몇 원인지 숫자 하나만 적어라.
+3. 영어 단어 strawberry에 들어 있는 알파벳 r의 개수를 숫자 하나만 적어라. 대소문자는 구분하지 않는다.</pre>
+<h3>✅ 정답(실험 전에 고정)</h3><ul><li>파이썬 3의 내장 함수 round(2.5)가 실제로 반환하는 값을 숫자 하나만 적어라. 학교식 사사오입이 아니라 파이썬 3 round의 반환값이다. → <b>2</b></li><li>야구 배트와 공의 가격 합은 1100원이다. 배트는 공보다 1000원 더 비싸다. 공의 가격은 몇 원인지 숫자 하나만 적어라. → <b>50</b></li><li>영어 단어 strawberry에 들어 있는 알파벳 r의 개수를 숫자 하나만 적어라. 대소문자는 구분하지 않는다. → <b>3</b></li></ul>
+<h3>📊 결과</h3><table><tr><td>GPT</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Claude</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Gemini</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr></table>
+<p class="verdict">이 3문제(1회 시도)에서는 세 모델 모두 3/3 정답이라 차이가 없었음. 문제 수가 적고 잘 알려진 함정 문제라 모델 실력 비교 근거로는 약함.</p>
+<p class="note">같은 질문 1회, 재시도 0회 · 1회 실험 결과이며 전체 성능 순위가 아닙니다.</p>
+<h3>💬 3대 AI 실제 답변</h3><details><summary>GPT 실제 답변 전체 <small>ChatGPT GPT-6.1 Sol Light (Work 모드, 기본 추론 수준 Light 그대로)</small></summary><pre>1. 2
+2. 50
+3. 3</pre></details><details><summary>Claude 실제 답변 전체 <small>Claude Opus 5.5 (사고 수준 &#x27;중간&#x27;, 기본값 그대로)</small></summary><pre>1. 2
+2. 50
+3. 3</pre></details><details><summary>Gemini 실제 답변 전체 <small>Gemini 4 Argon (사고 수준 기본값 그대로)</small></summary><pre>1. 2
+2. 50
+3. 3</pre></details>
+
+</article>
+<footer>마지막 업데이트 2026-10-18 19:03 KST · 이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다. · <a href="https://www.youtube.com/@saeailab" style="color:#8b949e">YouTube @saeailab</a></footer>
+</main></body></html>

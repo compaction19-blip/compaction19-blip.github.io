@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://compaction19-blip.github.io/sitemap.xml
