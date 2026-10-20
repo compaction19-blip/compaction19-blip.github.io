@@ -36,7 +36,78 @@ footer{color:var(--dim);font-size:12px;text-align:center;margin-top:30px}
 <a class="tool" href="https://aside.com/" target="_blank" rel="noopener"><b>Aside</b><span>브라우저 자동화(업로드·수집)</span></a></div></section>
 <section class="box"><h2>🤝 추천 AI 도구 (제휴)</h2><div class="tools"><a class="tool" href="https://try.elevenlabs.io/5mmhvk860sq6" target="_blank" rel="sponsored noopener"><b>ElevenLabs <em>제휴</em></b><span>자연스러운 AI 음성·더빙 (우리 채널은 현재 타입캐스트 사용)</span></a></div><p class="disc">이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</p></section>
 
-<article id="2026-10-19">
+<article id="2026-10-20">
+<div class="date">2026-10-20</div><h2>100 옆이 3? 세 AI, 재실험도 동점</h2>
+<a class="yt" href="https://youtube.com/shorts/UVuhX9VdMNI" target="_blank" rel="noopener">▶ 쇼츠 보기</a>
+<h3>📝 AI에게 보낸 프롬프트 원문</h3><pre>아래 3문제에 번호별로 짧게 답해라.
+1. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+class P(int):
+    def __add__(self, other):
+        return 100
+print(P(1) + 2, 2 + P(1), P(1) + P(1))
+2. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+class A:
+    def __init__(self):
+        self.s = &quot;A&quot;
+class B(A):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;B&quot;
+class C(A):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;C&quot;
+class D(B, C):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;D&quot;
+print(D().s)
+3. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+x = 1
+class T:
+    x = 2
+    y = [x]
+    z = [x for _ in range(1)]
+print(T.y, T.z)</pre>
+<h3>✅ 정답(실험 전에 고정)</h3><ul><li>파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+class P(int):
+    def __add__(self, other):
+        return 100
+print(P(1) + 2, 2 + P(1), P(1) + P(1)) → <b>100 3 100</b></li><li>파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+class A:
+    def __init__(self):
+        self.s = &quot;A&quot;
+class B(A):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;B&quot;
+class C(A):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;C&quot;
+class D(B, C):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;D&quot;
+print(D().s) → <b>ACBD</b></li><li>파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+x = 1
+class T:
+    x = 2
+    y = [x]
+    z = [x for _ in range(1)]
+print(T.y, T.z) → <b>[2] [1]</b></li></ul>
+<h3>📊 결과</h3><table><tr><td>GPT</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Claude</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Gemini</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr></table>
+<p class="verdict">동점: 기본 세트(덧셈·순서·본문)와 미리 고정한 더 어려운 세트(연쇄 대입·반복자 묶기·정렬 안정성) 모두 GPT·Claude·Gemini가 3/3으로 같았음. 승자 없음.</p><p class="note">문제 세트 3개를 시험해 마지막 세트를 소개(앞 세트는 동점)</p>
+<p class="note">같은 질문 1회, 재시도 0회 · 기본 세트 3명 모두 3/3 → 기본 세트 전송 전에 정답표를 파일로 고정한 더 어려운 파이썬 세트로 새 대화에서 1회 재실험 → 다시 3명 모두 3/3, 동점 · 1회 실험 결과이며 전체 성능 순위가 아닙니다.</p>
+<h3>💬 3대 AI 실제 답변</h3><details><summary>GPT 실제 답변 전체 <small>GPT-6.1 Sol High (Work 모드)</small></summary><pre>100 3 100
+ACBD
+[2] [1]</pre></details><details><summary>Claude 실제 답변 전체 <small>Claude Opus 5.5 중간 (시크릿 모드)</small></summary><pre>100 3 100
+ACBD
+[2] [1]</pre></details><details><summary>Gemini 실제 답변 전체 <small>Gemini 4 Argon (임시 채팅)</small></summary><pre>100 3 100
+ACBD
+[2] [1]</pre></details>
+<section class="cbox"><h2>💰 오늘 실험과 어울리는 추천템</h2><p class="qa">세 AI가 재실험까지 동점이라, 승자 없는 밤에 탄산이랑 과자가 어울려요.</p><a class="cp" href="https://link.coupang.com/a/hZQLNBBGvY" target="_blank" rel="sponsored noopener">🥤 동점이 긴 밤에 톡 쏘는 한 모금 (탐사스파클링 플레인)</a><a class="cp" href="https://link.coupang.com/a/hZQRSAkpQi" target="_blank" rel="sponsored noopener">🍪 채점 기다리는 퇴근 뒤 한 입 (오리온 와우스낵)</a><p class="disc">이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</p></section>
+</article><article id="2026-10-19">
 <div class="date">2026-10-19</div><h2>뉴욕은 9시 30분? 세 AI, 함정 3개에 재대결까지</h2>
 <a class="yt" href="https://youtube.com/shorts/wWfCFjmO018" target="_blank" rel="noopener">▶ 쇼츠 보기</a>
 <h3>📝 AI에게 보낸 프롬프트 원문</h3><pre>아래 3문제에 번호별로 짧게 답해라.
@@ -106,5 +177,5 @@ except TypeError:
 3. 3</pre></details>
 
 </article>
-<footer>마지막 업데이트 2026-10-19 18:13 KST · 이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다. · <a href="https://www.youtube.com/@saeailab" style="color:#8b949e">YouTube @saeailab</a></footer>
+<footer>마지막 업데이트 2026-10-20 15:10 KST · 이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다. · <a href="https://www.youtube.com/@saeailab" style="color:#8b949e">YouTube @saeailab</a></footer>
 </main></body></html>
