@@ -187,5 +187,69 @@
         }
       ]
     }
+  },
+  {
+    "date": "2026-10-20",
+    "title": "100 옆이 3? 세 AI, 재실험도 동점",
+    "video_url": "https://youtube.com/shorts/UVuhX9VdMNI",
+    "questions": [
+      "파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.\nclass P(int):\n    def __add__(self, other):\n        return 100\nprint(P(1) + 2, 2 + P(1), P(1) + P(1))",
+      "파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.\nclass A:\n    def __init__(self):\n        self.s = \"A\"\nclass B(A):\n    def __init__(self):\n        super().__init__()\n        self.s += \"B\"\nclass C(A):\n    def __init__(self):\n        super().__init__()\n        self.s += \"C\"\nclass D(B, C):\n    def __init__(self):\n        super().__init__()\n        self.s += \"D\"\nprint(D().s)",
+      "파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.\nx = 1\nclass T:\n    x = 2\n    y = [x]\n    z = [x for _ in range(1)]\nprint(T.y, T.z)"
+    ],
+    "answer_key": [
+      "100 3 100",
+      "ACBD",
+      "[2] [1]"
+    ],
+    "prompt": "아래 3문제에 번호별로 짧게 답해라.\n1. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.\nclass P(int):\n    def __add__(self, other):\n        return 100\nprint(P(1) + 2, 2 + P(1), P(1) + P(1))\n2. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.\nclass A:\n    def __init__(self):\n        self.s = \"A\"\nclass B(A):\n    def __init__(self):\n        super().__init__()\n        self.s += \"B\"\nclass C(A):\n    def __init__(self):\n        super().__init__()\n        self.s += \"C\"\nclass D(B, C):\n    def __init__(self):\n        super().__init__()\n        self.s += \"D\"\nprint(D().s)\n3. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.\nx = 1\nclass T:\n    x = 2\n    y = [x]\n    z = [x for _ in range(1)]\nprint(T.y, T.z)",
+    "conditions": "같은 질문 1회, 재시도 0회 · 기본 세트 3명 모두 3/3 → 기본 세트 전송 전에 정답표를 파일로 고정한 더 어려운 파이썬 세트로 새 대화에서 1회 재실험 → 다시 3명 모두 3/3, 동점",
+    "verdict": "동점: 기본 세트(덧셈·순서·본문)와 미리 고정한 더 어려운 세트(연쇄 대입·반복자 묶기·정렬 안정성) 모두 GPT·Claude·Gemini가 3/3으로 같았음. 승자 없음.",
+    "attempted_sets": 3,
+    "models": {
+      "GPT": {
+        "model": "GPT-6.1 Sol High (Work 모드)",
+        "answers": "100 3 100\nACBD\n[2] [1]",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      },
+      "Claude": {
+        "model": "Claude Opus 5.5 중간 (시크릿 모드)",
+        "answers": "100 3 100\nACBD\n[2] [1]",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      },
+      "Gemini": {
+        "model": "Gemini 4 Argon (임시 채팅)",
+        "answers": "100 3 100\nACBD\n[2] [1]",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      }
+    },
+    "bridge": {
+      "intro": "세 AI가 재실험까지 동점이라, 승자 없는 밤에 탄산이랑 과자가 어울려요.",
+      "picks": [
+        {
+          "key": "auto_20261020",
+          "label": "🥤 동점이 긴 밤에 톡 쏘는 한 모금 (탐사스파클링 플레인)"
+        },
+        {
+          "key": "auto_20261020_2",
+          "label": "🍪 채점 기다리는 퇴근 뒤 한 입 (오리온 와우스낵)"
+        }
+      ]
+    }
   }
 ]
