@@ -1,0 +1,89 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ai 비교, 100 옆에 3이 나온 파이썬 대결 | 새AI실험노트</title><meta name="description" content="파이썬 출력 문제 세 개를 GPT·Claude·Gemini에 같은 조건으로 물었다. 세 모델 모두 3점으로 동점이었다. 정답을 먼저 고정한 실험 설계와 각 문제의 함정, 재실험 결과를 실무 검산 기준과 함께 살펴본다."><meta name="keywords" content="ai 비교, ai 비교 분석, 파이썬 출력, 다중 상속, 클래스 변수">
+<link rel="canonical" href="https://compaction19-blip.github.io/posts/ai-comparison-python-three-models-tie/"><meta property="og:type" content="article"><meta property="og:title" content="ai 비교, 100 옆에 3이 나온 파이썬 대결">
+<meta property="og:description" content="파이썬 출력 문제 세 개를 GPT·Claude·Gemini에 같은 조건으로 물었다. 세 모델 모두 3점으로 동점이었다. 정답을 먼저 고정한 실험 설계와 각 문제의 함정, 재실험 결과를 실무 검산 기준과 함께 살펴본다."><meta property="og:url" content="https://compaction19-blip.github.io/posts/ai-comparison-python-three-models-tie/"><meta property="og:image" content="https://compaction19-blip.github.io/posts/ai-comparison-python-three-models-tie/img1.jpg">
+<meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "ai 비교, 100 옆에 3이 나온 파이썬 대결", "description": "파이썬 출력 문제 세 개를 GPT·Claude·Gemini에 같은 조건으로 물었다. 세 모델 모두 3점으로 동점이었다. 정답을 먼저 고정한 실험 설계와 각 문제의 함정, 재실험 결과를 실무 검산 기준과 함께 살펴본다.", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "inLanguage": "ko", "mainEntityOfPage": "https://compaction19-blip.github.io/posts/ai-comparison-python-three-models-tie/", "author": {"@type": "Organization", "name": "새AI실험노트"}, "image": ["https://compaction19-blip.github.io/posts/ai-comparison-python-three-models-tie/img1.jpg"]}</script><style>:root{--bg:#0f141c;--card:#161d28;--fg:#eef1f6;--dim:#9aa6b8;--acc:#ffd166;--line:#26303f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:22px 18px 60px}a{color:#8ec5ff}h1{font-size:26px;line-height:1.4;margin:10px 0}h2{font-size:21px;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:18px;margin:24px 0 8px}p{margin:12px 0}img{max-width:min(100%,420px);border-radius:12px;border:1px solid var(--line);display:block;margin:14px auto}
+.meta{color:var(--dim);font-size:14px}.disc{background:#2b2112;border:1px solid #6b5420;border-radius:10px;padding:10px 12px;font-size:14px;color:#ffe2a3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0}.card h4{margin:0 0 8px;font-size:16px}
+.btn{display:block;text-align:center;background:var(--acc);color:#141414;font-weight:700;text-decoration:none;border-radius:10px;padding:12px;margin:8px 0}
+pre{white-space:pre-wrap;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}code{background:#0b0f16;padding:1px 5px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}.yt{position:relative;padding-top:177%;max-width:360px;margin:14px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style></head>
+<body><main><nav class="top"><a href="https://compaction19-blip.github.io/">🏠 실험노트 홈</a><a href="https://compaction19-blip.github.io/posts/">📚 칼럼 목록</a></nav>
+<p class="disc">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><h1>ai 비교, 100 옆에 3이 나온 파이썬 대결</h1><p class="meta">2026-10-20 · 새AI실험노트 · 실제 실험 기록</p>
+<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/UVuhX9VdMNI" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><h2>서론</h2>
+<p>AI가 짧은 코드의 실행 결과를 답하면 그대로 옮기기 쉽다. 개발자는 검토 시간을 줄이고 싶고, 직장인은 자동화 작업을 빨리 끝내고 싶기 때문이다. 하지만 답이 매끄럽다는 이유만으로 정확하다고 판단하면, 잘못 이해한 규칙이 다음 작업에도 이어질 수 있다.</p>
+<p>2026년 10월 20일에는 파이썬 출력 문제 세 개를 GPT·Claude·Gemini에 똑같이 물었다. 결과는 모두 3문제 정답이었다. 정답표를 미리 고정한 더 어려운 세트로 새 대화에서 재실험했지만, 다시 세 모델 모두 3점이었다. 이번 기록에서 승자는 없다.</p>
+<p>눈여겨볼 부분은 순위보다 출력의 이유다. 덧셈 순서를 바꾸면 왜 값이 달라지고, 같은 이름의 변수를 읽는데 왜 서로 다른 숫자가 나올까.</p>
+<img src="img1.jpg" alt="ai 비교, 100 옆에 3이 나온 파이썬 대결 - 오늘 영상 첫 장면" loading="lazy"><p class="meta" style="text-align:center">오늘 영상 첫 장면 (영상 캡처)</p>
+<h2>실험 설계</h2>
+<p>기본 세트는 덧셈 메서드, 다중 상속의 실행 순서, 클래스 안의 변수 참조를 묻는 세 문제다. 모두 설명을 붙이지 않고 표준 출력 한 줄을 그대로 적도록 했다. 긴 해설의 설득력보다 실제 출력이 맞는지에 초점을 둔 구성이다.</p>
+<p>첫 문제는 정수형을 물려받은 <code>P</code>가 <code>__add__</code>에서 언제나 100을 반환하도록 했다. 이어 <code>P(1) + 2</code>, <code>2 + P(1)</code>, <code>P(1) + P(1)</code>을 한 번에 출력하게 했다.</p>
+<p>둘째는 <code>D</code>가 <code>B, C</code>를 상속하고, <code>B</code>와 <code>C</code>가 각각 <code>A</code>를 상속하는 코드다. 각 초기화 메서드는 <code>super()</code>를 호출한 뒤 문자열에 자기 글자를 붙인다. 셋째는 바깥쪽 <code>x = 1</code>과 클래스 안쪽 <code>x = 2</code>를 두고, 일반 리스트와 리스트 컴프리헨션의 결과를 비교했다.</p>
+<p>정답표는 기본 세트를 보내기 전에 파일로 고정했다. 답을 본 뒤 채점 기준을 바꾸지 않으려면, 무엇을 정답으로 볼지 먼저 정하는 절차가 필요하다. 각 세트는 같은 질문을 한 번씩 보냈고, 재시도는 하지 않았다. 더 어려운 세트는 새 대화에서 별도 실험했다.</p>
+<img src="img2.jpg" alt="ai 비교, 100 옆에 3이 나온 파이썬 대결 - 실험 문제 화면" loading="lazy"><p class="meta" style="text-align:center">실험 문제 화면 (영상 캡처)</p>
+<h2>결과</h2>
+<p>사용한 모델과 설정은 다음과 같다.</p>
+<ul><li>GPT: GPT-6.1 Sol High, Work 모드</li><li>Claude: Claude Opus 5.5 중간, 시크릿 모드</li><li>Gemini: Gemini 4 Argon, 임시 채팅</li></ul>
+<p>기본 세트에서 세 모델이 제출한 답은 모두 같았다.</p>
+<p>| 문제 | 정답표 | GPT | Claude | Gemini | |---|---|---|---|---| | 1 | <code>100 3 100</code> | 정답 | 정답 | 정답 | | 2 | <code>ACBD</code> | 정답 | 정답 | 정답 | | 3 | <code>[2] [1]</code> | 정답 | 정답 | 정답 |</p>
+<p>즉, GPT·Claude·Gemini 모두 3/3이다. 세 모델 모두 첫 줄은 <code>100 3 100</code>, 둘째 줄은 <code>ACBD</code>, 셋째 줄은 <code>[2] [1]</code>로 답했다. 이미지에 담긴 점수와 별개로 본문에서도 확인할 수 있는 핵심 결과다.</p>
+<p>더 어려운 세트는 연쇄 대입·반복자 묶기·정렬 안정성을 다뤘고, 기록상 결과는 역시 모두 3/3이다. 다만 여기 제공된 개별 질문과 실제 답은 기본 세트에 해당한다. 재실험의 세부 출력이나 풀이를 덧붙일 근거는 없다. 동점이 이어졌다는 범위에서만 해석해야 한다.</p>
+<img src="img3.jpg" alt="ai 비교, 100 옆에 3이 나온 파이썬 대결 - 실험 문제 화면" loading="lazy"><p class="meta" style="text-align:center">실험 문제 화면 (영상 캡처)</p>
+<h2>왜 이런 결과가 나왔나</h2>
+<p>첫 문제의 함정은 덧셈 기호 양쪽의 역할이다. <code>P(1) + 2</code>에서는 <code>P</code>가 바꿔 놓은 <code>__add__</code>가 쓰이므로 100이 나온다. <code>P(1) + P(1)</code>도 같은 이유로 100이다.</p>
+<p>반면 <code>2 + P(1)</code>은 왼쪽이 일반 정수다. 오른쪽에 <code>P</code> 객체가 있다고 해서 그 객체의 <code>__add__</code>를 그대로 호출하는 것은 아니다. 이 코드에는 반대 방향의 덧셈을 따로 바꾸는 정의가 없고, 정수 덧셈 결과인 3이 나온다. 그래서 가운데만 다른 <code>100 3 100</code>이 된다.</p>
+<p>둘째 문제는 <code>super()</code>를 단순히 “내 바로 위 부모”라고 생각하면 헷갈린다. 이 구조에서 메서드를 찾는 순서는 <code>D → B → C → A</code>다. <code>B</code>의 <code>super()</code>도 이 순서를 따라 <code>C</code>로 이어진다.</p>
+<p>다만 글자를 붙이는 일은 각 <code>super()</code> 호출이 끝난 뒤에 일어난다. 가장 안쪽 <code>A</code>에서 <code>&quot;A&quot;</code>를 만들고, 돌아오면서 <code>C</code>, <code>B</code>, <code>D</code>가 차례로 글자를 붙인다. 최종 문자열은 <code>ACBD</code>다. 찾아 들어가는 순서와 작업을 마치는 순서를 나눠 보면 이해하기 쉽다.</p>
+<p>셋째 문제는 같은 <code>x</code>라도 어디에서 읽느냐가 다르다는 점을 묻는다. 클래스 본문에서 바로 계산하는 <code>y = [x]</code>는 앞서 정한 클래스 안의 <code>x = 2</code>를 읽는다. 따라서 <code>y</code>는 <code>[2]</code>다.</p>
+<p>그러나 <code>z = [x for _ in range(1)]</code>의 컴프리헨션 안에서 읽는 <code>x</code>는 클래스 본문의 변수를 같은 방식으로 가져오지 않는다. 여기서는 바깥의 <code>x = 1</code>을 읽으므로 <code>[1]</code>이 된다. 두 결과를 함께 출력하면 <code>[2] [1]</code>이다.</p>
+<p>세 모델은 이 세 가지 구분을 모두 정답으로 처리했다. 다만 출력만 요청했으므로, 모델 내부에서 어떤 추론 과정을 거쳤는지까지 확인한 실험은 아니다.</p>
+<img src="img4.jpg" alt="ai 비교, 100 옆에 3이 나온 파이썬 대결 - 실제 채점 결과" loading="lazy"><p class="meta" style="text-align:center">실제 채점 결과 (영상 캡처)</p>
+<section class="card"><h4>🧰 오늘의 실험실 생존 세트 — 밤새 실험 돌릴 때 쟁여 두는 것들</h4><div class="grid"><a class="pc" href="https://link.coupang.com/a/hZQLNBBGvY" target="_blank" rel="sponsored noopener"><img src="https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/729077036752739-33071492-7a55-44b9-9f0f-474ba015a7b0.jpg" alt="탐사 탄산수 20병" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🥤 음료/생수</span><b>탐사 탄산수 20병</b><span class="pm">별점 5 · 후기 67,724</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/hZQRSAkpQi" target="_blank" rel="sponsored noopener"><img src="https://t1a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/197532929384162-71f84928-d76d-4579-b8bd-673e335cbed9.jpg" alt="오리온 와우스낵 16팩" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍜 라면/간식</span><b>오리온 와우스낵 16팩</b><span class="pm">별점 5 · 후기 32,050</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/hZQW2wOoIS" target="_blank" rel="sponsored noopener"><img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1733507691057547-20b810e6-79ac-44e4-8602-e3de8abf40b2.jpg" alt="한강식품 닭가슴살 1kg" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍳 육류/간편식/식료품</span><b>한강식품 닭가슴살 1kg</b><span class="pm">별점 5 · 후기 82,872</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/hZQ2xlimtM" target="_blank" rel="sponsored noopener"><img src="https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/37798732751039-9155167b-385c-4976-b5aa-def64293eec8.jpg" alt="탐사 파워워시 세제" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🧴 화장품/바디케어/생필품</span><b>탐사 파워워시 세제</b><span class="pm">별점 5 · 후기 262,980</span><span class="pbtn">쿠팡에서 보기</span></a></div><p class="meta">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></section>
+<h2>결론</h2>
+<p>이번 ai 비교에서 얻은 결론은 분명하다. 기본 세트와 더 어려운 재실험 세트 모두 동점이었다. 적어도 이 기록으로는 특정 모델이 파이썬 출력 문제를 더 잘 푼다고 말할 수 없다.</p>
+<p>실무에서는 모델 이름보다 확인 절차를 챙기는 편이 유용하다.</p>
+<ul><li>정답과 채점 기준을 답변을 받기 전에 정한다.</li><li>같은 코드와 출력 요구를 각 모델에 전달한다.</li><li>실행 가능한 코드는 직접 실행해 출력과 비교한다.</li><li>연산자 방향, 호출 순서, 변수 범위를 따로 확인한다.</li><li>동점이면 차이가 없었다고 기록하고 평가 범위를 넓힌다.</li></ul>
+<p>각 세트는 문제 3개에 대한 1회 시도이며, 같은 질문의 재시도는 0회였다. 이 결과만으로 전체 코딩 능력이나 다른 업무의 우열을 판단하기는 어렵다.</p>
+<p>이 글은 실제 실험 기록을 바탕으로 AI 도구와 함께 정리했다. 다음에 비슷한 코드를 만나면, 먼저 실행 결과를 예상한 뒤 실제 출력과 대조해 보자.</p>
+<p>혹시 글에서 틀린 부분이나 고쳐야 할 부분이 보이면 유튜브·스레드 댓글로 알려 주시면 정말 감사하겠습니다. 바로 확인해서 고칠게요!</p><h2>실험 원문과 실제 답</h2><p>아래 질문을 세 AI에 똑같이 1번씩 보냈어요.</p><pre>아래 3문제에 번호별로 짧게 답해라.
+1. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+class P(int):
+    def __add__(self, other):
+        return 100
+print(P(1) + 2, 2 + P(1), P(1) + P(1))
+2. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+class A:
+    def __init__(self):
+        self.s = &quot;A&quot;
+class B(A):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;B&quot;
+class C(A):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;C&quot;
+class D(B, C):
+    def __init__(self):
+        super().__init__()
+        self.s += &quot;D&quot;
+print(D().s)
+3. 파이썬 3에서 아래 코드를 실행했을 때 표준 출력 한 줄을 그대로 적어라. 설명은 적지 마라.
+x = 1
+class T:
+    x = 2
+    y = [x]
+    z = [x for _ in range(1)]
+print(T.y, T.z)</pre><p>정답(실험 전에 먼저 정함): 100 3 100 / ACBD / [2] [1]</p><table><tr><th>AI</th><th>실제 답</th></tr><tr><td>GPT</td><td><pre>100 3 100
+ACBD
+[2] [1]</pre></td></tr><tr><td>Claude</td><td><pre>100 3 100
+ACBD
+[2] [1]</pre></td></tr><tr><td>Gemini</td><td><pre>100 3 100
+ACBD
+[2] [1]</pre></td></tr></table><section class="card"><h4>🛒 다시 보기: 오늘의 생존 세트</h4><div class="grid"><a class="pc" href="https://link.coupang.com/a/hZQLNBBGvY" target="_blank" rel="sponsored noopener"><img src="https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/729077036752739-33071492-7a55-44b9-9f0f-474ba015a7b0.jpg" alt="탐사 탄산수 20병" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🥤 음료/생수</span><b>탐사 탄산수 20병</b><span class="pm">별점 5 · 후기 67,724</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/hZQRSAkpQi" target="_blank" rel="sponsored noopener"><img src="https://t1a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/197532929384162-71f84928-d76d-4579-b8bd-673e335cbed9.jpg" alt="오리온 와우스낵 16팩" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍜 라면/간식</span><b>오리온 와우스낵 16팩</b><span class="pm">별점 5 · 후기 32,050</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/hZQW2wOoIS" target="_blank" rel="sponsored noopener"><img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1733507691057547-20b810e6-79ac-44e4-8602-e3de8abf40b2.jpg" alt="한강식품 닭가슴살 1kg" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍳 육류/간편식/식료품</span><b>한강식품 닭가슴살 1kg</b><span class="pm">별점 5 · 후기 82,872</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/hZQ2xlimtM" target="_blank" rel="sponsored noopener"><img src="https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/37798732751039-9155167b-385c-4976-b5aa-def64293eec8.jpg" alt="탐사 파워워시 세제" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🧴 화장품/바디케어/생필품</span><b>탐사 파워워시 세제</b><span class="pm">별점 5 · 후기 262,980</span><span class="pbtn">쿠팡에서 보기</span></a></div><p class="meta">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></section><section class="card"><h4>🎙️ AI 음성이 궁금하다면</h4><p>우리 채널 내레이션은 타입캐스트를 쓰지만, 영어·다국어 AI 음성을 실험해 보고 싶다면 ElevenLabs도 많이 쓰여요.</p><a class="btn" href="https://try.elevenlabs.io/5mmhvk860sq6" target="_blank" rel="sponsored noopener">ElevenLabs 둘러보기 (제휴)</a><p class="meta">ElevenLabs 제휴 링크로, 가입·결제 시 일정 수수료를 받을 수 있습니다.</p></section>
+<section class="card"><h2>🎬 쇼츠로 다시 보기 · 🧵 함께 이야기하기</h2><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/UVuhX9VdMNI" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><p><a href="https://www.threads.com/@alligatorxor" rel="noopener">🧵 스레드 @alligatorxor에서 오늘 실험 이야기 나누기</a> · <a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트 다른 쇼츠 보기</a> · <a href="https://compaction19-blip.github.io/">📒 실험노트 홈</a></p></section>
+<footer>이 글의 실험 결과는 같은 질문 1회 시도 기준의 실제 기록이며, 전체 성능 순위가 아닙니다. 글은 AI 도구로 초안을 만들고 실험 기록과 대조해 정리했습니다.</footer></main></body></html>
