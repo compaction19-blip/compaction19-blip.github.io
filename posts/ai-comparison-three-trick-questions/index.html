@@ -1,0 +1,69 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법 | 새AI실험노트</title><meta name="description" content="같은 함정 3문제를 한 번씩 물었더니 GPT와 Claude는 3점, Gemini는 1점이었다. 개구리의 탈출 날짜, 중복 집계, 파이썬 반복자 문제를 풀어 보며 AI 답과 해명을 확인하는 방법을 짚는다."><meta name="keywords" content="ai 비교 분석, ai 비교, GPT Claude Gemini, AI 오답 검증, 파이썬 반복자">
+<link rel="canonical" href="https://compaction19-blip.github.io/posts/ai-comparison-three-trick-questions/"><meta property="og:type" content="article"><meta property="og:title" content="ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법">
+<meta property="og:description" content="같은 함정 3문제를 한 번씩 물었더니 GPT와 Claude는 3점, Gemini는 1점이었다. 개구리의 탈출 날짜, 중복 집계, 파이썬 반복자 문제를 풀어 보며 AI 답과 해명을 확인하는 방법을 짚는다."><meta property="og:url" content="https://compaction19-blip.github.io/posts/ai-comparison-three-trick-questions/"><meta property="og:image" content="https://compaction19-blip.github.io/posts/ai-comparison-three-trick-questions/img1.jpg">
+<meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법", "description": "같은 함정 3문제를 한 번씩 물었더니 GPT와 Claude는 3점, Gemini는 1점이었다. 개구리의 탈출 날짜, 중복 집계, 파이썬 반복자 문제를 풀어 보며 AI 답과 해명을 확인하는 방법을 짚는다.", "datePublished": "2026-10-22", "dateModified": "2026-10-22", "inLanguage": "ko", "mainEntityOfPage": "https://compaction19-blip.github.io/posts/ai-comparison-three-trick-questions/", "author": {"@type": "Organization", "name": "새AI실험노트"}, "image": ["https://compaction19-blip.github.io/posts/ai-comparison-three-trick-questions/img1.jpg"]}</script><style>:root{--bg:#0f141c;--card:#161d28;--fg:#eef1f6;--dim:#9aa6b8;--acc:#ffd166;--line:#26303f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:22px 18px 60px}a{color:#8ec5ff}h1{font-size:26px;line-height:1.4;margin:10px 0}h2{font-size:21px;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:18px;margin:24px 0 8px}p{margin:12px 0}img{max-width:min(100%,420px);border-radius:12px;border:1px solid var(--line);display:block;margin:14px auto}
+.meta{color:var(--dim);font-size:14px}.disc{background:#2b2112;border:1px solid #6b5420;border-radius:10px;padding:10px 12px;font-size:14px;color:#ffe2a3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0}.card h4{margin:0 0 8px;font-size:16px}
+.btn{display:block;text-align:center;background:var(--acc);color:#141414;font-weight:700;text-decoration:none;border-radius:10px;padding:12px;margin:8px 0}
+pre{white-space:pre-wrap;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}code{background:#0b0f16;padding:1px 5px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}.yt{position:relative;padding-top:177%;max-width:360px;margin:14px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style></head>
+<body><main><nav class="top"><a href="https://compaction19-blip.github.io/">🏠 실험노트 홈</a><a href="https://compaction19-blip.github.io/posts/">📚 칼럼 목록</a></nav>
+<p class="disc">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><h1>ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법</h1><p class="meta">2026-10-22 · 새AI실험노트 · 실제 실험 기록</p>
+<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/RSWh5F4cbKk" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><h2>서론</h2>
+<p>AI가 계산한 일정이나 코드 출력값을 업무 문서에 옮길 때, 짧고 또렷한 답은 믿기 쉽다. 하지만 조건 하나를 빠뜨리면 일정은 하루 앞당겨지고, 대상 수는 하나 늘어난다. 답만 복사하면 그 실수도 함께 옮겨 간다.</p>
+<p>2026년 10월 22일 진행한 이번 실험에서는 GPT와 Claude가 각각 3문제를 모두 맞혔다. Gemini는 1문제를 맞히고 2문제를 틀렸다. 세 AI에 같은 질문을 한 번씩 주었고, 재시도는 하지 않았다.</p>
+<p>이번 결과에서 볼 것은 특정 AI의 완승이 아니다. 공동 1위는 GPT와 Claude다. 더 유용한 관찰은 조건을 빠뜨린 답이 어떻게 만들어졌고, 사람이 어디를 확인하면 오류를 찾을 수 있었는지다.</p>
+<img src="img1.jpg" alt="ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법 - 오늘 영상 첫 장면" loading="lazy"><p class="meta" style="text-align:center">오늘 영상 첫 장면 (영상 캡처)</p>
+<h2>실험 설계</h2>
+<p>문제는 세 가지였다. 개구리가 우물을 탈출하는 날짜, 여러 조건을 만족하는 자연수의 개수, 파이썬 코드의 출력값이다. 모두 질문은 짧지만, 앞에서 처리한 조건을 뒤에서도 유지해야 한다.</p>
+<p>첫 문제는 깊이 26m인 우물이다. 개구리는 낮에 7m 올라가고 밤에 4m 내려간다. 단, 3의 배수인 날에는 낮에 5m만 올라간다. 둘째는 1부터 100까지에서 2와 3의 배수를 제외하고, 숫자 5가 들어간 수를 세는 문제다.</p>
+<p>셋째는 다음 코드의 출력값을 묻는다.</p>
+<pre>it = iter([1, 2, 3, 4, 5])
+print(2 in it, 2 in it, sum(it))</pre>
+<p>정답표는 순서대로 <code>10</code>, <code>9</code>, <code>True False 0</code>이다. 정답을 기준으로 놓아야 AI끼리 같은 답을 했다는 이유로 정답 처리하는 일을 피할 수 있다. 다수결보다 문제 조건과 실행 순서가 채점 기준이다.</p>
+<p>사용 모델은 GPT-6.1 Sol High의 Work 모드, Claude Opus 5.5 중간의 시크릿 환경, Gemini 4 Argon의 임시 채팅이다. 번호별로 짧게 답하도록 같은 질문을 전달했다.</p>
+<img src="img2.jpg" alt="ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법 - 실험 문제 화면" loading="lazy"><p class="meta" style="text-align:center">실험 문제 화면 (영상 캡처)</p>
+<h2>결과</h2>
+<p>세 AI가 실제로 제출한 답을 정답표와 비교하면 다음과 같다.</p>
+<p>| 항목 | 정답 | GPT | Claude | Gemini | |---|---|---|---|---| | 1번 탈출 날짜 | 10 | 10 | 10 | 9 | | 2번 자연수 개수 | 9 | 9 | 9 | 10 | | 3번 코드 출력 | True False 0 | True False 0 | True False 0 | True False 0 | | 점수 | 3점 만점 | 3/3 | 3/3 | 1/3 |</p>
+<p>GPT와 Claude는 전 문항 정답으로 동점이다. Gemini는 개구리 문제에서 하루 이른 날짜를, 자연수 문제에서 하나 많은 개수를 답했다. 코드 출력은 세 AI가 모두 맞혔다.</p>
+<p>같은 점수도 범위를 나누어 읽어야 한다. 이번에는 두 계산 문제에서 차이가 났고, 코드 문제에서는 차이가 없었다. 이 표만으로 코딩 전반이나 글쓰기 능력까지 순위를 매길 수는 없다.</p>
+<img src="img3.jpg" alt="ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법 - 실험 문제 화면" loading="lazy"><p class="meta" style="text-align:center">실험 문제 화면 (영상 캡처)</p>
+<h2>왜 이런 결과가 나왔나</h2>
+<p>개구리 문제의 핵심은 날짜마다 낮의 이동 거리가 다르다는 점이다. 밤까지 계산한 순이동 거리만 반복해서 더하면, 낮에 먼저 탈출하는지도 놓칠 수 있다.</p>
+<p>날짜별로 낮과 밤을 나누면 확인하기 쉽다. 3일째 밤에는 7m, 6일째 밤에는 14m, 8일째 밤에는 20m에 있다. 9일째는 3의 배수이므로 5m만 올라간다. 낮의 최고 높이는 25m로, 아직 26m에 닿지 않는다. 밤에 21m로 내려온 뒤 10일째 낮에 28m에 도달한다.</p>
+<p>Gemini는 사후 설명에서 9일째에도 평소처럼 7m를 더한 것이 실수였다고 밝혔다. 다만 이 설명에도 확인할 부분이 남았다. 9일째 출발 높이를 19m로 두고 <code>19+5=24m</code>라고 적었는데, 조건대로 계산하면 출발 높이는 20m이고 낮의 높이는 25m다. 오답의 이유를 설명하는 문장도 별도로 검산해야 한다.</p>
+<p>둘째 문제는 두 목록이 겹치는 함정이다. 일의 자리가 5이고 2와 3의 배수가 아닌 수는 다음 7개다.</p>
+<ul><li>5, 25, 35, 55, 65, 85, 95</li></ul>
+<p>십의 자리가 5이고 같은 조건을 만족하는 수는 53, 55, 59다. 두 목록의 개수를 그대로 더하면 10개지만, 55가 양쪽에 들어 있다. 한 번 빼면 정답은 9개다. Gemini도 사후 설명에서 이 중복을 빼지 못했다고 밝혔다.</p>
+<p>셋째 문제에서는 반복자를 여러 번 사용할 때 상태가 달라진다. 반복자는 읽은 곳으로 저절로 돌아가지 않는 책갈피와 비슷하다. 첫 <code>2 in it</code>은 1과 2를 읽고 <code>True</code>가 된다. 두 번째 검사는 남은 3, 4, 5를 끝까지 읽지만 2를 찾지 못해 <code>False</code>가 된다. 마지막에는 남은 값이 없어 합계가 0이다.</p>
+<p>따라서 출력은 <code>True False 0</code>이다. 세 AI 모두 맞혔지만, 답을 이해하려면 각 검사 뒤에 무엇이 남는지 확인해야 한다.</p>
+<img src="img4.jpg" alt="ai 비교 분석, 함정 3문제에서 갈린 정답과 검증법 - 실제 채점 결과" loading="lazy"><p class="meta" style="text-align:center">실제 채점 결과 (영상 캡처)</p>
+<section class="card"><h4>🧰 오늘의 실험실 생존 세트 — 밤새 실험 돌릴 때 쟁여 두는 것들</h4><div class="grid"><a class="pc" href="https://link.coupang.com/a/h3aDFBQevA" target="_blank" rel="sponsored noopener"><img src="https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/9582/24b9141513f28aa45f2005209f571019cebb032104cab6b9d7f996e9a50e.jpg" alt="삼다수 무라벨 12병" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🥤 음료/생수</span><b>삼다수 무라벨 12병</b><span class="pm">별점 5 · 후기 1,481,010</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h3aOqpwrwO" target="_blank" rel="sponsored noopener"><img src="https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0c8d/d05b531cad00187282dcf5f9464214a96da7d8e560ec7e4b00a9484f1784.jpg" alt="원데이발란스그린 50봉" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍜 라면/간식</span><b>원데이발란스그린 50봉</b><span class="pm">별점 4.5 · 후기 21,739</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h3aYkD7rVI" target="_blank" rel="sponsored noopener"><img src="https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/5c0b/9cd8071900286b197963362b8291b83d092249a7a3ba8de8493510439706.jpg" alt="햇살닭 10종 50팩" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍳 육류/간편식/식료품</span><b>햇살닭 10종 50팩</b><span class="pm">별점 5 · 후기 13,632</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h3a6HWDcgm" target="_blank" rel="sponsored noopener"><img src="https://thumbnail4.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/ca12/9b88a0325a006bc9b76a6d37ced4db41f68d8e9a785b938f18ec4e261202.jpg" alt="베베숲 오리진 10팩" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🧴 화장품/바디케어/생필품</span><b>베베숲 오리진 10팩</b><span class="pm">별점 5 · 후기 98,934</span><span class="pbtn">쿠팡에서 보기</span></a></div><p class="meta">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></section>
+<h2>결론</h2>
+<p>실무에서 AI 답을 확인할 때도 이번 문제의 검산 방식을 작게 적용할 수 있다.</p>
+<ul><li>날짜별 예외 조건은 해당 날짜에 다시 적용한다.</li><li>목표 도달 여부는 중간 단계에서도 확인한다.</li><li>여러 목록을 합칠 때는 겹치는 항목을 찾는다.</li><li>코드는 실행 순서에 따라 남은 값과 상태를 적는다.</li><li>오류 해명도 원래 조건과 맞는지 다시 계산한다.</li></ul>
+<p>이번 실험은 문제 3개를 같은 질문으로 한 번씩 물은 1세트이며, 재시도는 0회다. GPT와 Claude의 공동 1위는 이번 세트의 결과이며, AI의 일반적인 성능 우열을 뜻하지 않는다.</p>
+<p>이 글은 실제 실험 기록을 바탕으로 AI 도구와 함께 정리했다. 짧은 답을 받아도 검증에 필요한 조건까지 짧아지는 것은 아니다.</p>
+<p>혹시 글에서 틀린 부분이나 고쳐야 할 부분이 보이면 유튜브·스레드 댓글로 알려 주시면 정말 감사하겠습니다. 바로 확인해서 고칠게요!</p><h2>실험 원문과 실제 답</h2><p>아래 질문을 세 AI에 똑같이 1번씩 보냈어요.</p><pre>아래 3문제에 번호별로 짧게 답해라.
+1. 깊이 26m인 우물 바닥에 개구리가 있습니다. 낮에는 7m 올라가고 밤에는 4m 미끄러집니다. 단, 3의 배수인 날(3일, 6일, 9일...) 낮에는 지쳐서 7m 대신 5m만 올라갑니다. 개구리가 우물 꼭대기(26m 이상)에 처음 도달하는 것은 며칠째인가요? 숫자만 답하세요.
+2. 1부터 100까지의 자연수 중에서, 2의 배수도 아니고 3의 배수도 아니지만 숫자 &#x27;5&#x27;가 적어도 한 번 들어가는 수는 모두 몇 개인가요? 숫자만 답하세요.
+3. 다음 파이썬 코드의 출력 결과는 무엇인가요? 출력값만 정확히 한 줄로 답하세요.
+
+it = iter([1, 2, 3, 4, 5])
+print(2 in it, 2 in it, sum(it))</pre><p>정답(실험 전에 먼저 정함): 10 / 9 / True False 0</p><table><tr><th>AI</th><th>실제 답</th></tr><tr><td>GPT</td><td><pre>10
+9
+True False 0</pre></td></tr><tr><td>Claude</td><td><pre>10
+9
+True False 0</pre></td></tr><tr><td>Gemini</td><td><pre>9
+
+10
+
+True False 0</pre></td></tr></table><section class="card"><h4>🛒 다시 보기: 오늘의 생존 세트</h4><div class="grid"><a class="pc" href="https://link.coupang.com/a/h3aDFBQevA" target="_blank" rel="sponsored noopener"><img src="https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/9582/24b9141513f28aa45f2005209f571019cebb032104cab6b9d7f996e9a50e.jpg" alt="삼다수 무라벨 12병" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🥤 음료/생수</span><b>삼다수 무라벨 12병</b><span class="pm">별점 5 · 후기 1,481,010</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h3aOqpwrwO" target="_blank" rel="sponsored noopener"><img src="https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0c8d/d05b531cad00187282dcf5f9464214a96da7d8e560ec7e4b00a9484f1784.jpg" alt="원데이발란스그린 50봉" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍜 라면/간식</span><b>원데이발란스그린 50봉</b><span class="pm">별점 4.5 · 후기 21,739</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h3aYkD7rVI" target="_blank" rel="sponsored noopener"><img src="https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/5c0b/9cd8071900286b197963362b8291b83d092249a7a3ba8de8493510439706.jpg" alt="햇살닭 10종 50팩" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍳 육류/간편식/식료품</span><b>햇살닭 10종 50팩</b><span class="pm">별점 5 · 후기 13,632</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h3a6HWDcgm" target="_blank" rel="sponsored noopener"><img src="https://thumbnail4.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/ca12/9b88a0325a006bc9b76a6d37ced4db41f68d8e9a785b938f18ec4e261202.jpg" alt="베베숲 오리진 10팩" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🧴 화장품/바디케어/생필품</span><b>베베숲 오리진 10팩</b><span class="pm">별점 5 · 후기 98,934</span><span class="pbtn">쿠팡에서 보기</span></a></div><p class="meta">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></section><section class="card"><h4>🎙️ AI 음성이 궁금하다면</h4><p>우리 채널 내레이션은 타입캐스트를 쓰지만, 영어·다국어 AI 음성을 실험해 보고 싶다면 ElevenLabs도 많이 쓰여요.</p><a class="btn" href="https://try.elevenlabs.io/5mmhvk860sq6" target="_blank" rel="sponsored noopener">ElevenLabs 둘러보기 (제휴)</a><p class="meta">ElevenLabs 제휴 링크로, 가입·결제 시 일정 수수료를 받을 수 있습니다.</p></section>
+<section class="card"><h2>🎬 쇼츠로 다시 보기 · 🧵 함께 이야기하기</h2><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/RSWh5F4cbKk" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><p><a href="https://www.threads.com/@alligatorxor" rel="noopener">🧵 스레드 @alligatorxor에서 오늘 실험 이야기 나누기</a> · <a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트 다른 쇼츠 보기</a> · <a href="https://compaction19-blip.github.io/">📒 실험노트 홈</a></p></section>
+<footer>이 글의 실험 결과는 같은 질문 1회 시도 기준의 실제 기록이며, 전체 성능 순위가 아닙니다. 글은 AI 도구로 초안을 만들고 실험 기록과 대조해 정리했습니다.</footer></main></body></html>
