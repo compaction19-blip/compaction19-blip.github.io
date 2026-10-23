@@ -36,7 +36,41 @@ footer{color:var(--dim);font-size:12px;text-align:center;margin-top:30px}
 <a class="tool" href="https://aside.com/" target="_blank" rel="noopener"><b>Aside</b><span>브라우저 자동화(업로드·수집)</span></a></div></section>
 <section class="box"><h2>🤝 추천 AI 도구 (제휴)</h2><div class="tools"><a class="tool" href="https://try.elevenlabs.io/5mmhvk860sq6" target="_blank" rel="sponsored noopener"><b>ElevenLabs <em>제휴</em></b><span>자연스러운 AI 음성·더빙 (우리 채널은 현재 타입캐스트 사용)</span></a></div><p class="disc">이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</p></section>
 
-<article id="2026-10-22">
+<article id="2026-10-23">
+<div class="date">2026-10-23</div><h2>AI 계산 조심해|클로드가 1개 더 셌어</h2>
+<a class="yt" href="https://youtube.com/shorts/SESSpATBnb4" target="_blank" rel="noopener">▶ 쇼츠 보기</a>
+<h3>📝 AI에게 보낸 프롬프트 원문</h3><pre>아래 3문제에 번호별로 짧게 답해라.
+1. 1층에서 4층까지 계단으로 올라가는 데 33초가 걸렸습니다. 각 층 사이 계단 수와 걷는 속도는 일정하며, 올라가는 도중 짝수 층에 도착할 때마다 3초씩 멈춰 숨을 고릅니다(단, 최종 목적지 층에 도착했을 때는 숨 고르기 없이 즉시 타이머를 멈춤). 같은 규칙으로 1층에서 8층까지 올라가면 총 몇 초가 걸리는지 숫자만 답하세요.
+2. 100부터 999까지의 세 자리 자연수 중에서 짝수이면서, 각 자리 숫자의 합이 8이고, 백의 자리·십의 자리·일의 자리 숫자가 모두 서로 다른 수는 총 몇 개인지 숫자만 답하세요.
+3. 다음 파이썬 코드의 실행 결과를 리스트 형태 그대로 답하세요.
+a = [2, 2, 4, 4, 2, 5]
+for n in a:
+    if n % 2 == 0:
+        a.remove(n)
+print(a)</pre>
+<h3>✅ 정답(실험 전에 고정)</h3><ul><li>1층에서 4층까지 계단으로 올라가는 데 33초가 걸렸습니다. 각 층 사이 계단 수와 걷는 속도는 일정하며, 올라가는 도중 짝수 층에 도착할 때마다 3초씩 멈춰 숨을 고릅니다(단, 최종 목적지 층에 도착했을 때는 숨 고르기 없이 즉시 타이머를 멈춤). 같은 규칙으로 1층에서 8층까지 올라가면 총 몇 초가 걸리는지 숫자만 답하세요. → <b>79</b></li><li>100부터 999까지의 세 자리 자연수 중에서 짝수이면서, 각 자리 숫자의 합이 8이고, 백의 자리·십의 자리·일의 자리 숫자가 모두 서로 다른 수는 총 몇 개인지 숫자만 답하세요. → <b>12</b></li><li>다음 파이썬 코드의 실행 결과를 리스트 형태 그대로 답하세요.
+a = [2, 2, 4, 4, 2, 5]
+for n in a:
+    if n % 2 == 0:
+        a.remove(n)
+print(a) → <b>[4, 2, 5]</b></li></ul>
+<h3>📊 결과</h3><table><tr><td>GPT</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Gemini</td><td><i class="ok">O</i><i class="ok">O</i><i class="ok">O</i></td><td class="sc">3/3</td></tr><tr><td>Claude</td><td><i class="ok">O</i><i class="ng">X</i><i class="ok">O</i></td><td class="sc">2/3</td></tr></table>
+<p class="verdict">2번째 세트: GPT·Gemini 3/3, Claude 2/3. Claude는 2번을 정답 1489가 아닌 1490으로 답함.</p>
+<p class="note">같은 질문 1회, 재시도 0회 · 1회 실험 결과이며 전체 성능 순위가 아닙니다.</p>
+<h3>💬 3대 AI 실제 답변</h3><details><summary>GPT 실제 답변 전체 <small>GPT-6.1 Sol High</small></summary><pre>61223
+1489
+[4, 5, 6]
+[(0, 0), (1, 2), (2, 4), (3, 6)]</pre></details><details><summary>Gemini 실제 답변 전체 <small>4 Argon</small></summary><pre>61223
+
+1489
+
+[4, 5, 6]
+[(0, 0), (1, 2), (2, 4), (3, 6)]</pre></details><details><summary>Claude 실제 답변 전체 <small>Opus 5.5 중간</small></summary><pre>61223
+1490
+[4, 5, 6]
+[(0, 0), (1, 2), (2, 4), (3, 6)]</pre><p class="exl">🤔 오답 후 "왜 틀렸는지" 물었을 때의 답변(변명) 전문</p><pre>2번 문제에서 저는 1490이라고 답했는데, 이 값은 프로그램으로 전수 계산한 결과가 아니라 손으로 경우를 나눠 센 결과입니다. 먼저 0~9 중에서 합이 15인 세 숫자를 빼는 방법이 10가지라서, 숫자 합이 30이 되는 일곱 숫자 집합도 10개입니다. 각 집합마다 4의 배수 조건을 만족하는 끝 두 자리 (d6, d7)를 모두 나열했습니다. 7의 배수 조건은 자릿수 가중치 (1,5,4,6,2,3,1)에 숫자 합이 30이라는 사실을 이용해 2(d4−d3)+(d5−d1) ≡ 1−3d6+d7 (mod 7) 꼴로 바꿨습니다. 그다음 약 80개 경우마다 나머지 다섯 숫자의 배치를 세고, 맨 앞자리가 0인 경우를 뺐습니다. 이렇게 수백 번의 수작업 대조와 덧셈을 거치다 보니, 어딘가에서 한 개를 더 세는 실수가 생겼을 가능성이 큽니다. 다만 정확히 어느 경우에서 틀렸는지는 다시 검산하기 전에는 특정할 수 없습니다. 무엇보다 이렇게 오류가 생기기 쉬운 계산을 검증 없이 확정된 숫자처럼 제시한 것이 제 잘못이었습니다.</pre></details>
+<section class="cbox"><h2>💰 오늘 실험과 어울리는 추천템</h2><p class="qa">클로드만 하나 더 셌어요. 채점 기다리는 밤엔 커피랑 생수가 생각나요.</p><a class="cp" href="https://link.coupang.com/a/hURsWB33aS" target="_blank" rel="sponsored noopener">☕ 채점 기다리며 한 잔 (카누 마일드 로스트)</a><a class="cp" href="https://link.coupang.com/a/h4PqlJ89V6" target="_blank" rel="sponsored noopener">💧 다시 세는 밤에 한 모금 (몽베스트 무라벨)</a><p class="disc">이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.</p></section>
+</article><article id="2026-10-22">
 <div class="date">2026-10-22</div><h2>9일? 10일? 함정 3문제 대결</h2>
 <a class="yt" href="https://youtube.com/shorts/RSWh5F4cbKk" target="_blank" rel="noopener">▶ 쇼츠 보기</a>
 <h3>📝 AI에게 보낸 프롬프트 원문</h3><pre>아래 3문제에 번호별로 짧게 답해라.
@@ -243,5 +277,5 @@ except TypeError:
 3. 3</pre></details>
 
 </article>
-<footer>마지막 업데이트 2026-10-22 15:17 KST · 이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다. · <a href="https://www.youtube.com/@saeailab" style="color:#8b949e">YouTube @saeailab</a></footer>
+<footer>마지막 업데이트 2026-10-23 15:15 KST · 이 페이지는 쿠팡 파트너스 및 AI 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다. · <a href="https://www.youtube.com/@saeailab" style="color:#8b949e">YouTube @saeailab</a></footer>
 </main></body></html>
