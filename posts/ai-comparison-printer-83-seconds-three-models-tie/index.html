@@ -1,0 +1,109 @@
+<!doctype html><html lang="ko"><head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBE3H6LSGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YBE3H6LSGB');
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ai 비교 분석, 50장 인쇄 83초와 세 모델 동점 | 새AI실험노트</title><meta name="description" content="정상 인쇄물 50장을 만드는 시간은 왜 83초일까요? 같은 세 문제를 한 번씩 받은 GPT·Claude·Gemini의 실제 답과 채점을 비교하고, 계산 조건과 파이썬 문자열 처리를 확인하는 방법을 짚습니다."><meta name="keywords" content="ai 비교 분석, AI 정답 검증, GPT Claude Gemini, 프린터 시간 계산, 파이썬 문자열">
+<link rel="canonical" href="https://compaction19-blip.github.io/posts/ai-comparison-printer-83-seconds-three-models-tie/"><meta property="og:type" content="article"><meta property="og:title" content="ai 비교 분석, 50장 인쇄 83초와 세 모델 동점">
+<meta property="og:description" content="정상 인쇄물 50장을 만드는 시간은 왜 83초일까요? 같은 세 문제를 한 번씩 받은 GPT·Claude·Gemini의 실제 답과 채점을 비교하고, 계산 조건과 파이썬 문자열 처리를 확인하는 방법을 짚습니다."><meta property="og:url" content="https://compaction19-blip.github.io/posts/ai-comparison-printer-83-seconds-three-models-tie/"><meta property="og:image" content="https://compaction19-blip.github.io/posts/ai-comparison-printer-83-seconds-three-models-tie/img1.jpg">
+<meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "ai 비교 분석, 50장 인쇄 83초와 세 모델 동점", "description": "정상 인쇄물 50장을 만드는 시간은 왜 83초일까요? 같은 세 문제를 한 번씩 받은 GPT·Claude·Gemini의 실제 답과 채점을 비교하고, 계산 조건과 파이썬 문자열 처리를 확인하는 방법을 짚습니다.", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "inLanguage": "ko", "mainEntityOfPage": "https://compaction19-blip.github.io/posts/ai-comparison-printer-83-seconds-three-models-tie/", "author": {"@type": "Organization", "name": "새AI실험노트"}, "image": ["https://compaction19-blip.github.io/posts/ai-comparison-printer-83-seconds-three-models-tie/img1.jpg"]}</script><style>:root{--bg:#0f141c;--card:#161d28;--fg:#eef1f6;--dim:#9aa6b8;--acc:#ffd166;--line:#26303f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:22px 18px 60px}a{color:#8ec5ff}h1{font-size:26px;line-height:1.4;margin:10px 0}h2{font-size:21px;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:18px;margin:24px 0 8px}p{margin:12px 0}img{max-width:min(100%,420px);border-radius:12px;border:1px solid var(--line);display:block;margin:14px auto}
+.meta{color:var(--dim);font-size:14px}.disc{background:#2b2112;border:1px solid #6b5420;border-radius:10px;padding:10px 12px;font-size:14px;color:#ffe2a3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0}.card h4{margin:0 0 8px;font-size:16px}
+.btn{display:block;text-align:center;background:var(--acc);color:#141414;font-weight:700;text-decoration:none;border-radius:10px;padding:12px;margin:8px 0}
+pre{white-space:pre-wrap;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}code{background:#0b0f16;padding:1px 5px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}.yt{position:relative;padding-top:177%;max-width:360px;margin:14px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style></head>
+<body><main><nav class="top"><a href="https://compaction19-blip.github.io/">🏠 실험노트 홈</a><a href="https://compaction19-blip.github.io/posts/">📚 칼럼 목록</a></nav>
+<p class="disc">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><h1>ai 비교 분석, 50장 인쇄 83초와 세 모델 동점</h1><p class="meta">2026-10-26 · 새AI실험노트 · 실제 실험 기록</p>
+<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/ADQGtjVtx84" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><h2>서론</h2>
+<p>AI가 계산한 작업 시간을 일정표에 옮기거나, 설명해 준 코드를 업무에 쓰는 일은 낯설지 않다. 하지만 출력한 종이와 정상 종이를 같은 것으로 세면 작업 시간이 달라진다. 코드도 함수 이름만 보고 뜻을 짐작하면 실제 출력과 다른 답을 적을 수 있다.</p>
+<p>이번 실험에서는 GPT·Claude·Gemini가 모두 세 문제를 맞혔다. 조건은 같은 질문 1회, 재시도 0회였다. 점수는 각각 3/3으로 동점이다. 이 결과가 보여 주는 것은 이번 답의 정확성이다. 어떤 모델이 다른 업무에서도 더 낫다는 결론까지 내릴 수는 없다.</p>
+<p>핵심은 세 AI가 같은 답을 냈다는 사실에서 한 걸음 더 가는 것이다. 그 답이 문제의 조건과 맞는지, 사람이 다시 따라가며 확인할 수 있어야 한다.</p>
+<img src="img1.jpg" alt="ai 비교 분석, 50장 인쇄 83초와 세 모델 동점 - 오늘 영상 첫 장면" loading="lazy"><p class="meta" style="text-align:center">오늘 영상 첫 장면 (영상 캡처)</p>
+<h2>실험 설계</h2>
+<p>2026년 10월 26일 기록의 비교 대상은 GPT-6.1 Sol High, Claude Opus 5.5 중간, Gemini 4 Argon이다. 아래 결과는 기록에 담긴 3차 세트 기준이다.</p>
+<p>문제는 서로 다른 확인 지점을 가진 세 개로 구성됐다.</p>
+<ul><li>정상 인쇄물 50장이 완성될 때까지 걸리는 시간.</li><li>1부터 100까지에서 배수 조건과 숫자 제외 조건을 함께 만족하는 수의 개수.</li><li>파이썬의 <code>strip</code>과 <code>replace</code>를 연달아 적용한 출력값.</li></ul>
+<p>이 구성을 보면 계산 자체보다 조건을 빠뜨리지 않는지가 중요하다. 인쇄 문제는 무엇을 세는지, 배수 문제는 조건을 어떻게 묶는지, 코드는 각 함수가 실제로 무엇을 하는지 확인해야 한다.</p>
+<p>채점 기준은 먼저 고정한다. 정답키는 순서대로 <b>83초, 15개, <code>[&#x27;c&#x27;, &#x27;a&#x27;]</code></b>다. 모델 답을 본 뒤 기준을 바꾸면 같은 표현을 다르게 채점할 수 있다. 단위와 꾸밈을 구분하고, 답의 내용이 정답키와 맞는지 보는 이유다.</p>
+<img src="img2.jpg" alt="ai 비교 분석, 50장 인쇄 83초와 세 모델 동점 - 실험 문제 화면" loading="lazy"><p class="meta" style="text-align:center">실험 문제 화면 (영상 캡처)</p>
+<h2>결과</h2>
+<p>세 AI가 제출한 답의 내용과 채점은 다음과 같다.</p>
+<p>| 모델 | 인쇄 시간 | 조건에 맞는 수 | 파이썬 출력 | 점수 | |---|---|---|---|---| | GPT | 83초 | 15개 | <code>[&#x27;c&#x27;, &#x27;a&#x27;]</code> | 3/3 | | Claude | 83초 | 15개 | <code>[&#x27;c&#x27;, &#x27;a&#x27;]</code> | 3/3 | | Gemini | 83초 | 15개 | <code>[&#x27;c&#x27;, &#x27;a&#x27;]</code> | 3/3 |</p>
+<p>GPT와 Claude는 번호별로 짧게 답했다. Gemini는 인쇄 과정을 반복문으로 표현하고, 숫자 조건을 검사하는 코드와 출력 예시를 제시한 뒤 최종 답을 적었다. 다만 코드가 답변에 있다는 사실만으로 실제 실행 여부까지 확인됐다고 말할 수는 없다.</p>
+<p>답변 길이는 달랐지만, 정답키와 대조한 세 문항은 모두 PASS였다. 기록의 최종 판정 역시 이 세트로 우열을 확인하지 못했다는 것이다. 별도의 시행착오나 예상 밖의 오답은 기록에 없다. 이번엔 예상대로였다.</p>
+<img src="img3.jpg" alt="ai 비교 분석, 50장 인쇄 83초와 세 모델 동점 - 실험 문제 화면" loading="lazy"><p class="meta" style="text-align:center">실험 문제 화면 (영상 캡처)</p>
+<h2>왜 이런 결과가 나왔나</h2>
+<p>세 AI의 내부 판단 과정을 이 기록만으로 단정할 수는 없다. 대신 정답에 도달하려면 어떤 조건을 지켜야 하는지는 문제에서 확인할 수 있다.</p>
+<p>첫 문제에서는 <b>전체 출력 장수와 정상 장수를 나눠야 한다.</b> 매 8번째 종이가 불량이므로 56장을 출력하면 불량은 7장, 정상은 49장이다. 다음 57번째 종이가 정상으로 나오면서 목표 50장을 채운다.</p>
+<p>따라서 인쇄에 57초가 걸린다. 불량 7번의 청소는 14초다. 정상 10장·20장·30장·40장 뒤 정리는 네 번이므로 12초다. 합계는 <code>57 + 14 + 12 = 83초</code>다. 마지막 50장 뒤에는 정리하지 않는다는 문장이 계산의 끝을 정한다.</p>
+<p>둘째 문제는 <b>배수 조건과 숫자 제외 조건을 함께 적용</b>한다. 이번 기록의 기준은 ‘4의 배수 또는 6의 배수’인 수를 고르고, 그중 숫자 4와 6이 들어간 수를 제외하는 것이다. 두 배수 조건에 모두 해당해도 한 번만 센다.</p>
+<p>조건을 통과하는 수는 다음과 같다.</p>
+<p><code>8, 12, 18, 20, 28, 30, 32, 52, 72, 78, 80, 88, 90, 92, 100</code></p>
+<p>총 15개다. “동시에”가 어디에 걸리는지 헷갈린다면, 질문을 쓸 때 배수 조건 전체에 괄호를 붙이면 뜻이 더 분명해진다.</p>
+<p>셋째 문제의 <code>strip(&quot;abrd&quot;)</code>는 문자열 <code>&quot;abrd&quot;</code>라는 덩어리를 찾아 지우는 명령이 아니다. 양쪽 끝에서 a·b·r·d에 해당하는 문자를 만나는 동안 제거한다. <code>&quot;abracadabra&quot;</code>에서는 양끝을 벗겨 내고 <code>&#x27;c&#x27;</code>가 남는다.</p>
+<p><code>&quot;banana&quot;.replace(&quot;a&quot;, &quot;b&quot;, 2)</code>는 앞에서부터 a 두 개만 바꿔 <code>&quot;bbnbna&quot;</code>를 만든다. 여기에 <code>strip(&quot;bn&quot;)</code>을 적용하면 양끝의 b와 n을 제거해 <code>&#x27;a&#x27;</code>가 남는다. 함수 적용 순서와 교체 횟수를 따로 확인하면 최종 리스트를 따라갈 수 있다.</p>
+<img src="img4.jpg" alt="ai 비교 분석, 50장 인쇄 83초와 세 모델 동점 - 실제 채점 결과" loading="lazy"><p class="meta" style="text-align:center">실제 채점 결과 (영상 캡처)</p>
+<section class="card"><h4>🧰 오늘의 실험실 생존 세트 — 밤새 실험 돌릴 때 쟁여 두는 것들</h4><div class="grid"><a class="pc" href="https://link.coupang.com/a/h93RNeZiSW" target="_blank" rel="sponsored noopener"><img src="https://thumbnail1.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/347e/a84148398ff89590d33dfcfd37a2693a2270cf8aca9cb2dc9a1743427690.jpg" alt="석수 무라벨 생수" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🥤 음료/생수</span><b>석수 무라벨 생수</b><span class="pm">별점 5 · 후기 81,994</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h93YYs9WEe" target="_blank" rel="sponsored noopener"><img src="https://thumbnail12.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/459009851474558-34785738-48d6-4b18-9587-f2b9d99027d2.jpg" alt="농심 과자 5종 세트" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍜 라면/간식</span><b>농심 과자 5종 세트</b><span class="pm">별점 5 · 후기 5,282</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h934e7ug5k" target="_blank" rel="sponsored noopener"><img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/prod/9d6f0012-cd9e-4c17-935c-488ded9fd1a4_fixing_v2.png" alt="뺀닭 블랙페퍼 닭가슴살" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍳 육류/간편식/식료품</span><b>뺀닭 블랙페퍼 닭가슴살</b><span class="pm">별점 4.5 · 후기 2,133</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h938Hlo6sC" target="_blank" rel="sponsored noopener"><img src="https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2147625288740083-e84f1ec9-b27b-44a7-80f3-505294b79453.jpg" alt="블루나 본 퓨어 물티슈" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🧴 화장품/바디케어/생필품</span><b>블루나 본 퓨어 물티슈</b><span class="pm">별점 4.5 · 후기 21,633</span><span class="pbtn">쿠팡에서 보기</span></a></div><p class="meta">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></section>
+<h2>결론</h2>
+<p>오늘은 세 AI 모두 정답이었다. 실무에서도 답이 일치했다는 데서 멈추기보다, 계산의 중간 상태와 코드의 실제 동작을 확인하는 편이 도움이 된다.</p>
+<ul><li>목표 수량과 전체 처리 수량을 따로 적는다.</li><li>쉬는 시간이나 정리 시간이 마지막에도 붙는지 확인한다.</li><li>‘또는’과 ‘동시에’가 섞이면 괄호로 조건을 명확히 쓴다.</li><li>짧은 코드는 중간 문자열을 적거나 직접 실행해 대조한다.</li></ul>
+<p>이 결과는 같은 질문을 각 모델에 한 번씩 제시하고 재시도하지 않은 세 문제의 기록이다. 문제 수가 적으므로 모델의 전반적인 성능이나 유료 서비스의 가치를 판단하는 근거로 넓혀 쓰기 어렵다.</p>
+<p>이 글은 실제 실험 기록을 바탕으로 AI 도구와 함께 정리했다.</p>
+<p>혹시 글에서 틀린 부분이나 고쳐야 할 부분이 보이면 유튜브·스레드 댓글로 알려 주시면 정말 감사하겠습니다. 바로 확인해서 고칠게요!</p><h2>실험 원문과 실제 답</h2><p>아래 질문을 세 AI에 똑같이 1번씩 보냈어요.</p><pre>아래 3문제에 번호별로 짧게 답해라.
+1. 프린터로 정상 인쇄물 50장을 뽑으려고 한다. 종이 1장을 인쇄하는 데는 1초가 걸린다. 그런데 기계가 인쇄하는 매 8번째 종이(8번째, 16번째, 24번째... 출력물)는 불량이 나서 버려야 하고(정상 인쇄물 개수에 포함되지 않음), 불량이 날 때마다 즉시 2초 동안 노즐 청소를 한다. 또한 정상 인쇄물이 10장 모일 때마다(10장, 20장, 30장, 40장 달성 직후) 3초 동안 묶음 정리를 한다(마지막 50장이 완성된 뒤에는 정리하지 않는다). 정상 인쇄물 50장이 모두 출력되는 순간까지 걸리는 시간은 총 몇 초인가? 정답만 짧게 답해.
+2. 1부터 100까지의 자연수 중에서, 4의 배수이거나 6의 배수이면서 동시에 각 자리 숫자에 &#x27;4&#x27;와 &#x27;6&#x27;이 하나도 들어가지 않는 수는 모두 몇 개인가? 정답만 짧게 답해.
+3. 파이썬 3에서 print([&quot;abracadabra&quot;.strip(&quot;abrd&quot;), &quot;banana&quot;.replace(&quot;a&quot;, &quot;b&quot;, 2).strip(&quot;bn&quot;)]) 를 실행했을 때 출력되는 리스트는 무엇인가? 정답만 짧게 답해.</pre><p>정답(실험 전에 먼저 정함): 83초 / 15개 / [&#x27;c&#x27;, &#x27;a&#x27;]</p><table><tr><th>AI</th><th>실제 답</th></tr><tr><td>GPT</td><td><pre>1. 83초
+2. 15개
+3. `[&#x27;c&#x27;, &#x27;a&#x27;]`</pre></td></tr><tr><td>Claude</td><td><pre>1. **83초**
+2. **15개**
+3. **[&#x27;c&#x27;, &#x27;a&#x27;]**</pre></td></tr><tr><td>Gemini</td><td><pre>```python
+# 1
+good = 0
+total_printed = 0
+time = 0
+while good &lt; 50:
+    total_printed += 1
+    time += 1 # 1 sec per sheet
+    if total_printed % 8 == 0:
+        time += 2 # nozzle cleaning
+    else:
+        good += 1
+        if good in [10, 20, 30, 40]:
+            time += 3 # bundling
+
+# 2
+count_2 = 0
+for n in range(1, 101):
+    if (n % 4 == 0 or n % 6 == 0) and (&#x27;4&#x27; not in str(n) and &#x27;6&#x27; not in str(n)):
+        count_2 += 1
+
+# 3
+res_3 = [&quot;abracadabra&quot;.strip(&quot;abrd&quot;), &quot;banana&quot;.replace(&quot;a&quot;, &quot;b&quot;, 2).strip(&quot;bn&quot;)]
+
+print(f&quot;1: {time}&quot;)
+print(f&quot;2: {count_2}&quot;)
+print(f&quot;3: {res_3}&quot;)
+
+
+```
+
+```text
+1: 83
+2: 15
+3: [&#x27;c&#x27;, &#x27;a&#x27;]
+
+
+```
+
+1. **83초**
+2. **15개**
+3. **`[&#x27;c&#x27;, &#x27;a&#x27;]`**</pre></td></tr></table><section class="card"><h4>🛒 다시 보기: 오늘의 생존 세트</h4><div class="grid"><a class="pc" href="https://link.coupang.com/a/h93RNeZiSW" target="_blank" rel="sponsored noopener"><img src="https://thumbnail1.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/347e/a84148398ff89590d33dfcfd37a2693a2270cf8aca9cb2dc9a1743427690.jpg" alt="석수 무라벨 생수" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🥤 음료/생수</span><b>석수 무라벨 생수</b><span class="pm">별점 5 · 후기 81,994</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h93YYs9WEe" target="_blank" rel="sponsored noopener"><img src="https://thumbnail12.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/459009851474558-34785738-48d6-4b18-9587-f2b9d99027d2.jpg" alt="농심 과자 5종 세트" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍜 라면/간식</span><b>농심 과자 5종 세트</b><span class="pm">별점 5 · 후기 5,282</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h934e7ug5k" target="_blank" rel="sponsored noopener"><img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/prod/9d6f0012-cd9e-4c17-935c-488ded9fd1a4_fixing_v2.png" alt="뺀닭 블랙페퍼 닭가슴살" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🍳 육류/간편식/식료품</span><b>뺀닭 블랙페퍼 닭가슴살</b><span class="pm">별점 4.5 · 후기 2,133</span><span class="pbtn">쿠팡에서 보기</span></a><a class="pc" href="https://link.coupang.com/a/h938Hlo6sC" target="_blank" rel="sponsored noopener"><img src="https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2147625288740083-e84f1ec9-b27b-44a7-80f3-505294b79453.jpg" alt="블루나 본 퓨어 물티슈" loading="lazy" referrerpolicy="no-referrer"><span class="pcat">🧴 화장품/바디케어/생필품</span><b>블루나 본 퓨어 물티슈</b><span class="pm">별점 4.5 · 후기 21,633</span><span class="pbtn">쿠팡에서 보기</span></a></div><p class="meta">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></section><section class="card"><h4>🎙️ AI 음성이 궁금하다면</h4><p>우리 채널 내레이션은 타입캐스트를 쓰지만, 영어·다국어 AI 음성을 실험해 보고 싶다면 ElevenLabs도 많이 쓰여요.</p><a class="btn" href="https://try.elevenlabs.io/5mmhvk860sq6" target="_blank" rel="sponsored noopener">ElevenLabs 둘러보기 (제휴)</a><p class="meta">ElevenLabs 제휴 링크로, 가입·결제 시 일정 수수료를 받을 수 있습니다.</p></section>
+<section class="card"><h2>🎬 쇼츠로 다시 보기 · 🧵 함께 이야기하기</h2><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/ADQGtjVtx84" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><p><a href="https://www.threads.com/@alligatorxor" rel="noopener">🧵 스레드 @alligatorxor에서 오늘 실험 이야기 나누기</a> · <a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트 다른 쇼츠 보기</a> · <a href="https://compaction19-blip.github.io/">📒 실험노트 홈</a></p></section>
+<footer>이 글의 실험 결과는 같은 질문 1회 시도 기준의 실제 기록이며, 전체 성능 순위가 아닙니다. 글은 AI 도구로 초안을 만들고 실험 기록과 대조해 정리했습니다.</footer></main></body></html>
