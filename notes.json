@@ -571,5 +571,69 @@
         }
       ]
     }
+  },
+  {
+    "date": "2026-10-26",
+    "title": "50장 인쇄는 83초? 확인된 두 AI는 만점",
+    "video_url": "https://youtube.com/shorts/ADQGtjVtx84",
+    "questions": [
+      "프린터로 정상 인쇄물 50장을 뽑으려고 한다. 종이 1장을 인쇄하는 데는 1초가 걸린다. 그런데 기계가 인쇄하는 매 8번째 종이(8번째, 16번째, 24번째... 출력물)는 불량이 나서 버려야 하고(정상 인쇄물 개수에 포함되지 않음), 불량이 날 때마다 즉시 2초 동안 노즐 청소를 한다. 또한 정상 인쇄물이 10장 모일 때마다(10장, 20장, 30장, 40장 달성 직후) 3초 동안 묶음 정리를 한다(마지막 50장이 완성된 뒤에는 정리하지 않는다). 정상 인쇄물 50장이 모두 출력되는 순간까지 걸리는 시간은 총 몇 초인가? 정답만 짧게 답해.",
+      "1부터 100까지의 자연수 중에서, 4의 배수이거나 6의 배수이면서 동시에 각 자리 숫자에 '4'와 '6'이 하나도 들어가지 않는 수는 모두 몇 개인가? 정답만 짧게 답해.",
+      "파이썬 3에서 print([\"abracadabra\".strip(\"abrd\"), \"banana\".replace(\"a\", \"b\", 2).strip(\"bn\")]) 를 실행했을 때 출력되는 리스트는 무엇인가? 정답만 짧게 답해."
+    ],
+    "answer_key": [
+      "83초",
+      "15개",
+      "['c', 'a']"
+    ],
+    "prompt": "아래 3문제에 번호별로 짧게 답해라.\n1. 프린터로 정상 인쇄물 50장을 뽑으려고 한다. 종이 1장을 인쇄하는 데는 1초가 걸린다. 그런데 기계가 인쇄하는 매 8번째 종이(8번째, 16번째, 24번째... 출력물)는 불량이 나서 버려야 하고(정상 인쇄물 개수에 포함되지 않음), 불량이 날 때마다 즉시 2초 동안 노즐 청소를 한다. 또한 정상 인쇄물이 10장 모일 때마다(10장, 20장, 30장, 40장 달성 직후) 3초 동안 묶음 정리를 한다(마지막 50장이 완성된 뒤에는 정리하지 않는다). 정상 인쇄물 50장이 모두 출력되는 순간까지 걸리는 시간은 총 몇 초인가? 정답만 짧게 답해.\n2. 1부터 100까지의 자연수 중에서, 4의 배수이거나 6의 배수이면서 동시에 각 자리 숫자에 '4'와 '6'이 하나도 들어가지 않는 수는 모두 몇 개인가? 정답만 짧게 답해.\n3. 파이썬 3에서 print([\"abracadabra\".strip(\"abrd\"), \"banana\".replace(\"a\", \"b\", 2).strip(\"bn\")]) 를 실행했을 때 출력되는 리스트는 무엇인가? 정답만 짧게 답해.",
+    "conditions": "같은 질문 1회, 재시도 0회",
+    "verdict": "3차 세트에서도 GPT·Claude·Gemini 모두 83초·15개·['c', 'a']로 전 문항 PASS, 각 3/3 동점. 이 세트로 우열을 확인하지 못했다.",
+    "attempted_sets": 3,
+    "models": {
+      "GPT": {
+        "model": "GPT-6.1 Sol High",
+        "answers": "1. 83초\r\n2. 15개\r\n3. `['c', 'a']`",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      },
+      "Claude": {
+        "model": "Opus 5.5 중간",
+        "answers": "1. **83초**\r\n2. **15개**\r\n3. **['c', 'a']**",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      },
+      "Gemini": {
+        "model": "4 Argon",
+        "answers": "```python\r\n# 1\r\ngood = 0\r\ntotal_printed = 0\r\ntime = 0\r\nwhile good < 50:\r\n    total_printed += 1\r\n    time += 1 # 1 sec per sheet\r\n    if total_printed % 8 == 0:\r\n        time += 2 # nozzle cleaning\r\n    else:\r\n        good += 1\r\n        if good in [10, 20, 30, 40]:\r\n            time += 3 # bundling\r\n\r\n# 2\r\ncount_2 = 0\r\nfor n in range(1, 101):\r\n    if (n % 4 == 0 or n % 6 == 0) and ('4' not in str(n) and '6' not in str(n)):\r\n        count_2 += 1\r\n\r\n# 3\r\nres_3 = [\"abracadabra\".strip(\"abrd\"), \"banana\".replace(\"a\", \"b\", 2).strip(\"bn\")]\r\n\r\nprint(f\"1: {time}\")\r\nprint(f\"2: {count_2}\")\r\nprint(f\"3: {res_3}\")\r\n\r\n\r\n```\r\n\r\n```text\r\n1: 83\r\n2: 15\r\n3: ['c', 'a']\r\n\r\n\r\n```\r\n\r\n1. **83초**\r\n2. **15개**\r\n3. **`['c', 'a']`**",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      }
+    },
+    "bridge": {
+      "intro": "3차에도 세 AI가 만점이라 우열은 못 가렸고, 기다리는 밤엔 물과 과자면 충분해요.",
+      "picks": [
+        {
+          "key": "auto_20261026",
+          "label": "💧 채점 기다리며 한 모금 (석수 무라벨)"
+        },
+        {
+          "key": "auto_20261026_2",
+          "label": "🍪 퇴근 후 가볍게 한 입 (농심 과자 세트)"
+        }
+      ]
+    }
   }
 ]
