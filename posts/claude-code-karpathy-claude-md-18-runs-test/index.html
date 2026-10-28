@@ -1,0 +1,72 @@
+<!doctype html><html lang="ko"><head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBE3H6LSGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YBE3H6LSGB');
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Code 카파시 규칙(CLAUDE.md) 넣는 법과 18번 실측: 애매한 요청엔 먼저 물었다 | 새AI실험노트</title><meta name="description" content="노마드 코더가 소개한 &#x27;Andrej Karpathy Skills&#x27;(CLAUDE.md 한 장)를 Claude Code에 넣기 전/후로 같은 과제 3개를 3번씩 18번 비교. 윈도우에서 넣는 순서, 과제 원문, 결과표(애매한 요청 먼저 물음 0/3→2/3, 기능 추가 14→10줄, 버그 수정 차이 없음)를 초보자용으로 정리했어요."><meta name="keywords" content="Claude Code, 클로드 코드, 카파시 스킬, andrej-karpathy-skills, CLAUDE.md, AI 코딩, 바이브 코딩, 클로드 코드 설정">
+<link rel="canonical" href="https://compaction19-blip.github.io/posts/claude-code-karpathy-claude-md-18-runs-test/"><meta property="og:type" content="article"><meta property="og:title" content="Claude Code 카파시 규칙(CLAUDE.md) 넣는 법과 18번 실측: 애매한 요청엔 먼저 물었다">
+<meta property="og:description" content="노마드 코더가 소개한 &#x27;Andrej Karpathy Skills&#x27;(CLAUDE.md 한 장)를 Claude Code에 넣기 전/후로 같은 과제 3개를 3번씩 18번 비교. 윈도우에서 넣는 순서, 과제 원문, 결과표(애매한 요청 먼저 물음 0/3→2/3, 기능 추가 14→10줄, 버그 수정 차이 없음)를 초보자용으로 정리했어요."><meta property="og:url" content="https://compaction19-blip.github.io/posts/claude-code-karpathy-claude-md-18-runs-test/"><meta property="og:image" content="https://compaction19-blip.github.io/posts/claude-code-karpathy-claude-md-18-runs-test/img1.jpg">
+<meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Claude Code 카파시 규칙(CLAUDE.md) 넣는 법과 18번 실측: 애매한 요청엔 먼저 물었다", "description": "노마드 코더가 소개한 'Andrej Karpathy Skills'(CLAUDE.md 한 장)를 Claude Code에 넣기 전/후로 같은 과제 3개를 3번씩 18번 비교. 윈도우에서 넣는 순서, 과제 원문, 결과표(애매한 요청 먼저 물음 0/3→2/3, 기능 추가 14→10줄, 버그 수정 차이 없음)를 초보자용으로 정리했어요.", "datePublished": "2026-10-28", "dateModified": "2026-10-28", "inLanguage": "ko", "mainEntityOfPage": "https://compaction19-blip.github.io/posts/claude-code-karpathy-claude-md-18-runs-test/", "author": {"@type": "Organization", "name": "새AI실험노트"}, "image": ["https://compaction19-blip.github.io/posts/claude-code-karpathy-claude-md-18-runs-test/img1.jpg"]}</script><style>:root{--bg:#0f141c;--card:#161d28;--fg:#eef1f6;--dim:#9aa6b8;--acc:#ffd166;--line:#26303f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:22px 18px 60px}a{color:#8ec5ff}h1{font-size:26px;line-height:1.4;margin:10px 0}h2{font-size:21px;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:18px;margin:24px 0 8px}p{margin:12px 0}img{max-width:min(100%,420px);border-radius:12px;border:1px solid var(--line);display:block;margin:14px auto}
+.meta{color:var(--dim);font-size:14px}.disc{background:#2b2112;border:1px solid #6b5420;border-radius:10px;padding:10px 12px;font-size:14px;color:#ffe2a3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0}.card h4{margin:0 0 8px;font-size:16px}
+.btn{display:block;text-align:center;background:var(--acc);color:#141414;font-weight:700;text-decoration:none;border-radius:10px;padding:12px;margin:8px 0}
+pre{white-space:pre-wrap;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}code{background:#0b0f16;padding:1px 5px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}.yt{position:relative;padding-top:177%;max-width:360px;margin:14px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style></head>
+<body><main><nav class="top"><a href="https://compaction19-blip.github.io/">🏠 실험노트 홈</a><a href="https://compaction19-blip.github.io/posts/">📚 칼럼 목록</a></nav>
+<h1>Claude Code 카파시 규칙(CLAUDE.md) 넣는 법과 18번 실측: 애매한 요청엔 먼저 물었다</h1><p class="meta">2026-10-28 · 새AI실험노트 · 직접 실측(같은 과제 3개 × 3번 × 2조건 = 18번)</p>
+<p>유튜브에서 &quot;처음이라면 이것부터 설치하라&quot;고 자주 추천되는 <b>&#x27;안드레이 카파시 스킬&#x27;(CLAUDE.md 파일 한 장)</b>을 Claude Code에 넣기 전과 후로 나눠, 똑같은 과제 3개를 조건마다 3번씩, 모두 <b>18번</b> 돌려 봤어요. 결과부터 말하면 판정은 <b>조건부 효과 있음</b>입니다. 애매하게 부탁할 때는 차이가 컸고(먼저 물어본 횟수 0/3 → 2/3), 기능 추가는 코드가 조금 줄었고(14줄 → 10줄), 분명한 버그 수정은 차이가 없었어요.</p>
+<p>이 글은 처음 해 보는 사람도 그대로 따라 할 수 있게 ① 설치하는 순서 ② 저희가 보낸 과제 원문 ③ 18번의 결과 전부를 정리한 설명서예요.</p>
+<img src="img1.jpg" alt="롱폼 영상 썸네일: 카파시 규칙 넣었더니 먼저 물었다 2/3" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">롱폼 영상 썸네일: 카파시 규칙 넣었더니 먼저 물었다 2/3</p>
+<h2>먼저 읽어 주세요 (이 글의 기준)</h2>
+<ul><li>시험 날짜: 2026년 10월 28일, 윈도우 PC 한 대, 원래 쓰던 클로드 계정(Claude Max의 월 API 크레딧 사용). 결제·새 가입은 하지 않았어요. 협찬도 없어요.</li><li>✅ 직접 해 봄 = 저희 PC에서 실제로 실행하고 결과를 확인한 것.</li><li>📄 문서 기준 = 저장소 설명서(README)에 적혀 있지만 저희가 직접 해 보지는 않은 것.</li><li>조건마다 3번씩 해 본 결과라 <b>일반화는 못 해요.</b> 시험 코드도 저희가 직접 만든 54줄짜리 가상 장바구니 코드 하나뿐이에요.</li></ul>
+<h2>한눈에 보는 판정표</h2>
+<ul><li>애매한 요청(&#x27;영수증을 좀 더 보기 좋게&#x27;): <b>효과 큼</b> — 먼저 물어봄 A 0/3 → B 2/3, 바뀐 줄 평균 33.7줄 → 4.3줄</li><li>기능 추가(수량 바꾸는 함수): <b>조금 효과</b> — 바뀐 줄 14·14·14 → 10·10·10, 요청에 없던 동작 3번 → 0번</li><li>버그 수정(10% 쿠폰): <b>차이 없음</b> — 6번 모두 같은 한 줄 수정, 채점 모두 통과</li></ul>
+<p>(A = CLAUDE.md 없음, B = 카파시 CLAUDE.md 넣음)</p>
+<h2>카파시 스킬이 뭔가요?</h2>
+<ul><li>출처 영상: 노마드 코더 「쓰레기 코드 ☠️ 없애는 법」(2026-10-04 공개, 10/28 기준 조회 149,985회). 설명란 챕터 03:05 「(2) Karpathy Skills」에서 소개됐어요. <a href="https://www.youtube.com/watch?v=3JCgiVYlLFo" rel="noopener">https://www.youtube.com/watch?v=3JCgiVYlLFo</a></li><li>저장소: <a href="https://github.com/multica-ai/andrej-karpathy-skills" rel="noopener">https://github.com/multica-ai/andrej-karpathy-skills</a> (10/28 기준 별 225,469개). 카파시가 직접 만든 건 아니고, 그가 지적한 AI 코딩의 단점(잘못된 가정, 과한 코드, 상관없는 코드 건드리기)을 다른 사람이 규칙으로 정리한 파일이에요.</li><li>저장소에 LICENSE 파일은 따로 없고 README 끝에 &#x27;MIT&#x27;라고 적혀 있어요. 그래서 이 글에도 원문 전체는 싣지 않고, 규칙을 요약만 할게요. 원문은 위 저장소에서 보세요.</li></ul>
+<p>규칙 4개 (요약)</p>
+<p>1. <b>먼저 생각하기</b>: 마음대로 가정하지 말고, 애매하면 혼자 고르지 말고 물어보기 2. <b>단순하게</b>: 요청한 것만, 필요한 만큼의 코드로 3. <b>필요한 곳만 고치기</b>: 옆에 있는 코드·주석·스타일은 건드리지 않기 4. <b>목표 기반으로 하기</b>: &#x27;고쳐 줘&#x27; 대신 &#x27;테스트로 확인할 기준&#x27;을 세우고 통과할 때까지</p>
+<img src="img2.jpg" alt="GitHub multica-ai/andrej-karpathy-skills 저장소 화면(10/28, 별 225k)" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">GitHub multica-ai/andrej-karpathy-skills 저장소 화면(10/28, 별 225k)</p>
+<h2>따라 하기: 내 프로젝트에 넣는 순서</h2>
+<p>준비물: Claude Code가 설치된 윈도우 PC, 작업할 프로젝트 폴더. (Claude Code 설치가 아직이라면 다음 편 칼럼에서 다룰 예정이에요.)</p>
+<p>1단계. 시작 버튼을 누르고 <code>PowerShell</code>을 입력해 파란(또는 검은) 창을 열어요. 이걸 &#x27;터미널&#x27;이라고 불러요.</p>
+<p>2단계. 내 프로젝트 폴더로 이동해요. 예를 들어 바탕화면의 <code>my_project</code> 폴더라면 이렇게 입력하고 Enter를 눌러요.</p>
+<p><code>cd $HOME\Desktop\my_project</code></p>
+<p>3단계 (✅ 직접 해 봄). 아래 한 줄을 그대로 입력하고 Enter를 눌러요. 저장소의 CLAUDE.md 파일을 내 폴더에 같은 이름으로 내려받는 명령이에요.</p>
+<p><code>Invoke-WebRequest <a href="https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/CLAUDE.md" rel="noopener">https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/CLAUDE.md</a> -OutFile CLAUDE.md</code></p>
+<p>4단계. 확인해요. <code>dir CLAUDE.md</code> 를 입력했을 때 <b>CLAUDE.md 파일이 2,357바이트 정도로 보이면 성공</b>이에요(10/28에 저희가 받은 크기). 메모장으로 열어 첫 줄이 <code># CLAUDE.md</code>인지 봐도 돼요.</p>
+<p>5단계. 그 폴더에서 평소처럼 <code>claude</code> 를 실행해 일을 시키면 돼요. Claude Code는 실행한 폴더의 CLAUDE.md를 자동으로 읽어요(📄 Claude Code 공식 문서 기준). 저희 시험에서도 파일만 넣었을 뿐인데 B 조건에서 행동이 달라졌어요.</p>
+<p>막히는 곳과 해결</p>
+<ul><li><b>이미 CLAUDE.md가 있는 폴더라면</b>: 3단계 명령은 기존 파일을 덮어써요! 먼저 기존 파일을 <code>CLAUDE_backup.md</code>처럼 복사해 두고, 받은 내용을 기존 파일 아래에 붙여 넣으세요(📄 README도 &#x27;기존 파일에 덧붙이라&#x27;고 안내해요).</li><li><b>&#x27;Invoke-WebRequest&#x27;가 실패하면</b>: 인터넷 연결을 확인하거나, 브라우저로 저장소에 들어가 CLAUDE.md → &#x27;Raw&#x27; 버튼 → 마우스 오른쪽 &#x27;다른 이름으로 저장&#x27;으로 받아도 돼요. 파일 이름이 <code>CLAUDE.md.txt</code>가 되지 않게 조심하세요.</li><li><b>모든 프로젝트에 한 번에 쓰고 싶다면</b> (📄 문서 기준, 저희는 안 해 봄): README에는 Claude Code 안에서 <code>/plugin marketplace add</code> 와 <code>/plugin install</code> 로 플러그인으로 설치하는 방법도 적혀 있어요.</li></ul>
+<h2>어떻게 시험했나요? (과제 원문 전부 공개)</h2>
+<ul><li>시험 코드: 직접 만든 <code>cart.py</code>(54줄, 함수 7개) + <code>test_cart.py</code>(테스트 6개). 일부러 <b>퍼센트 쿠폰 버그 1개</b>(10% 쿠폰이 10원을 빼는 버그)와 <b>안 쓰는 옛 함수</b>(<code>_old_round</code>)를 넣어 뒀어요.</li><li>조건: A = CLAUDE.md 없음, B = 카파시 CLAUDE.md를 폴더 맨 위에 복사.</li><li>실행: Claude Code 2.1.303 비대화 모드(<code>claude -p</code>), 모델 claude-opus-5-5, 기본 설정, 같은 권한(읽기·수정·쓰기 + 파이썬 테스트 실행만, 삭제·인터넷 금지), 매번 새 복사본 폴더에서 1번씩. 저희 공장 규칙 파일이 섞이지 않게 다른 폴더에서 돌렸어요.</li><li>채점: cart.py에서 바뀐 줄 수(원본과 비교), 원래 테스트 6개, 따로 숨겨 둔 채점 테스트, 먼저 물어봤는지(코드 0줄 + 질문), 걸린 시간·비용(Claude Code 표시값).</li></ul>
+<p>보낸 말 그대로:</p>
+<ul><li>과제 1 (기능 추가): <code>cart.py에 장바구니에서 상품 수량을 바꾸는 update_qty(cart, name, qty) 함수를 추가해 주세요.</code></li><li>과제 2 (버그 수정): <code>10% 쿠폰을 적용했는데 합계가 이상하게 나와요. 고쳐 주세요.</code></li><li>과제 3 (애매한 요청): <code>영수증을 좀 더 보기 좋게 만들어 주세요.</code></li></ul>
+<h2>결과 1. 기능 추가: 14줄 → 10줄</h2>
+<ul><li>A: 3번 모두 14줄. 그리고 3번 모두 <b>&#x27;수량을 0으로 하면 상품을 빼는&#x27; 동작을 스스로 정해 넣었어요.</b> 요청에는 없던 규칙이에요(답변에서 &#x27;제가 정했다&#x27;고 밝히긴 했어요).</li><li>B: 3번 모두 10줄. 원래 있던 <code>add_item</code>처럼 <b>0 이하면 오류</b>를 내는 쪽을 골랐어요. 이미 있던 코드의 방식을 따른 거예요.</li><li>숨긴 채점(수량 3 → 5, 바꾼 뒤 소계 4,500원 등 3개): 6번 모두 3/3 통과.</li><li>새 테스트를 함께 넣은 횟수: A 2번, B 3번. 평균 시간: A 25.1초, B 29.2초.</li></ul>
+<img src="img3.jpg" alt="기능 추가 B(카파시 규칙) 3회차 실제 실행 화면: cart.py +10줄, 숨긴 채점 3/3" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">기능 추가 B(카파시 규칙) 3회차 실제 실행 화면: cart.py +10줄, 숨긴 채점 3/3</p>
+<h2>결과 2. 버그 수정: 차이 없음</h2>
+<ul><li>6번 모두 <code>cart.py</code>의 같은 한 줄만 고쳤어요(바뀐 줄 2줄 = 1줄 지우고 1줄 추가) + 테스트 6줄 추가.</li><li>고친 식은 A가 <code>amount * (100 - value) / 100</code>, B가 <code>amount - amount * value / 100</code>으로 모양만 달랐고 결과는 같았어요.</li><li>숨긴 채점: 10% 쿠폰이면 10,000원 → 9,000원, 장바구니 5,500원 → 4,950원 → 세금 포함 5,445원. 6번 모두 통과.</li><li>안 쓰는 옛 함수 <code>_old_round</code>는 6번 모두 그대로 뒀어요.</li><li>평균 비용은 규칙 파일까지 읽는 B가 조금 더 들었어요(A 0.095달러, B 0.121달러).</li></ul>
+<h2>결과 3. 애매한 요청: 먼저 물어봤을까?</h2>
+<ul><li>A: 3번 모두 바로 고쳤어요. 바뀐 줄 33·37·31줄. 줄 맞춤, 쉼표, 소계·세금 줄까지 넣고, <b>원래 있던 영수증 테스트의 정답 문자열도 3번 모두 새 형식에 맞게 스스로 바꿨어요.</b></li><li>B 1·2회차: <b>코드를 한 줄도 안 고치고 먼저 물었어요.</b> 지금 출력, 제안하는 모양, 그리고 &#x27;이 방향이 괜찮은지 / 라벨은 한글이 좋은지 / 테스트를 고쳐도 되는지&#x27; 같은 질문을 정리해서요. 테스트가 영수증 문자열 전체를 그대로 비교한다는 점도 짚었어요.</li><li>B 3회차: 묻지 않고 바로 고쳤어요. 13줄. &#x27;보기 좋게&#x27;를 정렬과 표시 형식으로만 좁혀 해석했다고 밝혔고, 테스트 정답 문자열도 바꿨어요.</li><li>평균 시간: A 47.8초, B 23.5초(물어보고 멈춘 회차가 있어서 짧아요).</li></ul>
+<img src="img4.jpg" alt="애매한 요청 A(규칙 없음) 3회차 실제 실행 화면: cart.py +28 -3줄, 바로 수정" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">애매한 요청 A(규칙 없음) 3회차 실제 실행 화면: cart.py +28 -3줄, 바로 수정</p>
+<img src="img5.jpg" alt="애매한 요청 B(카파시 규칙) 1회차 기록: 코드 0줄, 먼저 질문(저장된 기록을 다시 띄운 화면)" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">애매한 요청 B(카파시 규칙) 1회차 기록: 코드 0줄, 먼저 질문(저장된 기록을 다시 띄운 화면)</p>
+<h2>18번 전체 결과표</h2>
+<img src="img6.jpg" alt="18번 실행 요약표(summary.json을 그대로 띄운 화면)" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">18번 실행 요약표(summary.json을 그대로 띄운 화면)</p>
+<ul><li>기능 추가 A: 14·14·14줄 / 0번 물음 / 평균 25.1초 / 0.096달러</li><li>기능 추가 B: 10·10·10줄 / 0번 물음 / 평균 29.2초 / 0.109달러</li><li>버그 수정 A: 2·2·2줄 / 0번 물음 / 평균 24.8초 / 0.095달러</li><li>버그 수정 B: 2·2·2줄 / 0번 물음 / 평균 27.5초 / 0.121달러</li><li>애매한 요청 A: 33·37·31줄 / 0번 물음 / 평균 47.8초 / 0.180달러</li><li>애매한 요청 B: 0·0·13줄 / 2번 물음 / 평균 23.5초 / 0.111달러</li></ul>
+<p>18번 전체 비용(Claude Code 표시 기준) 약 2.14달러. 처음 녹화 준비용으로 돌린 사전 시험 3번은 집계에서 뺐어요.</p>
+<h2>솔직한 한계 (안 된 것·조건부)</h2>
+<ul><li>조건마다 3번씩이라 일반화는 못 해요. 다른 코드, 다른 모델, 대화 모드에서는 다를 수 있어요.</li><li>비대화 모드라 Claude가 질문하면 그대로 끝나요. 실제로 쓸 때는 답을 주고받는 한 번이 더 생겨요.</li><li><b>규칙 없이도 이미 잘하던 것</b>: 버그 과제가 아닌 12번 모두 숨겨 둔 쿠폰 버그를 스스로 찾아 알려 줬고(고치지는 않음), 안 쓰는 옛 코드는 18번 모두 그대로 뒀어요. 그래서 &#x27;필요한 곳만 고치기&#x27; 규칙은 이번 시험에서 효과를 볼 틈이 없었어요.</li><li>바로 결과를 받고 싶은 분께는 &#x27;먼저 묻기&#x27;가 오히려 한 번 더 손이 가는 일일 수 있어요.</li><li>녹화 메모: 1·2회차는 녹화 도구가 창을 놓쳐 녹화가 안 됐어요. 그래서 3회차 6번은 녹화하면서 돌렸고, B가 먼저 물은 장면(1회차)은 저장된 기록 파일을 다시 화면에 띄워 녹화했어요. 숫자는 모두 저장된 기록에서 나온 그대로예요.</li></ul>
+<h2>정리: 깔까, 말까?</h2>
+<ul><li>요청을 짧고 대충 쓰는 편이라면 넣어 볼 만해요. 애매할 때 먼저 묻는 습관이 생겨요.</li><li>요구 사항을 이미 꼼꼼히 쓰는 분이라면 큰 차이는 기대하기 어려워요.</li><li>넣는다면, 이미 있는 CLAUDE.md를 덮어쓰지 않게만 조심하세요.</li></ul>
+<p>다른 유튜버가 &#x27;처음이라면 꼭 설치하라&#x27;고 한 것 중 저희가 검증해 볼 게 있다면 유튜브·스레드 댓글로 남겨 주세요.</p>
+<p>혹시 글에서 틀린 부분이나 고쳐야 할 부분이 보이면 유튜브·스레드 댓글로 알려 주시면 정말 감사하겠습니다. 바로 확인해서 고칠게요!</p>
+<section class="card"><h2>🎬 영상으로 보기 · 🧵 함께 이야기하기</h2><p><a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트 채널</a></p><p><a href="https://www.threads.com/@alligatorxor" rel="noopener">🧵 스레드 @alligatorxor</a> · <a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트</a> · <a href="https://compaction19-blip.github.io/">📒 실험노트 홈</a></p></section>
+<footer>이 글의 결과는 윈도우 PC 한 대에서 조건마다 3번씩 해 본 실제 기록이며, 다른 코드·모델·버전에서는 다를 수 있습니다. 글은 AI 도구로 초안을 만들고 실험 기록(verify.json·summary.json)과 대조해 정리했습니다.</footer></main></body></html>
