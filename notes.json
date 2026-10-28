@@ -699,5 +699,69 @@
         }
       ]
     }
+  },
+  {
+    "date": "2026-10-28",
+    "title": "김밥 10줄, 37분 같아도 정답은 41분",
+    "video_url": "https://youtube.com/shorts/c2SVdJn9KOI",
+    "questions": [
+      "자동 김밥 기계로 완성품 김밥 10줄(1번부터 10번까지)을 한 줄씩 순서대로 말아야 합니다. 기계가 김밥을 한 번 마는 과정을 1회 작업이라고 할 때, 기본적으로 1회 작업에는 시간 2분, 밥 120g이 소모되어 완성품 1줄이 나옵니다. 단, 4의 배수 번째 완성품(4·8번 완성품)을 만드는 작업에는 시간 4분, 밥 180g이 소모됩니다. 또한 기계 특성상 작업 횟수가 5의 배수(5회째·10회째 작업 등)일 때는 무조건 불량이 발생하여 1분 동안 밥 60g만 소모되고 완성품이 나오지 않으므로, 곧바로 다음 작업에서 해당 번호의 김밥을 다시 말아야 합니다. 처음에 밥 420g이 채워져 있으며, 각 작업을 시작하기 직전에 남은 밥이 그 작업에서 만들려는 완성품 번호에 필요한 밥 양(일반 120g, 4·8번 180g)보다 적으면 2분 동안 밥 420g을 추가 보충(남은 밥에 420g을 더함)한 뒤 작업을 시작합니다. 또한 3의 배수 번째 완성품(3·6·9번 완성품)이 완성된 직후마다 즉시 1분 동안 칼날 자동 세척이 작동합니다(불량 작업 직후에는 작동하지 않음). 기계의 연속 가동 시간(성공 작업 시간, 불량 작업 시간, 칼날 자동 세척 시간의 합)이 7분 이상이 되면 그 작업(3·6·9번 완성품의 경우 칼날 자동 세척까지 마친 시점)이 끝난 직후 2분 동안 모터를 냉각하고 연속 가동 시간을 0분으로 초기화합니다. 단, 밥을 보충하는 2분 동안은 기계가 멈추므로 가동 시간에 포함되지 않으며, 밥 보충이 끝나면 연속 가동 시간도 0분으로 초기화됩니다. 1회째 작업을 시작할 때부터 10번 완성품 김밥이 완성되어 나오는 순간까지 걸리는 총 시간은 몇 분인가요? (정수만 답하세요)",
+      "100부터 999까지의 세 자리 자연수 중에서 숫자 0과 숫자 9를 모두 포함하지 않고 각 자리 숫자가 모두 다른 수를 고를 때, '8의 배수이다'라는 조건과 '각 자리 숫자의 합이 14이다'라는 조건 중 오직 하나만 만족하는(두 조건을 동시에 만족하는 수는 제외) 수는 모두 몇 개인가요? (정수만 답하세요)",
+      "다음 파이썬 3 코드를 실행했을 때 출력되는 결과를 공백과 대괄호까지 정확히 그대로 쓰세요.\nd = {}\ndef f(k, v):\n    d[k] = [v]\n    return [v * 10]\na = d.setdefault(\"x\", f(\"x\", 1))\na.append(2)\nb = d.pop(\"x\", f(\"x\", 3))\nprint(a, b)"
+    ],
+    "answer_key": [
+      "41",
+      "68",
+      "[1, 2] [3]"
+    ],
+    "prompt": "아래 3문제에 번호별로 짧게 답해라.\n1. 자동 김밥 기계로 완성품 김밥 10줄(1번부터 10번까지)을 한 줄씩 순서대로 말아야 합니다. 기계가 김밥을 한 번 마는 과정을 1회 작업이라고 할 때, 기본적으로 1회 작업에는 시간 2분, 밥 120g이 소모되어 완성품 1줄이 나옵니다. 단, 4의 배수 번째 완성품(4·8번 완성품)을 만드는 작업에는 시간 4분, 밥 180g이 소모됩니다. 또한 기계 특성상 작업 횟수가 5의 배수(5회째·10회째 작업 등)일 때는 무조건 불량이 발생하여 1분 동안 밥 60g만 소모되고 완성품이 나오지 않으므로, 곧바로 다음 작업에서 해당 번호의 김밥을 다시 말아야 합니다. 처음에 밥 420g이 채워져 있으며, 각 작업을 시작하기 직전에 남은 밥이 그 작업에서 만들려는 완성품 번호에 필요한 밥 양(일반 120g, 4·8번 180g)보다 적으면 2분 동안 밥 420g을 추가 보충(남은 밥에 420g을 더함)한 뒤 작업을 시작합니다. 또한 3의 배수 번째 완성품(3·6·9번 완성품)이 완성된 직후마다 즉시 1분 동안 칼날 자동 세척이 작동합니다(불량 작업 직후에는 작동하지 않음). 기계의 연속 가동 시간(성공 작업 시간, 불량 작업 시간, 칼날 자동 세척 시간의 합)이 7분 이상이 되면 그 작업(3·6·9번 완성품의 경우 칼날 자동 세척까지 마친 시점)이 끝난 직후 2분 동안 모터를 냉각하고 연속 가동 시간을 0분으로 초기화합니다. 단, 밥을 보충하는 2분 동안은 기계가 멈추므로 가동 시간에 포함되지 않으며, 밥 보충이 끝나면 연속 가동 시간도 0분으로 초기화됩니다. 1회째 작업을 시작할 때부터 10번 완성품 김밥이 완성되어 나오는 순간까지 걸리는 총 시간은 몇 분인가요? (정수만 답하세요)\n2. 100부터 999까지의 세 자리 자연수 중에서 숫자 0과 숫자 9를 모두 포함하지 않고 각 자리 숫자가 모두 다른 수를 고를 때, '8의 배수이다'라는 조건과 '각 자리 숫자의 합이 14이다'라는 조건 중 오직 하나만 만족하는(두 조건을 동시에 만족하는 수는 제외) 수는 모두 몇 개인가요? (정수만 답하세요)\n3. 다음 파이썬 3 코드를 실행했을 때 출력되는 결과를 공백과 대괄호까지 정확히 그대로 쓰세요.\nd = {}\ndef f(k, v):\n    d[k] = [v]\n    return [v * 10]\na = d.setdefault(\"x\", f(\"x\", 1))\na.append(2)\nb = d.pop(\"x\", f(\"x\", 3))\nprint(a, b)",
+    "conditions": "같은 질문 1회, 재시도 0회",
+    "verdict": "GPT·Claude·Gemini 모두 3문항 PASS(3/3)로 동점. 이번 1회 실험만으로 모델 우열을 판단할 수 없음.",
+    "attempted_sets": 3,
+    "models": {
+      "GPT": {
+        "model": "GPT-6.1 Sol High",
+        "answers": "1. 41\r\n2. 68\r\n3. [1, 2] [3]",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      },
+      "Claude": {
+        "model": "Opus 5.5 중간",
+        "answers": "1. 41\r\n2. 68\r\n3. `[1, 2] [3]`",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      },
+      "Gemini": {
+        "model": "4 Argon",
+        "answers": "```python\r\n# Problem 1\r\ndef solve_p1():\r\n    rice = 420\r\n    total_time = 0\r\n    cont_time = 0\r\n    completed = 0\r\n    op_count = 0\r\n    \r\n    while completed < 10:\r\n        op_count += 1\r\n        target_num = completed + 1\r\n        req_rice = 180 if target_num in (4, 8) else 120\r\n        \r\n        # Check rice before starting operation\r\n        if rice < req_rice:\r\n            total_time += 2\r\n            rice += 420\r\n            cont_time = 0\r\n            print(f\"Op {op_count} (Target {target_num}): Refill rice (+2m), rice={rice}, cont_time=0, total_time={total_time}\")\r\n            \r\n        # Perform operation\r\n        if op_count % 5 == 0:\r\n            # Defect\r\n            op_time = 1\r\n            op_rice = 60\r\n            total_time += op_time\r\n            cont_time += op_time\r\n            rice -= op_rice\r\n            print(f\"Op {op_count} (Target {target_num}): DEFECT (+1m, -60g), rice={rice}, cont_time={cont_time}, total_time={total_time}\")\r\n        else:\r\n            # Success\r\n            op_time = 4 if target_num in (4, 8) else 2\r\n            op_rice = req_rice\r\n            total_time += op_time\r\n            cont_time += op_time\r\n            rice -= op_rice\r\n            completed += 1\r\n            print(f\"Op {op_count} (Completed {completed}): SUCCESS (+{op_time}m, -{op_rice}g), rice={rice}, cont_time={cont_time}, total_time={total_time}\")\r\n            \r\n            if completed == 10:\r\n                print(f\"10th completed at total_time = {total_time}\")\r\n                break\r\n                \r\n            if completed in (3, 6, 9):\r\n                total_time += 1\r\n                cont_time += 1\r\n                print(f\"  Blade clean after {completed} (+1m), cont_time={cont_time}, total_time={total_time}\")\r\n                \r\n        # Check continuous time >= 7\r\n        if cont_time >= 7:\r\n            total_time += 2\r\n            cont_time = 0\r\n            print(f\"  Motor cool (+2m), cont_time=0, total_time={total_time}\")\r\n            \r\n    return total_time\r\n\r\nprint(\"P1:\", solve_p1())\r\n\r\n# Problem 2\r\ndef solve_p2():\r\n    count = 0\r\n    for n in range(100, 1000):\r\n        s = str(n)\r\n        if '0' in s or '9' in s:\r\n            continue\r\n        if len(set(s)) != 3:\r\n            continue\r\n        c1 = (n % 8 == 0)\r\n        c2 = (sum(int(d) for d in s) == 14)\r\n        if c1 ^ c2:\r\n            count += 1\r\n    return count\r\n\r\nprint(\"P2:\", solve_p2())\r\n\r\n# Problem 3\r\nd = {}\r\ndef f(k, v):\r\n    d[k] = [v]\r\n    return [v * 10]\r\na = d.setdefault(\"x\", f(\"x\", 1))\r\na.append(2)\r\nb = d.pop(\"x\", f(\"x\", 3))\r\nprint(\"P3:\", f\"{a} {b}\")\r\n\r\n\r\n```\r\n\r\n```text\r\nOp 1 (Completed 1): SUCCESS (+2m, -120g), rice=300, cont_time=2, total_time=2\r\nOp 2 (Completed 2): SUCCESS (+2m, -120g), rice=180, cont_time=4, total_time=4\r\nOp 3 (Completed 3): SUCCESS (+2m, -120g), rice=60, cont_time=6, total_time=6\r\n  Blade clean after 3 (+1m), cont_time=7, total_time=7\r\n  Motor cool (+2m), cont_time=0, total_time=9\r\nOp 4 (Target 4): Refill rice (+2m), rice=480, cont_time=0, total_time=11\r\nOp 4 (Completed 4): SUCCESS (+4m, -180g), rice=300, cont_time=4, total_time=15\r\nOp 5 (Target 5): DEFECT (+1m, -60g), rice=240, cont_time=5, total_time=16\r\nOp 6 (Completed 5): SUCCESS (+2m, -120g), rice=120, cont_time=7, total_time=18\r\n  Motor cool (+2m), cont_time=0, total_time=20\r\nOp 7 (Completed 6): SUCCESS (+2m, -120g), rice=0, cont_time=2, total_time=22\r\n  Blade clean after 6 (+1m), cont_time=3, total_time=23\r\nOp 8 (Target 7): Refill rice (+2m), rice=420, cont_time=0, total_time=25\r\nOp 8 (Completed 7): SUCCESS (+2m, -120g), rice=300, cont_time=2, total_time=27\r\nOp 9 (Completed 8): SUCCESS (+4m, -180g), rice=120, cont_time=6, total_time=31\r\nOp 10 (Target 9): DEFECT (+1m, -60g), rice=60, cont_time=7, total_time=32\r\n  Motor cool (+2m), cont_time=0, total_time=34\r\nOp 11 (Target 9): Refill rice (+2m), rice=480, cont_time=0, total_time=36\r\nOp 11 (Completed 9): SUCCESS (+2m, -120g), rice=360, cont_time=2, total_time=38\r\n  Blade clean after 9 (+1m), cont_time=3, total_time=39\r\nOp 12 (Completed 10): SUCCESS (+2m, -120g), rice=240, cont_time=5, total_time=41\r\n10th completed at total_time = 41\r\nP1: 41\r\nP2: 68\r\nP3: [1, 2] [3]\r\n\r\n\r\n```\r\n\r\n1. **41**\r\n2. **68**\r\n3. **`[1, 2] [3]`**",
+        "tests": {
+          "q1": "PASS",
+          "q2": "PASS",
+          "q3": "PASS"
+        },
+        "excuse": null
+      }
+    },
+    "bridge": {
+      "intro": "세 모델이 3문항을 같이 통과해 동점이라 한 판으론 우열을 못 가르고, 기다리는 밤엔 생수와 초코칩이 어울려요.",
+      "picks": [
+        {
+          "key": "auto_20261028",
+          "label": "💧 채점 기다리는 밤에 아이시스 (아이시스 생수 무라벨)"
+        },
+        {
+          "key": "auto_20261028_2",
+          "label": "🍪 퇴근 후 기다리는 틈의 촉촉한초코칩 (촉촉한초코칩)"
+        }
+      ]
+    }
   }
 ]
