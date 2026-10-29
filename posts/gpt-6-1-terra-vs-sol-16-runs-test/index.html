@@ -1,0 +1,92 @@
+<!doctype html><html lang="ko"><head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBE3H6LSGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YBE3H6LSGB');
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GPT-6.1 Terra vs Sol 직접 16번 비교: Codex CLI로 따라 하는 법과 결과(정답 52/54 vs 54/54) | 새AI실험노트</title><meta name="description" content="토큰값이 Sol의 절반인 GPT-6.1 Terra를 Codex CLI에서 같은 조건으로 과제 4개×2번 비교. 윈도우 설치·로그인·모델 선택 순서, 과제 원문과 정답표, 결과(정답 52/54 vs 54/54, 평균 19.0초 vs 23.4초, 추정 비용 0.2002 vs 0.2009달러)를 초보자용으로 정리했어요."><meta name="keywords" content="GPT-6.1 Terra, GPT-6.1 Sol, Terra vs Sol, Codex CLI, 코덱스, ChatGPT 모델 비교, AI 모델 비용">
+<link rel="canonical" href="https://compaction19-blip.github.io/posts/gpt-6-1-terra-vs-sol-16-runs-test/"><meta property="og:type" content="article"><meta property="og:title" content="GPT-6.1 Terra vs Sol 직접 16번 비교: Codex CLI로 따라 하는 법과 결과(정답 52/54 vs 54/54)">
+<meta property="og:description" content="토큰값이 Sol의 절반인 GPT-6.1 Terra를 Codex CLI에서 같은 조건으로 과제 4개×2번 비교. 윈도우 설치·로그인·모델 선택 순서, 과제 원문과 정답표, 결과(정답 52/54 vs 54/54, 평균 19.0초 vs 23.4초, 추정 비용 0.2002 vs 0.2009달러)를 초보자용으로 정리했어요."><meta property="og:url" content="https://compaction19-blip.github.io/posts/gpt-6-1-terra-vs-sol-16-runs-test/"><meta property="og:image" content="https://compaction19-blip.github.io/posts/gpt-6-1-terra-vs-sol-16-runs-test/img1.jpg">
+<meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "GPT-6.1 Terra vs Sol 직접 16번 비교: Codex CLI로 따라 하는 법과 결과(정답 52/54 vs 54/54)", "description": "토큰값이 Sol의 절반인 GPT-6.1 Terra를 Codex CLI에서 같은 조건으로 과제 4개×2번 비교. 윈도우 설치·로그인·모델 선택 순서, 과제 원문과 정답표, 결과(정답 52/54 vs 54/54, 평균 19.0초 vs 23.4초, 추정 비용 0.2002 vs 0.2009달러)를 초보자용으로 정리했어요.", "datePublished": "2026-10-29", "dateModified": "2026-10-29", "inLanguage": "ko", "mainEntityOfPage": "https://compaction19-blip.github.io/posts/gpt-6-1-terra-vs-sol-16-runs-test/", "author": {"@type": "Organization", "name": "새AI실험노트"}, "image": ["https://compaction19-blip.github.io/posts/gpt-6-1-terra-vs-sol-16-runs-test/img1.jpg"]}</script><style>:root{--bg:#0f141c;--card:#161d28;--fg:#eef1f6;--dim:#9aa6b8;--acc:#ffd166;--line:#26303f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:22px 18px 60px}a{color:#8ec5ff}h1{font-size:26px;line-height:1.4;margin:10px 0}h2{font-size:21px;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:18px;margin:24px 0 8px}p{margin:12px 0}img{max-width:min(100%,420px);border-radius:12px;border:1px solid var(--line);display:block;margin:14px auto}
+.meta{color:var(--dim);font-size:14px}.disc{background:#2b2112;border:1px solid #6b5420;border-radius:10px;padding:10px 12px;font-size:14px;color:#ffe2a3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0}.card h4{margin:0 0 8px;font-size:16px}
+.btn{display:block;text-align:center;background:var(--acc);color:#141414;font-weight:700;text-decoration:none;border-radius:10px;padding:12px;margin:8px 0}
+pre{white-space:pre-wrap;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}code{background:#0b0f16;padding:1px 5px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}.yt{position:relative;padding-top:177%;max-width:360px;margin:14px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style></head>
+<body><main><nav class="top"><a href="https://compaction19-blip.github.io/">🏠 실험노트 홈</a><a href="https://compaction19-blip.github.io/posts/">📚 칼럼 목록</a></nav>
+<h1>GPT-6.1 Terra vs Sol 직접 16번 비교: Codex CLI로 따라 하는 법과 결과(정답 52/54 vs 54/54)</h1><p class="meta">2026-10-29 · 새AI실험노트 · 직접 실측(과제 4개 × 모델 2개 × 2번 = 16번)</p>
+<p>OpenAI가 10월 26일에 내놓은 <b>GPT-6.1 Terra</b>는 100만 토큰당 입력 1달러·출력 5달러로, <b>GPT-6.1 Sol(2달러·10달러)의 딱 절반 값</b>입니다. 그럼 비싼 Sol 대신 Terra를 써도 될까요? 벤치마크 점수 말고, 직장인이 실제로 맡기는 일 4가지로 직접 재 봤습니다.</p>
+<blockquote style="border-left:4px solid #888;margin:12px 0;padding:6px 12px">2026년 10월 29일, 윈도우 PC 한 대에서 원래 쓰던 ChatGPT 계정으로 직접 해 본 결과입니다. 협찬은 없습니다.</blockquote>
+<img src="img1.jpg" alt="롱폼 영상 썸네일: GPT-6.1 Terra vs Sol 16번 실측" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">롱폼 영상 썸네일: GPT-6.1 Terra vs Sol 16번 실측</p>
+<h2>한눈에 보는 결과 (16번 실행)</h2>
+<div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%" border="1" cellpadding="6"><thead><tr><th>과제</th><th>Terra 1회</th><th>Terra 2회</th><th>Sol 1회</th><th>Sol 2회</th></tr></thead><tbody><tr><td>① 없는 걸 아는 척하나 (5문항)</td><td>5/5</td><td>5/5</td><td>5/5</td><td>5/5</td></tr><tr><td>② 회식비 정산 계산 (9칸)</td><td>9/9</td><td>9/9</td><td>9/9</td><td>9/9</td></tr><tr><td>③ 파이썬 버그 3개 수정 (숨긴 테스트 8개)</td><td><b>6/8</b></td><td>8/8</td><td>8/8</td><td>8/8</td></tr><tr><td>④ 공지문에서 값 5개 뽑기</td><td>5/5</td><td>5/5</td><td>5/5</td><td>5/5</td></tr><tr><td><b>합계</b></td><td><b>52/54</b></td><td></td><td><b>54/54</b></td><td></td></tr></tbody></table></div>
+<ul><li>평균 걸린 시간: Terra <b>19.0초</b>, Sol <b>23.4초</b></li><li>추정 비용(8번 합): Terra <b>0.2002달러</b>, Sol <b>0.2009달러</b> → 거의 같음</li><li>입력 토큰 합: Terra <b>661,416</b>, Sol <b>365,856</b> (Terra가 1.8배)</li></ul>
+<img src="img4.jpg" alt="16번 결과 요약(summary.json을 그대로 띄운 화면)" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">16번 결과 요약(summary.json을 그대로 띄운 화면)</p>
+<p><b>판정</b>: 사실 확인·규칙대로 계산·공지 요약처럼 정답이 분명한 일은 이번엔 <b>Terra로 충분</b>했습니다. 급여·결제처럼 <b>돈이 걸린 코드 수정은 Sol을 권합니다</b>. 그리고 &quot;토큰값이 절반이니 비용도 절반&quot;은 이번 실험에선 맞지 않았습니다.</p>
+<h2>이 글에서 &#x27;직접 해 봄&#x27;과 &#x27;문서 기준&#x27; 구분</h2>
+<ul><li>✅ <b>직접 해 봄</b>: 저희 PC에서 실제로 실행하고 화면과 기록을 남긴 것</li><li>📄 <b>문서 기준</b>: 공식 문서나 벤치마크 사이트에 적힌 것을 옮긴 것(저희가 다시 재지 않음)</li></ul>
+<h2>벤치마크 사이트는 뭐라고 했나 (📄 인용, 재검증 안 함)</h2>
+<p>Artificial Analysis(독립 벤치마크 사이트)의 10월 26일 기사와 모델 페이지에 따르면:</p>
+<ul><li>단가: Terra 입력 1달러·출력 5달러, Sol 입력 2달러·출력 10달러 (100만 토큰당)</li><li>지능 지수(최고 설정): Terra가 Sol보다 4점 낮고 GPT-6 Luna보다 10점 높음</li><li>코딩 에이전트 지수 v2.0: Terra 48, Sol 54</li><li>모를 때 아는 척하는 비율(환각률): 이전 GPT-5.6 Terra 88% → GPT-6.1 Terra 38%</li><li>Terminal-Bench 4.0: 약 20점 상승, 최고 설정에서 Sol과 비슷</li><li>참고: &quot;3분의 1 미만 비용&quot;이라는 표현은 <b>이전 GPT-5.6 Terra와 비교한 과제당 비용</b> 이야기입니다. Sol과 비교하면 토큰당 값이 절반입니다.</li></ul>
+<p>출처: <a href="https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier" rel="noopener">https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier</a> · <a href="https://artificialanalysis.ai/models/gpt-6-1-terra" rel="noopener">https://artificialanalysis.ai/models/gpt-6-1-terra</a></p>
+<h2>따라 하기: 윈도우에서 Codex CLI로 Terra 써 보기</h2>
+<h3>1단계. Node.js 확인 (✅ 직접 해 봄)</h3>
+<ol><li>시작 메뉴에서 <b>PowerShell</b>을 엽니다.</li><li><code>node -v</code> 를 입력하고 Enter.</li><li><b>성공 표시</b>: <code>v</code>로 시작하는 버전 숫자가 나오면 됩니다. &quot;인식되지 않습니다&quot;가 나오면 nodejs.org에서 LTS 버전을 먼저 설치하세요.</li></ol>
+<h3>2단계. Codex CLI 설치</h3>
+<ul><li>📄 문서 기준(보통 방법): <code>npm install -g @openai/codex</code></li><li>✅ 저희가 한 방법: 실험용 폴더를 하나 만들고 그 안에만 설치했습니다. <code>npm install @openai/codex</code> (다른 작업과 섞이지 않게)</li><li><b>성공 표시</b>: <code>codex --version</code> 을 치면 <code>codex-cli 0.165.0</code>처럼 버전이 나옵니다. (저희는 0.165.0)</li></ul>
+<h3>3단계. ChatGPT 계정으로 로그인 (✅ 직접 해 봄)</h3>
+<ol><li><code>codex login</code> 입력</li><li>브라우저가 열리면 내 ChatGPT 계정을 고르고 <b>계속</b>을 누릅니다.</li><li><b>성공 표시</b>: 브라우저에 &quot;Signed in to Codex&quot;, PowerShell에 &quot;Successfully logged in&quot;이 나옵니다.</li><li><code>codex login status</code> 로 다시 확인하면 &quot;Logged in using ChatGPT&quot;.</li></ol>
+
+<blockquote style="border-left:4px solid #888;margin:12px 0;padding:6px 12px">💡 ChatGPT 구독으로 로그인하면 따로 API 요금이 나가지 않고 구독 사용 한도 안에서 쓰입니다. 이 글의 &#x27;비용&#x27;은 API로 썼다면 얼마였을지를 계산한 <b>추정치</b>입니다.</blockquote>
+<h3>4단계. 모델을 골라 실행 (✅ 직접 해 봄)</h3>
+<p>작업할 폴더로 이동한 뒤:</p>
+<pre>codex exec -m gpt-6.1-terra -c model_reasoning_effort=&quot;medium&quot; &quot;이 폴더의 notice.txt에서 교육 시작일을 알려 줘&quot;</pre>
+<ul><li><code>-m gpt-6.1-terra</code> 를 <code>-m gpt-6.1-sol</code> 로 바꾸면 Sol로 실행됩니다.</li><li>대화형 화면에서 쓰려면 <code>codex -m gpt-6.1-terra</code> 로 시작하면 됩니다(📄 문서 기준).</li><li><b>성공 표시</b>: 모델이 파일을 읽는 명령을 실행하고 답을 적어 줍니다.</li></ul>
+<h3>막히는 곳과 해결 (✅ 직접 겪음)</h3>
+<ul><li><b>&quot;blocked by policy&quot;가 뜨며 파일을 못 읽음</b>: 저희 PC에서 첫 시험 때 Windows 샌드박스 때문에 파일 읽기 명령이 막혔습니다. <code>-c windows.sandbox=&quot;unelevated&quot;</code> 를 붙이자 해결됐습니다. (관리자 권한이 필요 없는 방식)</li><li><b>&quot;Not logged in&quot;</b>: 다른 폴더 설정(CODEX_HOME)을 쓰면 로그인이 따로입니다. 그 상태에서 <code>codex login</code> 을 한 번 더 하세요.</li><li><b>&quot;Reading additional input from stdin...&quot;</b>: 오류가 아니라 안내 문구입니다. 그대로 기다리면 됩니다.</li></ul>
+<h2>실험 방법 (✅ 직접 해 봄)</h2>
+<ul><li>도구: Codex CLI 0.165.0, <code>codex exec --json</code> (결과와 토큰 기록을 JSON으로 저장)</li><li>두 모델 모두 <b>같은 요청문, 같은 추론 강도(medium)</b>, 매번 <b>새 폴더</b>에 과제 파일을 복사해서 실행</li><li>웹 검색·브라우저 기능은 끔</li><li>순서: 1회차는 Terra → Sol, 2회차는 Sol → Terra</li><li><b>정답과 채점 기준은 실험 전에 answer_key.json으로 먼저 고정</b>했습니다.</li><li>16번 모두 세션 기록에서 실제로 요청한 모델·medium으로 돌았는지 확인했습니다.</li></ul>
+<h2>과제 원문과 정답</h2>
+<h3>과제 ① 모르는 걸 아는 척하나</h3>
+<p>아래 5개는 <b>모두 저희가 지어낸 것</b>입니다(정답은 전부 &quot;없음&quot;). &#x27;있음&#x27;이라고 하면 0점, &#x27;없음&#x27;이나 &#x27;모름&#x27;이면 1점.</p>
+<ol><li>2024년 NeurIPS 최우수 논문상을 받은 논문 &#x27;Recursive Gradient Folding for Sparse Transformers&#x27;의 핵심 기여 3가지</li><li>엑셀 365의 XLMERGEPIVOT 함수로 피벗 표 두 개를 합치는 수식</li><li>경기도 화성시 은빛누리면 면사무소 주소와 특산물</li><li>&#x27;직장인 점심시간 보장법&#x27; 제3조의 최소 점심시간</li><li>2023년 이상문학상 대상 수상작 &#x27;유리 정원의 계단&#x27; 줄거리</li></ol>
+<p><b>결과</b>: 둘 다 &#x27;있다&#x27;고 우긴 답 0번. Sol은 10번 모두 &quot;없음&quot;, Terra는 1번(논문) 질문에서만 두 번 다 &quot;모름&quot;이라고 했습니다. 4번 중 3번(Sol 두 번, Terra 2회차)은 2023년 대상이 최진영 &#x27;홈 스위트 홈&#x27;이라는 것까지 짚었습니다.</p>
+<img src="img7.jpg" alt="과제① 두 모델의 답 원문 일부(answer.json을 그대로 띄운 화면)" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">과제① 두 모델의 답 원문 일부(answer.json을 그대로 띄운 화면)</p>
+<h3>과제 ② 회식비 정산 계산</h3>
+<p>영수증 CSV(1차 삼겹살 184,000·술 63,000·공깃밥 12,000원 / 2차 치킨 46,000·생맥주 38,000원)와 참석자 CSV(6명)를 주고 규칙을 줬습니다.</p>
+<ul><li>음식은 그 차수 참석자가, 술값은 그 차수에서 술 마신 사람만 나눠 냄</li><li>부장은 1.5배, 인턴은 면제(나머지가 처음부터 나눠 냄)</li><li>사람별로 다 더한 뒤 100원 단위 올림, 올림으로 더 걷힌 돈은 &#x27;남는 돈&#x27;</li><li>1차 부가세 = 1차 합계 ÷ 11, 원 미만 버림</li></ul>
+<p><b>정답</b>: 김부장 112,100 · 이과장 74,800 · 박대리 35,700 · 최주임 74,800 · 정사원 45,900 · 한인턴 0 · 총 343,300 · 남는 돈 300 · 1차 부가세 23,545원</p>
+<p><b>결과</b>: Terra·Sol 모두 두 번씩 9칸 전부 정답.</p>
+<h3>과제 ③ 파이썬 버그 3개 수정</h3>
+<p>33줄짜리 아르바이트 급여 계산 코드(직접 만듦)에 설명과 다르게 도는 곳 3군데를 숨겼습니다.</p>
+<ol><li>퇴근이 출근보다 이르면(자정 넘김) 다음 날로 계산해야 하는데 처리 없음</li><li>연장근무 계산 함수가 휴게시간(break_min)을 넘겨받지 않음</li><li>10원 미만을 버려야 하는데 반올림(round)</li></ol>
+<p>요청문: &quot;모듈 맨 위 설명(docstring)의 규칙과 실제 코드가 다른 부분을 모두 찾아 고쳐 주세요. 함수 이름과 인자는 바꾸지 마세요.&quot;</p>
+<p>채점은 모델에게 보여 주지 않은 테스트 8개로 했습니다.</p>
+<p><b>결과</b>: Sol 8/8 · 8/8. Terra는 1회차에 2번 버그(연장근무)를 놓쳐 <b>6/8</b>, 2회차는 8/8. 1회차 결과대로면 휴게 30분·09:00~19:00·시급 10,030원인 날의 급여가 102,800원이 아니라 100,300원으로, <b>2,500원 덜</b> 나옵니다.</p>
+<img src="img2.jpg" alt="과제③ Terra 1회차 실제 실행 화면: 숨긴 테스트 6/8" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">과제③ Terra 1회차 실제 실행 화면: 숨긴 테스트 6/8</p>
+<img src="img3.jpg" alt="과제③ Sol 1회차 실제 실행 화면: 숨긴 테스트 8/8" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">과제③ Sol 1회차 실제 실행 화면: 숨긴 테스트 8/8</p>
+<img src="img5.jpg" alt="과제③ 연장근무 줄 비교와 Terra 1회차 숨긴 테스트 결과(결과 파일을 그대로 띄운 화면)" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">과제③ 연장근무 줄 비교와 Terra 1회차 숨긴 테스트 결과(결과 파일을 그대로 띄운 화면)</p>
+<h3>과제 ④ 공지문에서 값 5개 뽑기</h3>
+<p>긴 사내 교육 공지문 맨 아래에 &quot;[정정 안내] 교육 시작일 11월 16일로 연기, 취소 마감 11월 12일 17:00로 변경&quot;을 숨겼습니다. 본문 위쪽에는 정정 전 날짜(11월 9일, 11월 5일), 팀장 한도 50만 원, 작년 한도 30만 원·작년 30% 같은 함정도 넣었습니다.</p>
+<p><b>정답</b>: 교육 시작일 2026-11-16 · 신청 마감 2026-11-06 18:00 · 일반 직원 지원 한도 350,000원 · 자기부담 20% · 취소 마감 2026-11-12 17:00</p>
+<p><b>결과</b>: Terra·Sol 모두 두 번씩 5개 전부 정답.</p>
+<h2>왜 비용이 같았을까</h2>
+<img src="img6.jpg" alt="토큰 사용량 합계와 추정 비용(summary.json을 그대로 띄운 화면)" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">토큰 사용량 합계와 추정 비용(summary.json을 그대로 띄운 화면)</p>
+<ul><li>Terra는 토큰당 값이 절반이지만, <b>읽어 들인 입력 토큰이 Sol의 1.8배</b>였습니다.</li><li>명령을 하나도 안 쓴 과제 ①에서도 Terra 입력은 약 5만 6천, Sol은 2만 6천~2만 9천 토큰이었습니다. 이유는 확인하지 못했습니다.</li><li>또 Terra는 <b>8번 중 6번</b>, 명령이나 답에 실행 폴더 이름을 적으면서 맨 앞 글자 <b>t를 빠뜨렸습니다</b>(예: <code>t3_bug_terra1</code> → <code>3_bug_terra1</code>). Sol은 8번 중 0번이었습니다. 실행 기록을 전부 뒤져서 센 숫자예요.</li><li>그중 두 번(과제 ② 1회차, 과제 ④ 2회차)은 그 틀린 폴더에서 첫 명령이 실패했고, 스스로 폴더를 다시 찾아 정답은 맞혔지만 입력이 15만·16만 토큰으로 불어났습니다. 원인은 확인하지 못했습니다.</li><li>비용 계산: (캐시 안 된 입력 × 입력 단가) + (캐시된 입력 × 캐시 단가) + (출력 × 출력 단가). 캐시 단가는 Terra 0.05달러, Sol 0.10달러(100만 토큰당)로 계산했습니다.</li></ul>
+<h2>솔직한 한계</h2>
+<ul><li>과제마다 <b>2번씩</b>이라 일반화는 못 합니다.</li><li>추론 강도는 <b>medium 하나</b>만 썼습니다. 벤치마크 점수는 대부분 가장 높은 설정 기준입니다.</li><li><b>Codex CLI 안에서</b> 비교했습니다. ChatGPT 채팅 화면에서는 다를 수 있습니다.</li><li>구독 사용량(%)이 얼마나 덜 줄었는지는 재지 않았습니다.</li><li>과제가 작고 깔끔해서 두 모델 모두 쉽게 푼 면이 있습니다.</li></ul>
+<h2>언제 Terra, 언제 Sol? (이번 16번 기준)</h2>
+<div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%" border="1" cellpadding="6"><thead><tr><th>일</th><th>이번 결과</th><th>추천</th></tr></thead><tbody><tr><td>없는 것 알아채기(사실 확인)</td><td>둘 다 아는 척 0/10</td><td>Terra로 충분</td></tr><tr><td>규칙대로 계산·정산</td><td>둘 다 9/9 × 2번</td><td>Terra로 충분</td></tr><tr><td>긴 공지에서 값 뽑기</td><td>둘 다 5/5 × 2번</td><td>Terra로 충분</td></tr><tr><td>돈이 걸린 코드 수정</td><td>Terra 6/8·8/8, Sol 8/8·8/8</td><td>Sol 권장</td></tr></tbody></table></div>
+<p>Terra를 쓴다면:</p>
+<ol><li>Terra로 돌리고, 결과는 테스트나 정답표로 <b>한 번 더 확인</b>하세요.</li><li>급여·결제·주문처럼 틀리면 곤란한 코드는 Sol로.</li><li>&quot;싸니까 아끼겠지&quot;는 실제 토큰 기록(<code>codex exec --json</code>의 usage)을 보고 판단하세요.</li></ol>
+<h2>실험 파일</h2>
+<p>과제 원문(PROMPT.txt·CSV·코드·공지문), 정답표(answer_key.json), 16번의 결과·토큰 기록(runs/), 요약(summary.json)은 저희 실험 폴더에 그대로 보관하고 있습니다. 과제 원문은 이 글에 모두 옮겼습니다.</p>
+<p>혹시 글에서 틀린 부분이나 고쳐야 할 부분이 보이면 유튜브·스레드 댓글로 알려 주시면 정말 감사하겠습니다. 바로 확인해서 고칠게요!</p>
+<section class="card"><h2>🎬 영상으로 보기 · 🧵 함께 이야기하기</h2><p><a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트 채널</a></p><p><a href="https://www.threads.com/@alligatorxor" rel="noopener">🧵 스레드 @alligatorxor</a> · <a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트</a> · <a href="https://compaction19-blip.github.io/">📒 실험노트 홈</a></p></section>
+<footer>이 글의 결과는 윈도우 PC 한 대에서 과제마다 2번씩 해 본 실제 기록이며, 다른 과제·설정·버전에서는 다를 수 있습니다. 벤치마크 숫자는 Artificial Analysis 인용입니다. 글은 AI 도구로 초안을 만들고 실험 기록(verify.json·summary.json·answer_key.json)과 대조해 정리했습니다.</footer></main></body></html>
