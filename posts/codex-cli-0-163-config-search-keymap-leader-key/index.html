@@ -20,10 +20,11 @@ h3{font-size:18px;margin:24px 0 8px}p{margin:12px 0}img{max-width:min(100%,420px
 .btn{display:block;text-align:center;background:var(--acc);color:#141414;font-weight:700;text-decoration:none;border-radius:10px;padding:12px;margin:8px 0}
 pre{white-space:pre-wrap;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}code{background:#0b0f16;padding:1px 5px;border-radius:5px}
 table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}.yt{position:relative;padding-top:177%;max-width:360px;margin:14px auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style></head>
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style><script>document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[rel~="sponsored"]'):null;if(a&&window.gtag)gtag('event','affiliate_click',{link_url:a.href,transport_type:'beacon'});},true);</script></head>
 <body><main><nav class="top"><a href="https://compaction19-blip.github.io/">🏠 실험노트 홈</a><a href="https://compaction19-blip.github.io/posts/">📚 칼럼 목록</a></nav>
 <p class="disc">이 포스팅은 쿠팡 파트너스 및 토스쇼핑 쉐어링크 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><h1>Codex 설정 검색은 /config, 단축키는 /keymap: 0.163.0 윈도우에서 직접 써 봄</h1><p class="meta">2026-10-22 · 새AI실험노트 · 직접 확인 기록</p>
-<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/TIRVjeWfgh0" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><h2>한눈에 보기</h2>
+<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/TIRVjeWfgh0" title="실험 쇼츠" allowfullscreen loading="lazy"></iframe></div><!--quick-table--><section class="card"><h2>명령어·설정·실패 해결표</h2><div style="overflow-x:auto"><table><thead><tr><th>구분</th><th>내용</th><th>해결</th></tr></thead><tbody><tr><td>설정</td><td><code>/config</code></td><td></td></tr><tr><td>명령어</td><td><code>/keymap</code></td><td></td></tr><tr><td>명령어</td><td><code>npm install -g @openai/codex@0.163.0</code></td><td></td></tr><tr><td>명령어</td><td><code>codex --version</code></td><td></td></tr></tbody></table></div></section>
+<h2>한눈에 보기</h2>
 <ul><li>Codex CLI(터미널에서 쓰는 OpenAI의 AI 코딩 도구) 0.163.0부터 <code>/config</code>로 설정을 검색하고, 지원되는 설정은 바로 바꿀 수 있습니다.</li><li><code>/keymap</code>에서는 단축키 묶음의 시작 키인 리더 키를 바꿀 수 있습니다. 기본값은 Ctrl+X입니다.</li><li>윈도우 PC 한 대에서 설정 검색, 켜고 끄기, 리더 키 변경과 원래대로 되돌리기까지 직접 해 봤습니다. 다만 일부만 확인했기 때문에 확인 수준은 <b>partial(부분 확인)</b> 입니다.</li></ul>
 <h2>시작 전에 확인할 것</h2>
 <ul><li><b>출시일</b>: [GitHub 공식 릴리스](https://github.com/openai/codex/releases/tag/rust-v0.163.0)를 기준으로 2026-10-15 21:30(UTC)에 나왔습니다. 한국 시간으로는 <b>2026-10-16 오전 6:30</b>입니다.</li><li><b>운영체제(OS)</b>: 공식 문서는 Windows·macOS·Linux 설치 방법을 모두 안내합니다. 우리가 직접 해 본 환경은 <b>Windows x64 한 대뿐</b>입니다.</li><li><b>설치 방법</b>: npm(Node.js 프로그램을 내려받는 도구), Homebrew, 독립 설치 파일 중에서 고를 수 있습니다([공식 README](https://github.com/openai/codex/blob/rust-v0.163.0/README.md)). Node.js가 꼭 필요한 건 npm으로 설치할 때뿐입니다. npm 패키지 0.163.0은 Node.js 16 이상이 필요합니다.</li><li><b>요금</b>: 프로그램은 Apache-2.0 공개 소스라서 설치는 무료입니다. 하지만 AI를 쓰는 비용은 따로입니다. [OpenAI 도움말](https://help.openai.com/en/articles/11369540-codex-in-chatgpt)에 따르면 Codex는 Free·Go를 포함한 ChatGPT 요금제에 들어 있고, 요금제마다 사용 한도가 다릅니다.</li><li><b>계정</b>: ChatGPT 계정으로 로그인하면 됩니다. API 키는 꼭 필요하지 않습니다. API 키로 로그인하면 OpenAI Platform 표준 요금으로 따로 청구됩니다([공식 인증 문서](https://learn.chatgpt.com/docs/auth?surface=cli)).</li></ul>
@@ -35,11 +36,11 @@ table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px 
 <pre>   codex --version</pre>
 <ul><li><b>성공 확인</b>: 출력된 버전이 0.163.0이면 됩니다.</li></ul>
 <p><b>방법 B: 우리가 쓴 폴더 안 설치</b> ✅ 직접 해 봄</p>
-<p>기존 설정을 건드리지 않으려고 빈 시험 폴더에만 설치했습니다. 이 방법은 관리자 권한이 필요 없습니다.</p>
+<p>프로그램은 빈 시험 폴더에만 설치했습니다. 폴더 안에 설치해도 설정은 분리되지 않습니다. 그래서 기존 설정을 건드리지 않도록 실행 전에 CODEX_HOME·SQLITE_HOME·TEMP를 이 시험 폴더로 지정했습니다. 이 방법은 관리자 권한이 필요 없습니다.</p>
 <p>1. PowerShell에서 빈 폴더를 하나 만들고 <code>cd</code>로 그 폴더에 들어갑니다. 2. 그 폴더에만 설치합니다.</p>
 <pre>   npm install --prefix . --no-audit --no-fund @openai/codex@0.163.0</pre>
 <ul><li><b>성공 확인</b>: <code>added 2 packages</code>가 보이면 됩니다. 우리 PC에서는 이 명령 한 번에 21.072초 걸렸습니다.</li></ul>
-<p>3. 실행할 때는 보통 <code>.\node_modules\.bin\codex.cmd --version</code>을 씁니다.</p>
+<p>3. 실행할 때는 보통 <code>.\node_modules\.bin\codex.cmd --version(버전 확인)과 옵션 없는 .\node_modules\.bin\codex.cmd(대화 화면 실행)</code>을 씁니다.</p>
 <ul><li><b>막히면</b>: 우리 PC에서는 이 <code>codex.cmd</code> 래퍼(실제 프로그램을 대신 불러 주는 작은 실행 파일)가 경로 오류로 실패했습니다. 아래처럼 설치된 <code>codex.exe</code>를 직접 실행하니 잘 됐습니다.</li></ul>
 <pre>   $codex = Get-ChildItem .\node_modules\@openai\codex-win32-x64 -Recurse -Filter codex.exe | Select-Object -First 1 -ExpandProperty FullName
    &amp; $codex --version
@@ -63,7 +64,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px 
 <ul><li><b>성공 확인</b>: 153 actions, 0 customized, 6 unbound가 표시되고 Leader에 <code>ctrl-x</code>가 보입니다.</li></ul>
 <p>2. <code>leader</code>를 검색하고 Enter를 누른 뒤 Replace binding을 고르고 원하는 키를 누릅니다. 우리는 Ctrl+B를 눌렀습니다.</p>
 <ul><li><b>성공 확인</b>: Leader가 <code>ctrl-b</code>로 바뀌고 Customized (1)이 표시됩니다.</li></ul>
-<p>3. 시험이 끝나면 Remove custom binding을 고르거나, 바꾼 설정을 지워서 기본값으로 되돌립니다.</p>
+<p>3. 시험이 끝나면 Remove custom binding을 고르거나, 격리 설정 폴더의 config.toml에서 이번에 추가된 tui.keymap.global.leader 항목 한 줄만 지워서 기본값으로 되돌립니다.</p>
 <ul><li><b>성공 확인</b>: Leader가 다시 <code>ctrl-x</code>이고 Customized (0)이 표시됩니다.</li></ul>
 <img src="img3.jpg" alt="Codex 설정 검색은 /config, 단축키는 /keymap: 0.163.0 윈도우에서 직접 써 봄 - 실제 Codex 0.163.0 /config에서 tips 검색 후 Tips Off 변경. 26px 콘솔 글자. 이후 On으로 원복 확인." loading="lazy"><p class="meta" style="text-align:center">실제 Codex 0.163.0 /config에서 tips 검색 후 Tips Off 변경. 26px 콘솔 글자. 이후 On으로 원복 확인. (영상 캡처)</p>
 <h2>우리가 직접 해 본 결과</h2>
