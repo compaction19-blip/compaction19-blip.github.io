@@ -37,7 +37,7 @@ table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px 
 <img src="img1.jpg" alt="Claude Code 작업 폴더 밖 쓰기 막는 새 설정, 직접 확인한 범위 - 오늘 쇼츠 첫 장면" loading="lazy"><p class="meta" style="text-align:center">오늘 쇼츠 첫 장면 (영상 캡처)</p>
 <h2>사용 방법</h2>
 <p>1. <b>설정 파일 찾고 백업하기</b> — 📄 공식 문서 기준 ① 프로젝트용은 <code>.claude/settings.json</code>, 사용자 전체용은 <code>~/.claude/settings.json</code>, 나만 쓰는 로컬용은 <code>.claude/settings.local.json</code>이에요. 고치기 전에 꼭 복사본을 만들어 두세요. ② 파일을 찾았으면 다음 단계로 넘어가요. ③ 기존 내용을 통째로 덮어쓰지 마세요.</p>
-<p>2. <b>permissions에 한 줄 합치기</b> — 📄 공식 문서 기준 (JSON 구문만 ✅ 직접 해 봄) ① 이미 있는 <code>permissions</code> 객체 안에 아래 줄을 넣어요.</p>
+<p>2. <b>permissions에 한 줄 합치기</b> — 📄 공식 문서 기준 (JSON 구문만 ✅ 직접 해 봄) ① 이미 있는 <code>permissions</code> 객체 안에 "blockWritesOutsideWorkingDirectories": true 한 줄만 합쳐 넣어요. 앞 항목이 있으면 그 끝에 쉼표를 붙이세요. 아래 예시는 바깥 중괄호까지 포함한 전체 구조라서, 설정 파일에 permissions가 아예 없을 때만 참고하세요.</p>
 <pre>   {
      &quot;permissions&quot;: {
        &quot;blockWritesOutsideWorkingDirectories&quot;: true
