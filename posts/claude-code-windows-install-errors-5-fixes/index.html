@@ -1,0 +1,127 @@
+<!doctype html><html lang="ko"><head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBE3H6LSGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YBE3H6LSGB');
+</script><script>document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[rel~="sponsored"]'):null;if(a&&window.gtag)gtag('event','affiliate_click',{link_url:a.href,transport_type:'beacon'});},true);</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Code 윈도우 설치 오류 5가지 해결법: 직접 일으켜 보고 다 고친 순서(초보자용) | 새AI실험노트</title><meta name="description" content="윈도우에서 Claude Code(클로드 코드) 설치·첫 실행 때 막히는 오류 5가지(&#x27;irm&#x27; is not recognized, &#x27;claude&#x27; is not recognized, running scripts is disabled, Not logged in, Invalid API key)를 직접 재현하고 고친 순서. 창 구별법, PATH, claude.cmd, /login, 남은 API 키 변수 확인까지 초보자용으로 정리했어요."><meta name="keywords" content="Claude Code 설치, 클로드 코드 설치, Claude Code 윈도우, claude is not recognized, running scripts is disabled, Claude Code 오류, Not logged in, Invalid API key">
+<link rel="canonical" href="https://compaction19-blip.github.io/posts/claude-code-windows-install-errors-5-fixes/"><meta property="og:type" content="article"><meta property="og:title" content="Claude Code 윈도우 설치 오류 5가지 해결법: 직접 일으켜 보고 다 고친 순서(초보자용)">
+<meta property="og:description" content="윈도우에서 Claude Code(클로드 코드) 설치·첫 실행 때 막히는 오류 5가지(&#x27;irm&#x27; is not recognized, &#x27;claude&#x27; is not recognized, running scripts is disabled, Not logged in, Invalid API key)를 직접 재현하고 고친 순서. 창 구별법, PATH, claude.cmd, /login, 남은 API 키 변수 확인까지 초보자용으로 정리했어요."><meta property="og:url" content="https://compaction19-blip.github.io/posts/claude-code-windows-install-errors-5-fixes/"><meta property="og:image" content="https://compaction19-blip.github.io/posts/claude-code-windows-install-errors-5-fixes/img1.jpg">
+<meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Claude Code 윈도우 설치 오류 5가지 해결법: 직접 일으켜 보고 다 고친 순서(초보자용)", "description": "윈도우에서 Claude Code(클로드 코드) 설치·첫 실행 때 막히는 오류 5가지('irm' is not recognized, 'claude' is not recognized, running scripts is disabled, Not logged in, Invalid API key)를 직접 재현하고 고친 순서. 창 구별법, PATH, claude.cmd, /login, 남은 API 키 변수 확인까지 초보자용으로 정리했어요.", "datePublished": "2026-10-31", "dateModified": "2026-10-31", "inLanguage": "ko", "mainEntityOfPage": "https://compaction19-blip.github.io/posts/claude-code-windows-install-errors-5-fixes/", "author": {"@type": "Organization", "name": "새AI실험노트"}, "image": ["https://compaction19-blip.github.io/posts/claude-code-windows-install-errors-5-fixes/img1.jpg"]}</script><style>:root{--bg:#0f141c;--card:#161d28;--fg:#eef1f6;--dim:#9aa6b8;--acc:#ffd166;--line:#26303f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:22px 18px 60px}a{color:#8ec5ff}h1{font-size:26px;line-height:1.4;margin:10px 0}h2{font-size:21px;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+h3{font-size:18px;margin:24px 0 8px}p{margin:12px 0}img{max-width:min(100%,420px);border-radius:12px;border:1px solid var(--line);display:block;margin:14px auto}
+.meta{color:var(--dim);font-size:14px}.disc{background:#2b2112;border:1px solid #6b5420;border-radius:10px;padding:10px 12px;font-size:14px;color:#ffe2a3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0}.card h4{margin:0 0 8px;font-size:16px}
+.btn{display:block;text-align:center;background:var(--acc);color:#141414;font-weight:700;text-decoration:none;border-radius:10px;padding:12px;margin:8px 0}
+pre{white-space:pre-wrap;background:#0b0f16;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:14px}code{background:#0b0f16;padding:1px 5px;border-radius:5px}
+table{width:100%;border-collapse:collapse;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}.yt{position:relative;padding-top:177%;max-width:360px;margin:14px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pc{display:flex;flex-direction:column;gap:4px;background:#0f1520;border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--fg);text-decoration:none}.pc img{width:100%;aspect-ratio:1;object-fit:cover;margin:0 0 4px;border-radius:8px;max-width:100%}.pcat{font-size:12px;color:var(--acc)}.pc b{font-size:14px;line-height:1.4}.pm{font-size:12px;color:var(--dim)}.pbtn{margin-top:auto;background:var(--acc);color:#141414;font-weight:700;text-align:center;border-radius:8px;padding:6px;font-size:13px}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}nav.top a{margin-right:12px;font-size:14px}footer{color:var(--dim);font-size:13px;margin-top:40px}</style></head>
+<body><main><nav class="top"><a href="https://compaction19-blip.github.io/">🏠 실험노트 홈</a><a href="https://compaction19-blip.github.io/posts/">📚 칼럼 목록</a></nav>
+<h1>Claude Code 윈도우 설치 오류 5가지 해결법: 직접 일으켜 보고 다 고친 순서(초보자용)</h1><p class="meta">2026-10-31 · 새AI실험노트 · 직접 재현(오류 5개 · 재현 5/5 · 해결 5/5)</p>
+<p>윈도우에서 <b>Claude Code(클로드 코드)</b> 를 설치하다가 빨간 글씨를 보고 멈췄다면, 이 글 하나로 대부분 풀 수 있게 정리했어요. 자주 막히는 오류 5가지를 저희 PC에서 <b>일부러 일으켜 보고</b>, 하나씩 고쳐서 <b>정말 풀리는지</b> 확인했습니다.</p>
+<blockquote style="border-left:4px solid #888;margin:12px 0;padding:6px 12px">2026년 10월 31일, 윈도우 11 PC 한 대에서 원래 쓰던 Claude 계정으로 직접 해 본 결과입니다(Claude Code 2.1.314). 협찬은 없습니다.</blockquote>
+<img src="img1.jpg" alt="롱폼 영상 썸네일: Claude Code 윈도우 설치 오류 5가지" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">롱폼 영상 썸네일: Claude Code 윈도우 설치 오류 5가지</p>
+<h2>한눈에 보기: 오류 5가지와 해결</h2>
+<div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%" border="1" cellpadding="6"><thead><tr><th>번호</th><th>화면에 뜬 말(원문)</th><th>원인</th><th>해결</th><th>해결 확인</th></tr></thead><tbody><tr><td>1</td><td><code>&#x27;irm&#x27; is not recognized</code> / <code>The token &#x27;&amp;&amp;&#x27; is not a valid statement separator</code></td><td>창(CMD·PowerShell)에 안 맞는 설치 명령</td><td>창에 맞는 명령 쓰기</td><td>✅ 맞는 창에서 내려받기 성공</td></tr><tr><td>2</td><td><code>&#x27;claude&#x27; is not recognized</code></td><td>설치 폴더가 PATH에 없음</td><td>PATH에 폴더 추가 후 새 창</td><td>✅ <code>2.1.314 (Claude Code)</code></td></tr><tr><td>3</td><td><code>claude.ps1 cannot be loaded because running scripts is disabled</code></td><td>PowerShell 실행 정책이 .ps1 파일을 막음</td><td><code>claude.cmd</code> 로 부르기</td><td>✅ <code>2.1.314 (Claude Code)</code></td></tr><tr><td>4</td><td><code>Not logged in · Please run /login</code></td><td>로그인 기록이 없음</td><td><code>claude</code> 실행 → <code>/login</code></td><td>✅ 로그인된 상태에서 답 &quot;안녕&quot;</td></tr><tr><td>5</td><td><code>Invalid API key · Fix external API key</code></td><td>예전에 넣어 둔 <code>ANTHROPIC_API_KEY</code> 환경 변수</td><td>그 변수를 지우고 새 창</td><td>✅ 구독 로그인으로 답 &quot;안녕&quot;</td></tr></tbody></table></div>
+<ul><li>5개 모두 <b>재현 1/1, 해결 1/1</b> (오류마다 1번씩 해 봤어요)</li><li>실행한 명령은 모두 20번, 화면은 실행과 동시에 녹화했어요.</li></ul>
+<h2>이 글에서 &#x27;직접 해 봄&#x27;과 &#x27;문서 기준&#x27; 구분</h2>
+<ul><li>✅ <b>직접 해 봄</b>: 저희 PC에서 실제로 실행하고 출력과 화면을 남긴 것</li><li>📄 <b>문서 기준</b>: Claude Code 공식 문서(설치·문제 해결)에 적힌 것을 옮긴 것</li></ul>
+<h2>시작 전에: 내 창이 CMD인지 PowerShell인지 보는 법</h2>
+<p>윈도우에는 명령을 치는 창이 두 종류 있어요. 설치 명령이 창마다 다르기 때문에 이것부터 구별해야 해요.</p>
+<ol start="1"><li>시작 메뉴에서 <b>PowerShell</b> 또는 <b>명령 프롬프트(CMD)</b> 를 검색해서 엽니다.</li></ol>
+
+<ol start="2"><li>깜빡이는 줄 앞을 보세요. <b><code>PS C:\Users\이름&gt;</code></b> 처럼 앞에 <b>PS</b> 가 있으면 PowerShell, <b><code>C:\Users\이름&gt;</code></b> 처럼 PS가 없으면 CMD예요. (📄 문서 기준)</li></ol>
+
+<ol start="3"><li><b>여기서 이렇게 보이면 성공</b>: 내가 연 창이 어느 쪽인지 말할 수 있으면 준비 끝!</li></ol>
+<h2>오류 1. 설치 명령을 엉뚱한 창에 넣었을 때</h2>
+<p>공식 문서의 윈도우 설치 명령은 두 개예요. (📄 문서 기준)</p>
+<pre>[PowerShell 창]
+irm <a href="https://claude.ai/install.ps1" rel="noopener">https://claude.ai/install.ps1</a> | iex
+
+[CMD 창]
+curl -fsSL <a href="https://claude.ai/install.cmd" rel="noopener">https://claude.ai/install.cmd</a> -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</pre>
+<p><b>✅ 직접 해 봄 — 이렇게 막혀요</b></p>
+<ol start="1"><li>PowerShell용 명령을 <b>CMD 창</b>에 넣으면 <code>&#x27;irm&#x27; is not recognized as an internal or external command</code> 가 나와요. (실제 설치가 돌지 않도록 <code>| iex</code> 앞부분만 넣어서 같은 오류를 확인했어요. 실험을 돌린 자동화 도구의 보안 장치도 &#x27;내려받아 바로 실행&#x27; 명령 전체는 막았어요.)</li></ol>
+<img src="img2.jpg" alt="오류 1: PowerShell용 명령을 CMD 창에 넣었을 때(&#x27;irm&#x27; is not recognized) — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">오류 1: PowerShell용 명령을 CMD 창에 넣었을 때(&#x27;irm&#x27; is not recognized) — 실제 실행 화면</p>
+<ol start="2"><li>CMD용 명령을 <b>Windows PowerShell 창</b>에 넣으면 <code>The token &#x27;&amp;&amp;&#x27; is not a valid statement separator in this version.</code> 가 나와요. 명령 전체가 해석 단계에서 멈춰서 아무것도 실행되지 않았어요.</li></ol>
+<img src="img3.jpg" alt="오류 1: CMD용 명령을 Windows PowerShell 창에 넣었을 때(&#x27;&amp;&amp;&#x27; 오류) — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">오류 1: CMD용 명령을 Windows PowerShell 창에 넣었을 때(&#x27;&amp;&amp;&#x27; 오류) — 실제 실행 화면</p>
+<p><b>해결</b></p>
+<ol start="1"><li>창 종류를 확인하고, 그 창에 맞는 명령을 넣으세요.</li></ol>
+
+<ol start="2"><li><b>여기서 이렇게 보이면 성공</b>: 저희는 PowerShell 창에서 <code>irm <a href="https://claude.ai/install.ps1" rel="noopener">https://claude.ai/install.ps1</a></code> 로 설치 스크립트(3,189글자)를 정상으로 <b>내려받는 것까지만</b> 확인했어요. 이 PC엔 이미 Claude Code가 있어서 실행(<code>| iex</code>)은 하지 않았어요.</li></ol>
+
+<ol start="3"><li>설치가 끝나면 <b>터미널을 새로 열고</b> <code>claude --version</code> 을 쳐서 버전 숫자가 나오면 성공이에요. (📄 문서 기준)</li></ol>
+<img src="img4.jpg" alt="맞는 창(PowerShell)에서 설치 스크립트 내려받기까지만 확인 — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">맞는 창(PowerShell)에서 설치 스크립트 내려받기까지만 확인 — 실제 실행 화면</p>
+<h2>오류 2. 설치했는데 &#x27;claude&#x27;를 못 찾을 때 (PATH)</h2>
+<p><b>✅ 직접 해 봄 — 이렇게 막혀요</b></p>
+<ol start="1"><li>이번엔 npm으로 <b>따로 만든 시험 폴더</b>에 설치했어요(<code>npm install -g --prefix 시험폴더 @anthropic-ai/claude-code@2.1.314</code>). 4초 만에 끝났고, 폴더에 <code>claude</code>, <code>claude.cmd</code>, <code>claude.ps1</code> 이 생겼어요.</li></ol>
+
+<ol start="2"><li>설치 중 <code>npm warn allow-scripts …</code> 경고가 몇 줄 떴지만, 이 npm 11.17.0에서는 실행에 문제가 없었어요.</li></ol>
+<img src="img5.jpg" alt="npm으로 시험 폴더에 설치(allow-scripts 경고) — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">npm으로 시험 폴더에 설치(allow-scripts 경고) — 실제 실행 화면</p>
+<ol start="3"><li>그런데 새 CMD 창에서 <code>claude --version</code> 을 치면 <code>&#x27;claude&#x27; is not recognized …</code> 가 나오고, <code>where.exe claude</code> 도 <code>INFO: Could not find files for the given pattern(s).</code> 라고 해요.</li></ol>
+<p><b>왜?</b> 윈도우는 <b>PATH</b>(명령을 찾아보는 폴더 목록)에 있는 폴더에서만 명령을 찾아요. 설치 폴더가 그 목록에 없었던 거예요.</p>
+<p><b>해결</b></p>
+<ol start="1"><li>그 창에서 설치 폴더를 PATH에 넣고 다시 치면(<code>set &quot;PATH=%PATH%;설치폴더&quot;</code>) 바로 <code>2.1.314 (Claude Code)</code> 가 나왔어요. ✅ 직접 해 봄</li></ol>
+<img src="img6.jpg" alt="오류 2: &#x27;claude&#x27; is not recognized → PATH 추가 후 2.1.314 — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">오류 2: &#x27;claude&#x27; is not recognized → PATH 추가 후 2.1.314 — 실제 실행 화면</p>
+<ol start="2"><li>매번 넣기 귀찮다면 <b>사용자 PATH에 한 번 등록</b>하세요. 공식 설치 프로그램은 <code>%USERPROFILE%\.local\bin</code> 에 깔린다고 해요. 시작 메뉴에서 &quot;환경 변수&quot;를 검색 → <b>사용자 변수</b>의 Path → 편집 → 새로 만들기 → 그 폴더 경로 입력 → 확인. (📄 문서 기준·일반 윈도우 방법, 이번에 저희 PC에서 영구 등록은 하지 않았어요)</li></ol>
+
+<ol start="3"><li><b>여기서 이렇게 보이면 성공</b>: 터미널을 <b>새로 열고</b> <code>claude --version</code> → 버전 숫자.</li></ol>
+<p><b>막히는 곳</b>: 등록하고 나서 <b>원래 열려 있던 창</b>에서는 여전히 못 찾아요. 꼭 새 창을 여세요. (📄 문서 기준)</p>
+<h2>오류 3. PowerShell이 &#x27;running scripts is disabled&#x27;라며 막을 때</h2>
+<p><b>✅ 직접 해 봄 — 이렇게 막혀요</b></p>
+<ol start="1"><li>PATH까지 맞춘 뒤, 윈도우에 기본으로 있는 <b>Windows PowerShell(5.1)</b> 창에서 <code>claude --version</code> 을 치면:</li></ol>
+<pre>claude : File …\npm\claude.ps1 cannot be loaded because running scripts is disabled on this system.
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException</pre>
+<img src="img7.jpg" alt="오류 3: claude.ps1 cannot be loaded(running scripts is disabled) — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">오류 3: claude.ps1 cannot be loaded(running scripts is disabled) — 실제 실행 화면</p>
+<ol start="2"><li>이 PC의 Windows PowerShell 실행 정책은 다섯 칸(MachinePolicy·UserPolicy·Process·CurrentUser·LocalMachine) 모두 <code>Undefined</code>, 즉 <b>윈도우 기본값 그대로</b>였어요. 저희가 일부러 바꾼 게 아니에요.</li></ol>
+<p><b>왜?</b> npm은 <code>claude</code> 를 부르는 파일을 <code>.ps1</code> 과 <code>.cmd</code> 두 가지로 만들어요. PowerShell이 <code>.ps1</code> 쪽을 골랐는데, 실행 정책이 스크립트 파일을 막은 거예요.</p>
+<p><b>해결</b> (✅ 1·2번 직접 해 봄)</p>
+<ol start="1"><li><b>가장 쉬운 방법</b>: <code>claude</code> 대신 <b><code>claude.cmd</code></b> 로 부르세요. 같은 창에서 바로 <code>2.1.314 (Claude Code)</code> 가 나왔어요.</li></ol>
+
+<ol start="2"><li><b>그 창에서만 풀기</b>: <code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force</code> 를 먼저 치면 그 창에서는 <code>claude</code> 가 돼요. 창을 닫으면 원래대로 돌아가요.</li></ol>
+
+<ol start="3"><li><b>문서 권장</b>: npm 대신 PowerShell 설치 프로그램(<code>irm <a href="https://claude.ai/install.ps1" rel="noopener">https://claude.ai/install.ps1</a> | iex</code>)으로 설치하면 <code>.ps1</code> 이 아니라 실행 파일이 깔려서 이 문제가 없어요. 사용자 범위 정책을 <code>RemoteSigned</code> 로 바꾸는 방법도 문서에 있지만, 보안 설정이라 저희는 바꾸지 않았어요. (📄 문서 기준)</li></ol>
+<img src="img8.jpg" alt="오류 3 해결: claude.cmd / 그 창에서만 정책 완화 — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">오류 3 해결: claude.cmd / 그 창에서만 정책 완화 — 실제 실행 화면</p>
+<ol start="4"><li><b>여기서 이렇게 보이면 성공</b>: <code>2.1.314 (Claude Code)</code> 처럼 버전 숫자.</li></ol>
+<h2>오류 4. &#x27;Not logged in&#x27;이 뜰 때</h2>
+<p><b>✅ 직접 해 봄</b></p>
+<ol start="1"><li>로그인 기록이 하나도 없는 <b>빈 설정 폴더</b>를 지정해서(처음 설치한 PC처럼) <code>claude -p &quot;한 단어로만 대답해: 안녕&quot;</code> 을 쳤더니 <code>Not logged in · Please run /login</code> 이 나왔어요.</li></ol>
+
+<ol start="2"><li>원래 로그인된 설정으로 같은 질문을 하자 2.5초 만에 &quot;안녕&quot;이 돌아왔어요.</li></ol>
+<img src="img9.jpg" alt="오류 4: Not logged in → 로그인된 설정에서는 답 — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">오류 4: Not logged in → 로그인된 설정에서는 답 — 실제 실행 화면</p>
+<p><b>해결</b> (📄 문서 기준)</p>
+<ol start="1"><li>창에서 <code>claude</code> 를 그냥 실행해요.</li></ol>
+
+<ol start="2"><li><code>/login</code> 을 치고, 열리는 브라우저에서 Claude 계정으로 로그인해요. 브라우저가 안 열리면 <code>c</code> 를 눌러 로그인 주소를 복사해 브라우저에 붙여 넣으면 돼요.</li></ol>
+
+<ol start="3"><li><b>여기서 이렇게 보이면 성공</b>: 다시 질문했을 때 답이 돌아와요.</li></ol>
+<p><b>막히는 곳</b>: Claude Code는 <b>무료 claude.ai 요금제로는 쓸 수 없어요</b>(Pro·Max 등 유료 또는 Console 계정 필요). (📄 문서 기준)</p>
+<h2>오류 5. &#x27;Invalid API key&#x27;가 뜰 때 (남아 있는 환경 변수)</h2>
+<p><b>✅ 직접 해 봄</b></p>
+<ol start="1"><li>예전에 다른 도구 때문에 <code>ANTHROPIC_API_KEY</code> 라는 환경 변수를 넣어 둔 PC를 흉내 내려고, <b>가짜 키</b>(과금 없음)를 넣고 질문했어요.</li></ol>
+
+<ol start="2"><li>결과: <code>Invalid API key · Fix external API key</code> 와 함께, <code>ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login</code> — 즉 <b>이 키가 claude.ai 로그인보다 먼저 쓰인다</b>는 경고가 떴어요.</li></ol>
+
+<ol start="3"><li>변수가 없는 창에서 다시 묻자 구독 로그인으로 &quot;안녕&quot;이 돌아왔어요(2.2초).</li></ol>
+<p><img src="img10.jpg" alt="오류 5: 남아 있는 ANTHROPIC_API_KEY(가짜 키) → Invalid API key — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">오류 5: 남아 있는 ANTHROPIC_API_KEY(가짜 키) → Invalid API key — 실제 실행 화면</p></p>
+<p><b>해결</b></p>
+<ol start="1"><li>CMD에서 <code>set ANTHROPIC_API_KEY</code> 를 쳐 보세요. <code>Environment variable ANTHROPIC_API_KEY not defined</code> 가 나오면 없는 거예요. ✅ 직접 해 봄</li></ol>
+
+<ol start="2"><li>값이 나오면, 시작 메뉴 &quot;환경 변수&quot; → 사용자/시스템 변수에서 <code>ANTHROPIC_API_KEY</code> 를 지우고 <b>새 창</b>을 여세요. (일반 윈도우 방법)</li></ol>
+<p><b>주의</b>: 키가 <b>맞는</b> 거라면 오류 없이 돌아가요. 그래서 구독 로그인이 아니라 그 키로 쓰고 있다는 걸 모르고 지나갈 수 있으니 한 번 확인해 보세요.</p>
+<h2>막히면 먼저: claude doctor</h2>
+<p><code>claude doctor</code> 는 세션을 시작하지 않고 설치 상태를 보여 주는 읽기 전용 진단 명령이에요. (📄 문서 기준) 저희 시험 설치에서는 <code>Running: npm-global (2.1.314)</code>, 설치 경로, 자동 업데이트 상태가 나오고 <code>No installation issues found.</code> 로 끝났어요. ✅ 직접 해 봄</p>
+<p><img src="img11.jpg" alt="claude doctor 진단 결과 — 실제 실행 화면" loading="lazy" style="max-width:100%"><p class="meta" style="text-align:center">claude doctor 진단 결과 — 실제 실행 화면</p></p>
+<p>그래도 안 되면 화면의 오류 문구를 그대로 복사해서 공식 문제 해결 문서의 &quot;Find your error&quot; 표에서 찾아보세요. 오늘 본 5개도 모두 그 표에 있었어요.</p>
+<ul><li>공식 문서(설치 문제 해결): <a href="https://docs.claude.com/en/docs/claude-code/troubleshoot-install" rel="noopener">https://docs.claude.com/en/docs/claude-code/troubleshoot-install</a></li><li>공식 문서(설치): <a href="https://docs.claude.com/en/docs/claude-code/setup" rel="noopener">https://docs.claude.com/en/docs/claude-code/setup</a></li></ul>
+<h2>솔직한 한계</h2>
+<ul><li>오류마다 <b>1번씩</b>, 저희 윈도우 11 PC(표시 언어 영어) <b>한 대</b>에서만 재현했어요. 한국어 윈도우에서는 오류 문구가 한국어로 나올 수 있어요.</li><li>설치는 <b>npm 방식</b>으로 재현했어요. 공식 추천인 PowerShell/CMD 설치 프로그램은 이 PC에 이미 Claude Code가 있어서 실행하지 않았어요.</li><li>npm은 Aside 실행 환경에 들어 있는 Node 26.5.0·npm 11.17.0을 썼어요. 문서에 나오는 <b>npm 12의 <code>claude native binary not installed</code></b> 오류는 이번엔 나지 않아서 문서로만 확인했어요.</li><li>&#x27;Not logged in&#x27;은 빈 설정 폴더로 흉내 낸 거라, 실제 로그인 만료는 재현하지 못했어요.</li><li>API 키 문제는 가짜 키로만 확인했고, PowerShell 7 창에서는 시험하지 않았어요.</li><li>회사 프록시·인증서·백신 차단 같은 <b>네트워크 오류</b>는 다루지 못했어요.</li></ul>
+<h2>오늘 실제로 친 명령 (원문)</h2>
+<div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%" border="1" cellpadding="6"><thead><tr><th>단계</th><th>창</th><th>명령</th><th>결과</th></tr></thead><tbody><tr><td>0</td><td>CMD</td><td><code>node -v &amp; npm -v</code></td><td>v26.5.0 / 11.17.0</td></tr><tr><td>0</td><td>CMD</td><td><code>npm install -g --prefix 시험폴더 @anthropic-ai/claude-code@2.1.314</code></td><td>4초, allow-scripts 경고</td></tr><tr><td>1-1</td><td>CMD</td><td><code>irm <a href="https://claude.ai/install.ps1" rel="noopener">https://claude.ai/install.ps1</a></code></td><td>&#x27;irm&#x27; is not recognized</td></tr><tr><td>1-2</td><td>Windows PowerShell 5.1</td><td><code>curl -fsSL <a href="https://claude.ai/install.cmd" rel="noopener">https://claude.ai/install.cmd</a> -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></td><td>&#x27;&amp;&amp;&#x27; is not a valid statement separator</td></tr><tr><td>1-3</td><td>Windows PowerShell 5.1</td><td><code>irm <a href="https://claude.ai/install.ps1" rel="noopener">https://claude.ai/install.ps1</a></code> (내려받기만)</td><td>3,189글자</td></tr><tr><td>2-1</td><td>CMD</td><td><code>claude --version</code></td><td>&#x27;claude&#x27; is not recognized</td></tr><tr><td>2-2</td><td>CMD</td><td><code>where.exe claude</code></td><td>Could not find files</td></tr><tr><td>2-4</td><td>CMD</td><td>PATH에 시험폴더 추가 후 <code>claude --version</code></td><td>2.1.314 (Claude Code)</td></tr><tr><td>3-1</td><td>Windows PowerShell 5.1</td><td><code>claude --version</code></td><td>claude.ps1 cannot be loaded</td></tr><tr><td>3-2</td><td>Windows PowerShell 5.1</td><td><code>claude.cmd --version</code></td><td>2.1.314 (Claude Code)</td></tr><tr><td>3-3</td><td>Windows PowerShell 5.1</td><td><code>Set-ExecutionPolicy -Scope Process … ; claude --version</code></td><td>2.1.314 (Claude Code)</td></tr><tr><td>4-1</td><td>CMD</td><td>빈 설정 폴더로 <code>claude -p &quot;한 단어로만 대답해: 안녕&quot;</code></td><td>Not logged in · Please run /login</td></tr><tr><td>4-2</td><td>CMD</td><td>같은 질문(원래 설정)</td><td>안녕 (2.5초)</td></tr><tr><td>5-1</td><td>CMD</td><td>가짜 <code>ANTHROPIC_API_KEY</code> 로 같은 질문</td><td>Invalid API key · Fix external API key</td></tr><tr><td>5-3</td><td>CMD</td><td>변수 없는 창에서 같은 질문</td><td>안녕 (2.2초)</td></tr><tr><td>6</td><td>CMD</td><td><code>claude doctor</code></td><td>No installation issues found.</td></tr></tbody></table></div>
+<p>환경 변수(PATH 추가·빈 설정 폴더·가짜 키)는 실험 스크립트가 그 실행 하나에만 넣었어요. 영상 속 화면은 이 명령들을 실제 CMD·PowerShell에 넣고 받은 출력을 그대로 녹화한 거예요.</p>
+<p>혹시 글에서 틀린 부분이나 고쳐야 할 부분이 보이면 유튜브·스레드 댓글로 알려 주시면 정말 감사하겠습니다. 바로 확인해서 고칠게요!</p>
+<section class="card"><h2>🎬 영상으로 보기 · 🧵 함께 이야기하기</h2><p><a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트 채널</a></p><p><a href="https://www.threads.com/@alligatorxor" rel="noopener">🧵 스레드 @alligatorxor</a> · <a href="https://www.youtube.com/@saeailab" rel="noopener">▶ 유튜브 새AI실험노트</a> · <a href="https://compaction19-blip.github.io/">📒 실험노트 홈</a></p></section>
+<footer>이 글의 결과는 윈도우 11 PC 한 대에서 오류마다 1번씩 해 본 실제 기록이며, 다른 PC·버전·네트워크 환경에서는 다를 수 있습니다. 📄 표시는 Claude Code 공식 문서 기준입니다. 글은 AI 도구로 초안을 만들고 실험 기록(verify.json·runs/e0~e6.json 실제 출력)과 대조해 정리했습니다.</footer></main></body></html>
