@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "sha256_before": "7942a7f8828561e1dedb03c27352ead41e4da1feae38cde98729d53293c0efc0",
+  "sha256_after": "7942a7f8828561e1dedb03c27352ead41e4da1feae38cde98729d53293c0efc0",
+  "started": "2026-11-02 08:42:05",
+  "ended": "2026-11-02 08:43:30",
+  "big_settings": "추론·사고 설정 기본값(지정 안 함)",
+  "recording": "20261102_084155_jevbench_big.mp4"
+ },
+ "summary": {
+  "jev": {
+   "model_id": "jev-latest",
+   "served": [
+    "jev-1.14.0"
+   ],
+   "n": 30,
+   "correct": 30,
+   "loose_correct": 30,
+   "format_errors": 0,
+   "call_errors": 0,
+   "by_level": {
+    "쉬움": [
+     15,
+     15
+    ],
+    "중간": [
+     10,
+     10
+    ],
+    "어려움": [
+     5,
+     5
+    ]
+   },
+   "consistent_3of3": 0,
+   "median_sec": 0.1619,
+   "p90_sec": 0.2004,
+   "mean_sec": 0.1722,
+   "min_sec": 0.1567,
+   "max_sec": 0.2344,
+   "tokens_in": 15965,
+   "tokens_out": 2028,
+   "cost_usd": 0.000671,
+   "price_per_mtok": [
+    0.042,
+    0.0
+   ]
+  },
+  "sol": {
+   "model_id": "gpt-6.1-sol",
+   "served": [
+    "gpt-6.1-sol effort=기본값 reasoning_tokens=0",
+    "gpt-6.1-sol effort=기본값 reasoning_tokens=10",
+    "gpt-6.1-sol effort=기본값 reasoning_tokens=7"
+   ],
+   "n": 30,
+   "correct": 30,
+   "loose_correct": 30,
+   "format_errors": 0,
+   "call_errors": 0,
+   "by_level": {
+    "쉬움": [
+     15,
+     15
+    ],
+    "중간": [
+     10,
+     10
+    ],
+    "어려움": [
+     5,
+     5
+    ]
+   },
+   "consistent_3of3": 0,
+   "median_sec": 1.3386,
+   "p90_sec": 1.522,
+   "mean_sec": 1.3576,
+   "min_sec": 1.1836,
+   "max_sec": 1.7133,
+   "tokens_in": 9444,
+   "tokens_out": 460,
+   "cost_usd": 0.023488,
+   "price_per_mtok": [
+    2.0,
+    10.0
+   ],
+   "x_slower_than_jev_median": 8.27,
+   "x_costlier_than_jev": 35.0
+  },
+  "fable": {
+   "model_id": "claude-fable-5-1",
+   "served": [
+    "claude-fable-5-1 temp=None"
+   ],
+   "n": 30,
+   "correct": 30,
+   "loose_correct": 30,
+   "format_errors": 0,
+   "call_errors": 0,
+   "by_level": {
+    "쉬움": [
+     15,
+     15
+    ],
+    "중간": [
+     10,
+     10
+    ],
+    "어려움": [
+     5,
+     5
+    ]
+   },
+   "consistent_3of3": 0,
+   "median_sec": 1.1928,
+   "p90_sec": 2.48,
+   "mean_sec": 1.3713,
+   "min_sec": 1.0786,
+   "max_sec": 2.5487,
+   "tokens_in": 20219,
+   "tokens_out": 384,
+   "cost_usd": 0.22139,
+   "price_per_mtok": [
+    10.0,
+    50.0
+   ],
+   "x_slower_than_jev_median": 7.37,
+   "x_costlier_than_jev": 329.9
+  }
+ }
+}
