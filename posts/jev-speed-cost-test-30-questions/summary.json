@@ -1,0 +1,174 @@
+{
+ "meta": {
+  "sha256_before": "7942a7f8828561e1dedb03c27352ead41e4da1feae38cde98729d53293c0efc0",
+  "sha256_after": "7942a7f8828561e1dedb03c27352ead41e4da1feae38cde98729d53293c0efc0",
+  "started": "2026-11-02 08:36:12",
+  "ended": "2026-11-02 08:40:24",
+  "gpt_effort": "none",
+  "gemini_thinking": {
+   "thinkingLevel": "minimal"
+  },
+  "claude_temp": null,
+  "recording": "20261102_083604_jevbench.mp4"
+ },
+ "summary": {
+  "jev": {
+   "model_id": "jev-latest",
+   "served": [
+    "jev-1.14.0"
+   ],
+   "n": 90,
+   "correct": 90,
+   "loose_correct": 90,
+   "format_errors": 0,
+   "call_errors": 0,
+   "by_level": {
+    "쉬움": [
+     45,
+     45
+    ],
+    "중간": [
+     30,
+     30
+    ],
+    "어려움": [
+     15,
+     15
+    ]
+   },
+   "consistent_3of3": 30,
+   "median_sec": 0.1678,
+   "p90_sec": 0.1938,
+   "mean_sec": 0.1772,
+   "min_sec": 0.1546,
+   "max_sec": 0.3548,
+   "tokens_in": 47895,
+   "tokens_out": 6084,
+   "cost_usd": 0.002012,
+   "price_per_mtok": [
+    0.042,
+    0.0
+   ]
+  },
+  "gpt": {
+   "model_id": "gpt-6-luna",
+   "served": [
+    "gpt-6-luna effort=none reasoning_tokens=0"
+   ],
+   "n": 90,
+   "correct": 90,
+   "loose_correct": 90,
+   "format_errors": 0,
+   "call_errors": 0,
+   "by_level": {
+    "쉬움": [
+     45,
+     45
+    ],
+    "중간": [
+     30,
+     30
+    ],
+    "어려움": [
+     15,
+     15
+    ]
+   },
+   "consistent_3of3": 30,
+   "median_sec": 0.8192,
+   "p90_sec": 1.0506,
+   "mean_sec": 0.8763,
+   "min_sec": 0.6314,
+   "max_sec": 2.0833,
+   "tokens_in": 28332,
+   "tokens_out": 1206,
+   "cost_usd": 0.003436,
+   "price_per_mtok": [
+    0.1,
+    0.5
+   ],
+   "x_slower_than_jev_median": 4.88,
+   "x_costlier_than_jev": 1.7
+  },
+  "gemini": {
+   "model_id": "gemini-3.5-flash-lite",
+   "served": [
+    "gemini-3.5-flash-lite thinking={\"thinkingLevel\": \"minimal\"} thoughts=None"
+   ],
+   "n": 90,
+   "correct": 90,
+   "loose_correct": 90,
+   "format_errors": 0,
+   "call_errors": 0,
+   "by_level": {
+    "쉬움": [
+     45,
+     45
+    ],
+    "중간": [
+     30,
+     30
+    ],
+    "어려움": [
+     15,
+     15
+    ]
+   },
+   "consistent_3of3": 30,
+   "median_sec": 0.7022,
+   "p90_sec": 0.8724,
+   "mean_sec": 0.7301,
+   "min_sec": 0.5568,
+   "max_sec": 1.1061,
+   "tokens_in": 18351,
+   "tokens_out": 1029,
+   "cost_usd": 0.008078,
+   "price_per_mtok": [
+    0.3,
+    2.5
+   ],
+   "x_slower_than_jev_median": 4.18,
+   "x_costlier_than_jev": 4.0
+  },
+  "claude": {
+   "model_id": "claude-haiku-5-5",
+   "served": [
+    "claude-haiku-5-5 temp=None"
+   ],
+   "n": 90,
+   "correct": 90,
+   "loose_correct": 90,
+   "format_errors": 0,
+   "call_errors": 0,
+   "by_level": {
+    "쉬움": [
+     45,
+     45
+    ],
+    "중간": [
+     30,
+     30
+    ],
+    "어려움": [
+     15,
+     15
+    ]
+   },
+   "consistent_3of3": 30,
+   "median_sec": 0.8942,
+   "p90_sec": 1.4163,
+   "mean_sec": 1.0206,
+   "min_sec": 0.721,
+   "max_sec": 2.5855,
+   "tokens_in": 79737,
+   "tokens_out": 3132,
+   "cost_usd": 0.00954,
+   "price_per_mtok": [
+    0.1,
+    0.5
+   ],
+   "x_slower_than_jev_median": 5.33,
+   "x_costlier_than_jev": 4.7
+  }
+ }
+}
