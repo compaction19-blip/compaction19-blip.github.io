@@ -1,0 +1,463 @@
+﻿round,model,order_in_round,k,qid,level,answer,label,loose_label,correct,loose_correct,sec,tin,tout,status,err,raw,note,prob,rec_t,at_kst,block_rec_start
+1,jev,1,1,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.1685,536,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,8.25,2026-11-02 08:36:12,
+1,jev,1,2,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.164,537,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,8.42,2026-11-02 08:36:12,
+1,jev,1,3,E01,쉬움,배송,배송,배송,True,True,0.1709,525,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,8.59,2026-11-02 08:36:12,
+1,jev,1,4,E15,쉬움,기타,기타,기타,True,True,0.1913,532,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,8.78,2026-11-02 08:36:12,
+1,jev,1,5,H01,어려움,배송,배송,배송,True,True,0.1801,546,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,8.96,2026-11-02 08:36:13,
+1,jev,1,6,E14,쉬움,기타,기타,기타,True,True,0.1878,516,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,9.15,2026-11-02 08:36:13,
+1,jev,1,7,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.19,520,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,9.34,2026-11-02 08:36:13,
+1,jev,1,8,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.1581,534,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,9.5,2026-11-02 08:36:13,
+1,jev,1,9,H05,어려움,기타,기타,기타,True,True,0.1908,539,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,9.69,2026-11-02 08:36:13,
+1,jev,1,10,M09,중간,기타,기타,기타,True,True,0.1855,533,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,9.88,2026-11-02 08:36:14,
+1,jev,1,11,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.1819,518,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,10.06,2026-11-02 08:36:14,
+1,jev,1,12,M01,중간,배송,배송,배송,True,True,0.163,535,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,10.22,2026-11-02 08:36:14,
+1,jev,1,13,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.3548,530,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,10.58,2026-11-02 08:36:14,
+1,jev,1,14,E13,쉬움,기타,기타,기타,True,True,0.1871,521,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,10.77,2026-11-02 08:36:14,
+1,jev,1,15,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.1719,528,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,10.94,2026-11-02 08:36:15,
+1,jev,1,16,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.1896,517,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,11.13,2026-11-02 08:36:15,
+1,jev,1,17,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.2773,522,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,11.41,2026-11-02 08:36:15,
+1,jev,1,18,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.1671,530,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 0.95, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.96, ""결제오류"": 0.0, ""계정·로그인"": 0.04, ""기타"": 0.0}}",jev-1.14.0,0.96,11.57,2026-11-02 08:36:15,
+1,jev,1,19,M06,중간,결제오류,결제오류,결제오류,True,True,0.1574,530,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 0.82, ""probabilities"": {""배송"": 0.01, ""환불·교환"": 0.02, ""결제오류"": 0.86, ""계정·로그인"": 0.0, ""기타"": 0.11}}",jev-1.14.0,0.86,11.73,2026-11-02 08:36:15,
+1,jev,1,20,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.1636,524,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,11.9,2026-11-02 08:36:16,
+1,jev,1,21,M02,중간,배송,배송,배송,True,True,0.1927,527,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 0.82, ""probabilities"": {""배송"": 0.86, ""환불·교환"": 0.14, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,0.86,12.09,2026-11-02 08:36:16,
+1,jev,1,22,E02,쉬움,배송,배송,배송,True,True,0.1612,535,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,12.25,2026-11-02 08:36:16,
+1,jev,1,23,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.1871,535,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,12.44,2026-11-02 08:36:16,
+1,jev,1,24,M10,중간,기타,기타,기타,True,True,0.1611,537,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 0.99, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.01, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.99}}",jev-1.14.0,0.99,12.6,2026-11-02 08:36:16,
+1,jev,1,25,M05,중간,결제오류,결제오류,결제오류,True,True,0.1585,542,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,12.76,2026-11-02 08:36:16,
+1,jev,1,26,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.1617,526,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,12.92,2026-11-02 08:36:17,
+1,jev,1,27,H03,어려움,결제오류,결제오류,결제오류,True,True,0.1757,630,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,13.1,2026-11-02 08:36:17,
+1,jev,1,28,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.1629,518,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,13.26,2026-11-02 08:36:17,
+1,jev,1,29,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.2271,518,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,13.49,2026-11-02 08:36:17,
+1,jev,1,30,E03,쉬움,배송,배송,배송,True,True,0.1598,524,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,13.65,2026-11-02 08:36:17,8.08
+1,gpt,2,1,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,1.1718,314,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,14.82,2026-11-02 08:36:19,
+1,gpt,2,2,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.7362,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,15.56,2026-11-02 08:36:19,
+1,gpt,2,3,E01,쉬움,배송,배송,배송,True,True,1.0461,310,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,16.6,2026-11-02 08:36:20,
+1,gpt,2,4,E15,쉬움,기타,기타,기타,True,True,1.2691,312,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,17.87,2026-11-02 08:36:22,
+1,gpt,2,5,H01,어려움,배송,배송,배송,True,True,1.2729,328,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,19.15,2026-11-02 08:36:23,
+1,gpt,2,6,E14,쉬움,기타,기타,기타,True,True,0.9201,303,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,20.07,2026-11-02 08:36:24,
+1,gpt,2,7,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,1.4198,306,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,21.49,2026-11-02 08:36:25,
+1,gpt,2,8,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7864,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,22.28,2026-11-02 08:36:26,
+1,gpt,2,9,H05,어려움,기타,기타,기타,True,True,0.7411,320,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,23.02,2026-11-02 08:36:27,
+1,gpt,2,10,M09,중간,기타,기타,기타,True,True,1.1509,318,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,24.17,2026-11-02 08:36:28,
+1,gpt,2,11,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7745,302,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,24.94,2026-11-02 08:36:29,
+1,gpt,2,12,M01,중간,배송,배송,배송,True,True,0.7604,318,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,25.7,2026-11-02 08:36:29,
+1,gpt,2,13,M03,중간,환불·교환,환불·교환,환불·교환,True,True,1.2118,313,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,26.92,2026-11-02 08:36:31,
+1,gpt,2,14,E13,쉬움,기타,기타,기타,True,True,0.7615,305,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,27.68,2026-11-02 08:36:31,
+1,gpt,2,15,E08,쉬움,결제오류,결제오류,결제오류,True,True,1.0398,313,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,28.72,2026-11-02 08:36:32,
+1,gpt,2,16,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.9098,305,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,29.63,2026-11-02 08:36:33,
+1,gpt,2,17,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.695,308,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,30.32,2026-11-02 08:36:34,
+1,gpt,2,18,M04,중간,환불·교환,환불·교환,환불·교환,True,True,1.0506,314,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,31.37,2026-11-02 08:36:35,
+1,gpt,2,19,M06,중간,결제오류,결제오류,결제오류,True,True,1.1101,313,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,32.48,2026-11-02 08:36:36,
+1,gpt,2,20,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.875,308,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,33.36,2026-11-02 08:36:37,
+1,gpt,2,21,M02,중간,배송,배송,배송,True,True,0.7572,314,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,34.12,2026-11-02 08:36:38,
+1,gpt,2,22,E02,쉬움,배송,배송,배송,True,True,0.7786,318,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,34.9,2026-11-02 08:36:39,
+1,gpt,2,23,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.6858,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,35.58,2026-11-02 08:36:39,
+1,gpt,2,24,M10,중간,기타,기타,기타,True,True,0.7695,318,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,36.35,2026-11-02 08:36:40,
+1,gpt,2,25,M05,중간,결제오류,결제오류,결제오류,True,True,0.7521,323,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,37.11,2026-11-02 08:36:41,
+1,gpt,2,26,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.7736,309,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,37.88,2026-11-02 08:36:42,
+1,gpt,2,27,H03,어려움,결제오류,결제오류,결제오류,True,True,0.9262,392,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,38.81,2026-11-02 08:36:42,
+1,gpt,2,28,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.7598,305,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,39.57,2026-11-02 08:36:43,
+1,gpt,2,29,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.0033,304,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,40.57,2026-11-02 08:36:44,
+1,gpt,2,30,E03,쉬움,배송,배송,배송,True,True,2.0833,306,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,42.65,2026-11-02 08:36:46,13.65
+1,gemini,3,1,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.6958,204,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,43.35,2026-11-02 08:36:47,
+1,gemini,3,2,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.7365,205,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,44.09,2026-11-02 08:36:48,
+1,gemini,3,3,E01,쉬움,배송,배송,배송,True,True,0.8724,201,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,44.96,2026-11-02 08:36:49,
+1,gemini,3,4,E15,쉬움,기타,기타,기타,True,True,0.7653,202,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,45.73,2026-11-02 08:36:49,
+1,gemini,3,5,H01,어려움,배송,배송,배송,True,True,0.6959,215,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,46.42,2026-11-02 08:36:50,
+1,gemini,3,6,E14,쉬움,기타,기타,기타,True,True,0.7411,194,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,47.16,2026-11-02 08:36:51,
+1,gemini,3,7,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7717,199,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,47.94,2026-11-02 08:36:52,
+1,gemini,3,8,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.9537,205,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,48.89,2026-11-02 08:36:53,
+1,gemini,3,9,H05,어려움,기타,기타,기타,True,True,0.722,209,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,49.61,2026-11-02 08:36:53,
+1,gemini,3,10,M09,중간,기타,기타,기타,True,True,0.8074,204,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,50.42,2026-11-02 08:36:54,
+1,gemini,3,11,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7201,192,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,51.14,2026-11-02 08:36:55,
+1,gemini,3,12,M01,중간,배송,배송,배송,True,True,0.646,204,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,51.79,2026-11-02 08:36:55,
+1,gemini,3,13,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.7606,202,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,52.55,2026-11-02 08:36:56,
+1,gemini,3,14,E13,쉬움,기타,기타,기타,True,True,0.7395,194,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,53.29,2026-11-02 08:36:57,
+1,gemini,3,15,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.6867,202,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,53.98,2026-11-02 08:36:58,
+1,gemini,3,16,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.728,193,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,54.7,2026-11-02 08:36:58,
+1,gemini,3,17,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.6499,199,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,55.35,2026-11-02 08:36:59,
+1,gemini,3,18,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.7403,204,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,56.1,2026-11-02 08:37:00,
+1,gemini,3,19,M06,중간,결제오류,결제오류,결제오류,True,True,0.6362,201,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,56.73,2026-11-02 08:37:00,
+1,gemini,3,20,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.6442,198,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,57.38,2026-11-02 08:37:01,
+1,gemini,3,21,M02,중간,배송,배송,배송,True,True,0.6779,205,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,58.05,2026-11-02 08:37:02,
+1,gemini,3,22,E02,쉬움,배송,배송,배송,True,True,0.8219,204,7,200,,"{""label"": ""배송""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,58.88,2026-11-02 08:37:03,
+1,gemini,3,23,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.6819,202,10,200,,"{""label"": ""계정·로그인""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,59.56,2026-11-02 08:37:03,
+1,gemini,3,24,M10,중간,기타,기타,기타,True,True,0.6708,206,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,60.23,2026-11-02 08:37:04,
+1,gemini,3,25,M05,중간,결제오류,결제오류,결제오류,True,True,0.7958,213,14,200,,"{
+  ""label"": ""결제오류""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,61.03,2026-11-02 08:37:05,
+1,gemini,3,26,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.742,198,14,200,,"{
+  ""label"": ""결제오류""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,61.77,2026-11-02 08:37:05,
+1,gemini,3,27,H03,어려움,결제오류,결제오류,결제오류,True,True,0.8938,273,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,62.66,2026-11-02 08:37:06,
+1,gemini,3,28,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.641,195,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,63.3,2026-11-02 08:37:07,
+1,gemini,3,29,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.6786,196,10,200,,"{""label"": ""환불·교환""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,63.98,2026-11-02 08:37:08,
+1,gemini,3,30,E03,쉬움,배송,배송,배송,True,True,0.6025,198,7,200,,"{""label"": ""배송""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,64.59,2026-11-02 08:37:08,42.65
+1,claude,4,1,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.8814,890,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,65.47,2026-11-02 08:37:09,
+1,claude,4,2,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.8578,889,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,66.33,2026-11-02 08:37:10,
+1,claude,4,3,E01,쉬움,배송,배송,배송,True,True,0.8469,879,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,67.18,2026-11-02 08:37:11,
+1,claude,4,4,E15,쉬움,기타,기타,기타,True,True,0.7813,881,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,67.96,2026-11-02 08:37:12,
+1,claude,4,5,H01,어려움,배송,배송,배송,True,True,1.0385,898,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,69.0,2026-11-02 08:37:13,
+1,claude,4,6,E14,쉬움,기타,기타,기타,True,True,0.831,861,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,69.83,2026-11-02 08:37:14,
+1,claude,4,7,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7273,867,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,70.56,2026-11-02 08:37:14,
+1,claude,4,8,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,1.3607,894,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,71.92,2026-11-02 08:37:16,
+1,claude,4,9,H05,어려움,기타,기타,기타,True,True,0.7354,900,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,72.65,2026-11-02 08:37:16,
+1,claude,4,10,M09,중간,기타,기타,기타,True,True,1.0723,889,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,73.73,2026-11-02 08:37:17,
+1,claude,4,11,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7298,863,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,74.46,2026-11-02 08:37:18,
+1,claude,4,12,M01,중간,배송,배송,배송,True,True,0.721,889,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,75.18,2026-11-02 08:37:19,
+1,claude,4,13,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.8634,881,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,76.04,2026-11-02 08:37:20,
+1,claude,4,14,E13,쉬움,기타,기타,기타,True,True,0.8179,866,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,76.86,2026-11-02 08:37:21,
+1,claude,4,15,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.7776,884,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,77.64,2026-11-02 08:37:21,
+1,claude,4,16,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.9378,864,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,78.58,2026-11-02 08:37:22,
+1,claude,4,17,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.8581,876,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,80.43,2026-11-02 08:37:24,
+1,claude,4,18,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.956,886,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,81.39,2026-11-02 08:37:25,
+1,claude,4,19,M06,중간,결제오류,결제오류,결제오류,True,True,1.0222,884,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,82.41,2026-11-02 08:37:26,
+1,claude,4,20,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.7604,876,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,83.17,2026-11-02 08:37:27,
+1,claude,4,21,M02,중간,배송,배송,배송,True,True,0.8748,880,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,84.05,2026-11-02 08:37:28,
+1,claude,4,22,E02,쉬움,배송,배송,배송,True,True,0.8849,888,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,84.93,2026-11-02 08:37:29,
+1,claude,4,23,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.9744,888,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,85.91,2026-11-02 08:37:30,
+1,claude,4,24,M10,중간,기타,기타,기타,True,True,0.753,894,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,86.66,2026-11-02 08:37:30,
+1,claude,4,25,M05,중간,결제오류,결제오류,결제오류,True,True,1.0022,896,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,87.67,2026-11-02 08:37:31,
+1,claude,4,26,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.8767,877,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,88.54,2026-11-02 08:37:32,
+1,claude,4,27,H03,어려움,결제오류,결제오류,결제오류,True,True,1.4828,1028,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,90.03,2026-11-02 08:37:34,
+1,claude,4,28,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.0522,868,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,91.08,2026-11-02 08:37:35,
+1,claude,4,29,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.0274,864,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,92.11,2026-11-02 08:37:36,
+1,claude,4,30,E03,쉬움,배송,배송,배송,True,True,0.9442,879,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,93.05,2026-11-02 08:37:37,64.59
+2,claude,1,1,E02,쉬움,배송,배송,배송,True,True,2.5855,888,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,95.64,2026-11-02 08:37:39,
+2,claude,1,2,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,1.2674,867,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,96.91,2026-11-02 08:37:41,
+2,claude,1,3,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.4163,868,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,98.32,2026-11-02 08:37:42,
+2,claude,1,4,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.9213,864,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,99.24,2026-11-02 08:37:43,
+2,claude,1,5,H01,어려움,배송,배송,배송,True,True,1.6186,898,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,100.86,2026-11-02 08:37:45,
+2,claude,1,6,E14,쉬움,기타,기타,기타,True,True,1.8994,861,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,102.76,2026-11-02 08:37:46,
+2,claude,1,7,H03,어려움,결제오류,결제오류,결제오류,True,True,0.8516,1028,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,103.62,2026-11-02 08:37:47,
+2,claude,1,8,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.8873,876,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,104.5,2026-11-02 08:37:48,
+2,claude,1,9,M10,중간,기타,기타,기타,True,True,0.885,894,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,105.39,2026-11-02 08:37:49,
+2,claude,1,10,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.9397,876,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,106.33,2026-11-02 08:37:50,
+2,claude,1,11,H05,어려움,기타,기타,기타,True,True,0.8302,900,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,107.16,2026-11-02 08:37:51,
+2,claude,1,12,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,1.1363,864,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,108.3,2026-11-02 08:37:52,
+2,claude,1,13,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.8148,890,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,109.11,2026-11-02 08:37:53,
+2,claude,1,14,M05,중간,결제오류,결제오류,결제오류,True,True,1.2914,896,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,110.4,2026-11-02 08:37:54,
+2,claude,1,15,M02,중간,배송,배송,배송,True,True,1.5987,880,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,112.0,2026-11-02 08:37:56,
+2,claude,1,16,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7695,888,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,112.77,2026-11-02 08:37:56,
+2,claude,1,17,E15,쉬움,기타,기타,기타,True,True,0.7679,881,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,113.54,2026-11-02 08:37:57,
+2,claude,1,18,E03,쉬움,배송,배송,배송,True,True,0.943,879,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,114.48,2026-11-02 08:37:58,
+2,claude,1,19,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.9193,881,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,115.4,2026-11-02 08:37:59,
+2,claude,1,20,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,1.3077,889,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,116.71,2026-11-02 08:38:00,
+2,claude,1,21,E13,쉬움,기타,기타,기타,True,True,2.1912,866,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,118.9,2026-11-02 08:38:03,
+2,claude,1,22,E08,쉬움,결제오류,결제오류,결제오류,True,True,1.9731,884,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,120.88,2026-11-02 08:38:05,
+2,claude,1,23,E01,쉬움,배송,배송,배송,True,True,1.1225,879,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,122.0,2026-11-02 08:38:06,
+2,claude,1,24,M04,중간,환불·교환,환불·교환,환불·교환,True,True,1.1261,886,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,123.13,2026-11-02 08:38:07,
+2,claude,1,25,M01,중간,배송,배송,배송,True,True,0.7979,889,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,123.93,2026-11-02 08:38:08,
+2,claude,1,26,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.9182,894,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,124.84,2026-11-02 08:38:09,
+2,claude,1,27,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.8447,863,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,125.69,2026-11-02 08:38:09,
+2,claude,1,28,E07,쉬움,결제오류,결제오류,결제오류,True,True,1.3674,877,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,127.06,2026-11-02 08:38:11,
+2,claude,1,29,M06,중간,결제오류,결제오류,결제오류,True,True,0.7568,884,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,127.81,2026-11-02 08:38:12,
+2,claude,1,30,M09,중간,기타,기타,기타,True,True,1.0567,889,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,128.87,2026-11-02 08:38:13,93.05
+2,gemini,2,1,E02,쉬움,배송,배송,배송,True,True,0.8387,204,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,129.71,2026-11-02 08:38:13,
+2,gemini,2,2,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.6909,199,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,130.4,2026-11-02 08:38:14,
+2,gemini,2,3,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.1061,195,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,131.51,2026-11-02 08:38:15,
+2,gemini,2,4,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.7817,196,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,132.29,2026-11-02 08:38:16,
+2,gemini,2,5,H01,어려움,배송,배송,배송,True,True,1.066,215,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,133.36,2026-11-02 08:38:17,
+2,gemini,2,6,E14,쉬움,기타,기타,기타,True,True,0.7922,194,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,134.15,2026-11-02 08:38:18,
+2,gemini,2,7,H03,어려움,결제오류,결제오류,결제오류,True,True,0.6802,273,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,134.83,2026-11-02 08:38:19,
+2,gemini,2,8,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.6982,199,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,135.53,2026-11-02 08:38:19,
+2,gemini,2,9,M10,중간,기타,기타,기타,True,True,0.7135,206,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,136.24,2026-11-02 08:38:20,
+2,gemini,2,10,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.6773,198,14,200,,"{
+  ""label"": ""결제오류""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,136.92,2026-11-02 08:38:21,
+2,gemini,2,11,H05,어려움,기타,기타,기타,True,True,0.7041,209,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,137.63,2026-11-02 08:38:21,
+2,gemini,2,12,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.9576,193,10,200,,"{""label"": ""환불·교환""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,138.58,2026-11-02 08:38:22,
+2,gemini,2,13,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.6689,204,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,139.25,2026-11-02 08:38:23,
+2,gemini,2,14,M05,중간,결제오류,결제오류,결제오류,True,True,0.7336,213,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,139.99,2026-11-02 08:38:24,
+2,gemini,2,15,M02,중간,배송,배송,배송,True,True,0.7266,205,7,200,,"{""label"": ""배송""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,140.71,2026-11-02 08:38:24,
+2,gemini,2,16,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7806,202,10,200,,"{""label"": ""계정·로그인""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,141.5,2026-11-02 08:38:25,
+2,gemini,2,17,E15,쉬움,기타,기타,기타,True,True,0.7573,202,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,142.25,2026-11-02 08:38:26,
+2,gemini,2,18,E03,쉬움,배송,배송,배송,True,True,0.7967,198,7,200,,"{""label"": ""배송""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,143.05,2026-11-02 08:38:27,
+2,gemini,2,19,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.9384,202,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,143.99,2026-11-02 08:38:28,
+2,gemini,2,20,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.6287,205,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,144.62,2026-11-02 08:38:28,
+2,gemini,2,21,E13,쉬움,기타,기타,기타,True,True,0.7021,194,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,145.32,2026-11-02 08:38:29,
+2,gemini,2,22,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.7597,202,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,146.08,2026-11-02 08:38:30,
+2,gemini,2,23,E01,쉬움,배송,배송,배송,True,True,0.6722,201,7,200,,"{""label"": ""배송""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,146.75,2026-11-02 08:38:30,
+2,gemini,2,24,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.6267,204,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,147.38,2026-11-02 08:38:31,
+2,gemini,2,25,M01,중간,배송,배송,배송,True,True,0.6679,204,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,148.05,2026-11-02 08:38:32,
+2,gemini,2,26,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.8661,205,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,148.91,2026-11-02 08:38:33,
+2,gemini,2,27,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7185,192,10,200,,"{""label"": ""계정·로그인""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,149.63,2026-11-02 08:38:33,
+2,gemini,2,28,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.6793,198,14,200,,"{
+  ""label"": ""결제오류""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,150.31,2026-11-02 08:38:34,
+2,gemini,2,29,M06,중간,결제오류,결제오류,결제오류,True,True,0.9697,201,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,151.28,2026-11-02 08:38:35,
+2,gemini,2,30,M09,중간,기타,기타,기타,True,True,0.6056,204,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,151.89,2026-11-02 08:38:36,128.87
+2,gpt,3,1,E02,쉬움,배송,배송,배송,True,True,1.0926,318,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,152.98,2026-11-02 08:38:37,
+2,gpt,3,2,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7769,306,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,153.76,2026-11-02 08:38:37,
+2,gpt,3,3,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.7252,305,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,154.49,2026-11-02 08:38:38,
+2,gpt,3,4,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.0056,304,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,155.49,2026-11-02 08:38:39,
+2,gpt,3,5,H01,어려움,배송,배송,배송,True,True,0.8212,328,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,156.31,2026-11-02 08:38:40,
+2,gpt,3,6,E14,쉬움,기타,기타,기타,True,True,0.812,303,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,157.13,2026-11-02 08:38:41,
+2,gpt,3,7,H03,어려움,결제오류,결제오류,결제오류,True,True,0.7984,392,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,157.93,2026-11-02 08:38:42,
+2,gpt,3,8,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.9418,308,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,158.87,2026-11-02 08:38:43,
+2,gpt,3,9,M10,중간,기타,기타,기타,True,True,0.9153,318,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,159.78,2026-11-02 08:38:43,
+2,gpt,3,10,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.7215,308,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,160.51,2026-11-02 08:38:44,
+2,gpt,3,11,H05,어려움,기타,기타,기타,True,True,0.8687,320,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,161.37,2026-11-02 08:38:45,
+2,gpt,3,12,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,1.0091,305,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,162.38,2026-11-02 08:38:46,
+2,gpt,3,13,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.6826,314,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,163.07,2026-11-02 08:38:47,
+2,gpt,3,14,M05,중간,결제오류,결제오류,결제오류,True,True,0.8524,323,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,163.92,2026-11-02 08:38:48,
+2,gpt,3,15,M02,중간,배송,배송,배송,True,True,0.993,314,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,164.91,2026-11-02 08:38:49,
+2,gpt,3,16,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,1.0188,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,165.93,2026-11-02 08:38:50,
+2,gpt,3,17,E15,쉬움,기타,기타,기타,True,True,0.728,312,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,166.66,2026-11-02 08:38:50,
+2,gpt,3,18,E03,쉬움,배송,배송,배송,True,True,0.8598,306,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,167.52,2026-11-02 08:38:51,
+2,gpt,3,19,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.8172,313,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,168.34,2026-11-02 08:38:52,
+2,gpt,3,20,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,1.0358,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,169.38,2026-11-02 08:38:53,
+2,gpt,3,21,E13,쉬움,기타,기타,기타,True,True,0.8077,305,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,170.18,2026-11-02 08:38:54,
+2,gpt,3,22,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.8025,313,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,170.99,2026-11-02 08:38:55,
+2,gpt,3,23,E01,쉬움,배송,배송,배송,True,True,0.7573,310,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,171.74,2026-11-02 08:38:55,
+2,gpt,3,24,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.8409,314,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,172.59,2026-11-02 08:38:56,
+2,gpt,3,25,M01,중간,배송,배송,배송,True,True,0.7062,318,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,173.29,2026-11-02 08:38:57,
+2,gpt,3,26,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.734,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,174.03,2026-11-02 08:38:58,
+2,gpt,3,27,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.744,302,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,174.77,2026-11-02 08:38:58,
+2,gpt,3,28,E07,쉬움,결제오류,결제오류,결제오류,True,True,1.033,309,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,175.8,2026-11-02 08:38:59,
+2,gpt,3,29,M06,중간,결제오류,결제오류,결제오류,True,True,1.0157,313,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,176.82,2026-11-02 08:39:01,
+2,gpt,3,30,M09,중간,기타,기타,기타,True,True,0.923,318,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,177.74,2026-11-02 08:39:01,151.89
+2,jev,4,1,E02,쉬움,배송,배송,배송,True,True,0.1748,535,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,177.92,2026-11-02 08:39:02,
+2,jev,4,2,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.2817,520,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,178.2,2026-11-02 08:39:02,
+2,jev,4,3,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.1736,518,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,178.38,2026-11-02 08:39:02,
+2,jev,4,4,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.156,518,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,178.53,2026-11-02 08:39:02,
+2,jev,4,5,H01,어려움,배송,배송,배송,True,True,0.1603,546,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,178.69,2026-11-02 08:39:02,
+2,jev,4,6,E14,쉬움,기타,기타,기타,True,True,0.1895,516,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,178.88,2026-11-02 08:39:03,
+2,jev,4,7,H03,어려움,결제오류,결제오류,결제오류,True,True,0.1605,630,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,179.05,2026-11-02 08:39:03,
+2,jev,4,8,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.1632,522,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,179.21,2026-11-02 08:39:03,
+2,jev,4,9,M10,중간,기타,기타,기타,True,True,0.195,537,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,179.4,2026-11-02 08:39:03,
+2,jev,4,10,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.1755,524,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,179.58,2026-11-02 08:39:03,
+2,jev,4,11,H05,어려움,기타,기타,기타,True,True,0.1612,539,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,179.74,2026-11-02 08:39:03,
+2,jev,4,12,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.1606,517,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,179.9,2026-11-02 08:39:04,
+2,jev,4,13,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.1671,536,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,180.07,2026-11-02 08:39:04,
+2,jev,4,14,M05,중간,결제오류,결제오류,결제오류,True,True,0.1612,542,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,180.23,2026-11-02 08:39:04,
+2,jev,4,15,M02,중간,배송,배송,배송,True,True,0.1649,527,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 0.84, ""probabilities"": {""배송"": 0.87, ""환불·교환"": 0.13, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,0.87,180.4,2026-11-02 08:39:04,
+2,jev,4,16,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.1546,535,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,180.55,2026-11-02 08:39:04,
+2,jev,4,17,E15,쉬움,기타,기타,기타,True,True,0.1564,532,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,180.71,2026-11-02 08:39:04,
+2,jev,4,18,E03,쉬움,배송,배송,배송,True,True,0.1938,524,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,180.9,2026-11-02 08:39:05,
+2,jev,4,19,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.1597,530,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,181.06,2026-11-02 08:39:05,
+2,jev,4,20,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.1822,537,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,181.25,2026-11-02 08:39:05,
+2,jev,4,21,E13,쉬움,기타,기타,기타,True,True,0.1667,521,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,181.41,2026-11-02 08:39:05,
+2,jev,4,22,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.1914,528,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,181.6,2026-11-02 08:39:05,
+2,jev,4,23,E01,쉬움,배송,배송,배송,True,True,0.1886,525,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,181.79,2026-11-02 08:39:05,
+2,jev,4,24,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.163,530,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 0.95, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.96, ""결제오류"": 0.0, ""계정·로그인"": 0.04, ""기타"": 0.0}}",jev-1.14.0,0.96,181.96,2026-11-02 08:39:06,
+2,jev,4,25,M01,중간,배송,배송,배송,True,True,0.2155,535,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,182.17,2026-11-02 08:39:06,
+2,jev,4,26,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.163,534,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,182.34,2026-11-02 08:39:06,
+2,jev,4,27,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.1671,518,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,182.5,2026-11-02 08:39:06,
+2,jev,4,28,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.2079,526,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,182.71,2026-11-02 08:39:06,
+2,jev,4,29,M06,중간,결제오류,결제오류,결제오류,True,True,0.1572,530,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 0.84, ""probabilities"": {""배송"": 0.01, ""환불·교환"": 0.02, ""결제오류"": 0.87, ""계정·로그인"": 0.0, ""기타"": 0.1}}",jev-1.14.0,0.87,182.87,2026-11-02 08:39:07,
+2,jev,4,30,M09,중간,기타,기타,기타,True,True,0.158,533,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,183.03,2026-11-02 08:39:07,177.75
+3,gpt,1,1,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.9131,309,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,183.94,2026-11-02 08:39:08,
+3,gpt,1,2,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.6825,313,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,184.63,2026-11-02 08:39:08,
+3,gpt,1,3,E02,쉬움,배송,배송,배송,True,True,0.8039,318,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,185.43,2026-11-02 08:39:09,
+3,gpt,1,4,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.752,314,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,186.18,2026-11-02 08:39:10,
+3,gpt,1,5,M09,중간,기타,기타,기타,True,True,0.6479,318,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,186.83,2026-11-02 08:39:11,
+3,gpt,1,6,M01,중간,배송,배송,배송,True,True,0.8602,318,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,187.69,2026-11-02 08:39:11,
+3,gpt,1,7,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7168,302,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,188.41,2026-11-02 08:39:12,
+3,gpt,1,8,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.8372,308,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,189.25,2026-11-02 08:39:13,
+3,gpt,1,9,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.6809,305,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,189.93,2026-11-02 08:39:14,
+3,gpt,1,10,E01,쉬움,배송,배송,배송,True,True,0.6314,310,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,190.56,2026-11-02 08:39:14,
+3,gpt,1,11,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.8727,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,191.43,2026-11-02 08:39:15,
+3,gpt,1,12,E03,쉬움,배송,배송,배송,True,True,0.7526,306,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,192.19,2026-11-02 08:39:16,
+3,gpt,1,13,M02,중간,배송,배송,배송,True,True,0.8824,314,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,193.07,2026-11-02 08:39:17,
+3,gpt,1,14,E13,쉬움,기타,기타,기타,True,True,0.6925,305,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,193.76,2026-11-02 08:39:17,
+3,gpt,1,15,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.8786,313,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,194.64,2026-11-02 08:39:18,
+3,gpt,1,16,E15,쉬움,기타,기타,기타,True,True,1.0021,312,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,195.64,2026-11-02 08:39:19,
+3,gpt,1,17,H03,어려움,결제오류,결제오류,결제오류,True,True,0.8234,392,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,196.47,2026-11-02 08:39:20,
+3,gpt,1,18,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.8152,306,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,197.28,2026-11-02 08:39:21,
+3,gpt,1,19,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.7912,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,198.07,2026-11-02 08:39:22,
+3,gpt,1,20,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.7005,305,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,198.78,2026-11-02 08:39:22,
+3,gpt,1,21,M06,중간,결제오류,결제오류,결제오류,True,True,0.7799,313,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,199.56,2026-11-02 08:39:23,
+3,gpt,1,22,M10,중간,기타,기타,기타,True,True,0.9403,318,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,200.5,2026-11-02 08:39:24,
+3,gpt,1,23,E14,쉬움,기타,기타,기타,True,True,0.8742,303,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,201.37,2026-11-02 08:39:25,
+3,gpt,1,24,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.7904,308,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,202.16,2026-11-02 08:39:26,
+3,gpt,1,25,M05,중간,결제오류,결제오류,결제오류,True,True,0.8319,323,14,200,,"{""label"":""결제오류""}",gpt-6-luna effort=none reasoning_tokens=0,,202.99,2026-11-02 08:39:27,
+3,gpt,1,26,H05,어려움,기타,기타,기타,True,True,0.6936,320,12,200,,"{""label"":""기타""}",gpt-6-luna effort=none reasoning_tokens=0,,203.69,2026-11-02 08:39:27,
+3,gpt,1,27,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7815,315,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,204.47,2026-11-02 08:39:28,
+3,gpt,1,28,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.9433,314,15,200,,"{""label"":""계정·로그인""}",gpt-6-luna effort=none reasoning_tokens=0,,205.41,2026-11-02 08:39:29,
+3,gpt,1,29,H01,어려움,배송,배송,배송,True,True,0.6886,328,11,200,,"{""label"":""배송""}",gpt-6-luna effort=none reasoning_tokens=0,,206.1,2026-11-02 08:39:30,
+3,gpt,1,30,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.9765,304,15,200,,"{""label"":""환불·교환""}",gpt-6-luna effort=none reasoning_tokens=0,,207.08,2026-11-02 08:39:31,183.03
+3,jev,2,1,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.1772,526,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,207.26,2026-11-02 08:39:31,
+3,jev,2,2,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.1599,528,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,207.42,2026-11-02 08:39:31,
+3,jev,2,3,E02,쉬움,배송,배송,배송,True,True,0.1599,535,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,207.58,2026-11-02 08:39:31,
+3,jev,2,4,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.1816,530,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 0.95, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.96, ""결제오류"": 0.0, ""계정·로그인"": 0.04, ""기타"": 0.0}}",jev-1.14.0,0.96,207.76,2026-11-02 08:39:31,
+3,jev,2,5,M09,중간,기타,기타,기타,True,True,0.1929,533,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,207.95,2026-11-02 08:39:32,
+3,jev,2,6,M01,중간,배송,배송,배송,True,True,0.1712,535,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,208.13,2026-11-02 08:39:32,
+3,jev,2,7,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.158,518,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,208.28,2026-11-02 08:39:32,
+3,jev,2,8,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.17,524,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,208.45,2026-11-02 08:39:32,
+3,jev,2,9,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.1684,517,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 0.99, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.99, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.01}}",jev-1.14.0,0.99,208.62,2026-11-02 08:39:32,
+3,jev,2,10,E01,쉬움,배송,배송,배송,True,True,0.1576,525,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,208.78,2026-11-02 08:39:32,
+3,jev,2,11,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.1791,534,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,208.96,2026-11-02 08:39:33,
+3,jev,2,12,E03,쉬움,배송,배송,배송,True,True,0.1586,524,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,209.12,2026-11-02 08:39:33,
+3,jev,2,13,M02,중간,배송,배송,배송,True,True,0.1967,527,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 0.84, ""probabilities"": {""배송"": 0.87, ""환불·교환"": 0.13, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,0.87,209.32,2026-11-02 08:39:33,
+3,jev,2,14,E13,쉬움,기타,기타,기타,True,True,0.1583,521,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,209.48,2026-11-02 08:39:33,
+3,jev,2,15,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.1566,530,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,209.63,2026-11-02 08:39:33,
+3,jev,2,16,E15,쉬움,기타,기타,기타,True,True,0.1601,532,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,209.79,2026-11-02 08:39:33,
+3,jev,2,17,H03,어려움,결제오류,결제오류,결제오류,True,True,0.1809,630,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,209.97,2026-11-02 08:39:34,
+3,jev,2,18,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.165,520,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,210.14,2026-11-02 08:39:34,
+3,jev,2,19,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.165,537,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,210.3,2026-11-02 08:39:34,
+3,jev,2,20,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.1611,518,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,210.47,2026-11-02 08:39:34,
+3,jev,2,21,M06,중간,결제오류,결제오류,결제오류,True,True,0.1755,530,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 0.8, ""probabilities"": {""배송"": 0.02, ""환불·교환"": 0.01, ""결제오류"": 0.84, ""계정·로그인"": 0.0, ""기타"": 0.13}}",jev-1.14.0,0.84,210.64,2026-11-02 08:39:34,
+3,jev,2,22,M10,중간,기타,기타,기타,True,True,0.2091,537,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,210.85,2026-11-02 08:39:35,
+3,jev,2,23,E14,쉬움,기타,기타,기타,True,True,0.1604,516,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,211.01,2026-11-02 08:39:35,
+3,jev,2,24,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.159,522,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,211.17,2026-11-02 08:39:35,
+3,jev,2,25,M05,중간,결제오류,결제오류,결제오류,True,True,0.166,542,68,200,,"{""type"": ""choice"", ""choice"": ""결제오류"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 1.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,211.34,2026-11-02 08:39:35,
+3,jev,2,26,H05,어려움,기타,기타,기타,True,True,0.1735,539,66,200,,"{""type"": ""choice"", ""choice"": ""기타"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 1.0}}",jev-1.14.0,1.0,211.51,2026-11-02 08:39:35,
+3,jev,2,27,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.1875,535,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,211.7,2026-11-02 08:39:35,
+3,jev,2,28,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.162,536,70,200,,"{""type"": ""choice"", ""choice"": ""계정·로그인"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 1.0, ""기타"": 0.0}}",jev-1.14.0,1.0,211.86,2026-11-02 08:39:36,
+3,jev,2,29,H01,어려움,배송,배송,배송,True,True,0.1781,546,65,200,,"{""type"": ""choice"", ""choice"": ""배송"", ""confidence"": 1.0, ""probabilities"": {""배송"": 1.0, ""환불·교환"": 0.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,212.04,2026-11-02 08:39:36,
+3,jev,2,30,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.1821,518,69,200,,"{""type"": ""choice"", ""choice"": ""환불·교환"", ""confidence"": 1.0, ""probabilities"": {""배송"": 0.0, ""환불·교환"": 1.0, ""결제오류"": 0.0, ""계정·로그인"": 0.0, ""기타"": 0.0}}",jev-1.14.0,1.0,212.22,2026-11-02 08:39:36,207.08
+3,claude,3,1,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.7293,877,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,212.95,2026-11-02 08:39:37,
+3,claude,3,2,E08,쉬움,결제오류,결제오류,결제오류,True,True,1.0396,884,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,213.99,2026-11-02 08:39:38,
+3,claude,3,3,E02,쉬움,배송,배송,배송,True,True,0.9394,888,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,214.93,2026-11-02 08:39:39,
+3,claude,3,4,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.7395,886,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,215.67,2026-11-02 08:39:39,
+3,claude,3,5,M09,중간,기타,기타,기타,True,True,0.9012,889,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,216.58,2026-11-02 08:39:40,
+3,claude,3,6,M01,중간,배송,배송,배송,True,True,1.1383,889,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,217.71,2026-11-02 08:39:41,
+3,claude,3,7,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.8578,863,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,218.57,2026-11-02 08:39:42,
+3,claude,3,8,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.8791,876,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,219.45,2026-11-02 08:39:43,
+3,claude,3,9,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.783,864,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,220.24,2026-11-02 08:39:44,
+3,claude,3,10,E01,쉬움,배송,배송,배송,True,True,1.0638,879,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,221.3,2026-11-02 08:39:45,
+3,claude,3,11,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7268,894,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,222.03,2026-11-02 08:39:46,
+3,claude,3,12,E03,쉬움,배송,배송,배송,True,True,0.882,879,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,222.91,2026-11-02 08:39:47,
+3,claude,3,13,M02,중간,배송,배송,배송,True,True,1.3783,880,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,224.29,2026-11-02 08:39:48,
+3,claude,3,14,E13,쉬움,기타,기타,기타,True,True,1.4513,866,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,225.74,2026-11-02 08:39:49,
+3,claude,3,15,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.8563,881,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,226.6,2026-11-02 08:39:50,
+3,claude,3,16,E15,쉬움,기타,기타,기타,True,True,0.9792,881,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,227.58,2026-11-02 08:39:51,
+3,claude,3,17,H03,어려움,결제오류,결제오류,결제오류,True,True,0.7426,1028,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,228.32,2026-11-02 08:39:52,
+3,claude,3,18,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.8185,867,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,229.14,2026-11-02 08:39:53,
+3,claude,3,19,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.721,889,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,229.86,2026-11-02 08:39:54,
+3,claude,3,20,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.8555,868,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,230.72,2026-11-02 08:39:54,
+3,claude,3,21,M06,중간,결제오류,결제오류,결제오류,True,True,0.882,884,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,231.6,2026-11-02 08:39:55,
+3,claude,3,22,M10,중간,기타,기타,기타,True,True,1.348,894,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,232.95,2026-11-02 08:39:57,
+3,claude,3,23,E14,쉬움,기타,기타,기타,True,True,0.9307,861,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,233.88,2026-11-02 08:39:58,
+3,claude,3,24,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,1.0529,876,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,234.93,2026-11-02 08:39:59,
+3,claude,3,25,M05,중간,결제오류,결제오류,결제오류,True,True,0.8498,896,35,200,,"{""label"": ""결제오류""}",claude-haiku-5-5 temp=None,,235.78,2026-11-02 08:39:59,
+3,claude,3,26,H05,어려움,기타,기타,기타,True,True,0.8034,900,33,200,,"{""label"": ""기타""}",claude-haiku-5-5 temp=None,,236.59,2026-11-02 08:40:00,
+3,claude,3,27,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7763,888,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,237.36,2026-11-02 08:40:01,
+3,claude,3,28,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.9016,890,37,200,,"{""label"": ""계정·로그인""}",claude-haiku-5-5 temp=None,,238.26,2026-11-02 08:40:02,
+3,claude,3,29,H01,어려움,배송,배송,배송,True,True,0.7642,898,33,200,,"{""label"": ""배송""}",claude-haiku-5-5 temp=None,,239.03,2026-11-02 08:40:03,
+3,claude,3,30,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.8042,864,36,200,,"{""label"": ""환불·교환""}",claude-haiku-5-5 temp=None,,239.84,2026-11-02 08:40:04,212.22
+3,gemini,4,1,E07,쉬움,결제오류,결제오류,결제오류,True,True,0.8137,198,14,200,,"{
+  ""label"": ""결제오류""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,240.65,2026-11-02 08:40:04,
+3,gemini,4,2,E08,쉬움,결제오류,결제오류,결제오류,True,True,0.6556,202,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,241.31,2026-11-02 08:40:05,
+3,gemini,4,3,E02,쉬움,배송,배송,배송,True,True,0.6813,204,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,241.99,2026-11-02 08:40:06,
+3,gemini,4,4,M04,중간,환불·교환,환불·교환,환불·교환,True,True,0.649,204,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,242.64,2026-11-02 08:40:06,
+3,gemini,4,5,M09,중간,기타,기타,기타,True,True,0.7035,204,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,243.35,2026-11-02 08:40:07,
+3,gemini,4,6,M01,중간,배송,배송,배송,True,True,0.6432,204,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,243.99,2026-11-02 08:40:08,
+3,gemini,4,7,E11,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.658,192,10,200,,"{""label"": ""계정·로그인""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,244.65,2026-11-02 08:40:08,
+3,gemini,4,8,E09,쉬움,결제오류,결제오류,결제오류,True,True,0.6794,198,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,245.33,2026-11-02 08:40:09,
+3,gemini,4,9,H02,어려움,환불·교환,환불·교환,환불·교환,True,True,0.6294,193,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,245.96,2026-11-02 08:40:10,
+3,gemini,4,10,E01,쉬움,배송,배송,배송,True,True,0.7416,201,7,200,,"{""label"": ""배송""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,246.7,2026-11-02 08:40:10,
+3,gemini,4,11,E12,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.6856,205,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,247.39,2026-11-02 08:40:11,
+3,gemini,4,12,E03,쉬움,배송,배송,배송,True,True,0.6153,198,7,200,,"{""label"": ""배송""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,248.01,2026-11-02 08:40:12,
+3,gemini,4,13,M02,중간,배송,배송,배송,True,True,0.5568,205,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,248.56,2026-11-02 08:40:12,
+3,gemini,4,14,E13,쉬움,기타,기타,기타,True,True,0.6371,194,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,249.2,2026-11-02 08:40:13,
+3,gemini,4,15,M03,중간,환불·교환,환불·교환,환불·교환,True,True,0.6646,202,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,249.87,2026-11-02 08:40:14,
+3,gemini,4,16,E15,쉬움,기타,기타,기타,True,True,0.9189,202,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,250.79,2026-11-02 08:40:14,
+3,gemini,4,17,H03,어려움,결제오류,결제오류,결제오류,True,True,0.8139,273,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,251.6,2026-11-02 08:40:15,
+3,gemini,4,18,E10,쉬움,계정·로그인,계정·로그인,계정·로그인,True,True,0.7354,199,10,200,,"{""label"": ""계정·로그인""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,252.34,2026-11-02 08:40:16,
+3,gemini,4,19,M08,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.9539,205,10,200,,"{""label"": ""계정·로그인""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,253.29,2026-11-02 08:40:17,
+3,gemini,4,20,E06,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.6541,195,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,253.95,2026-11-02 08:40:18,
+3,gemini,4,21,M06,중간,결제오류,결제오류,결제오류,True,True,0.5842,201,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,254.53,2026-11-02 08:40:18,
+3,gemini,4,22,M10,중간,기타,기타,기타,True,True,0.701,206,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,255.24,2026-11-02 08:40:19,
+3,gemini,4,23,E14,쉬움,기타,기타,기타,True,True,0.7023,194,12,200,,"{
+  ""label"": ""기타""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,255.94,2026-11-02 08:40:20,
+3,gemini,4,24,E04,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.7851,199,10,200,,"{""label"": ""환불·교환""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,256.73,2026-11-02 08:40:20,
+3,gemini,4,25,M05,중간,결제오류,결제오류,결제오류,True,True,0.6632,213,9,200,,"{""label"": ""결제오류""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,257.39,2026-11-02 08:40:21,
+3,gemini,4,26,H05,어려움,기타,기타,기타,True,True,0.6138,209,7,200,,"{""label"": ""기타""}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,258.01,2026-11-02 08:40:22,
+3,gemini,4,27,H04,어려움,계정·로그인,계정·로그인,계정·로그인,True,True,0.6773,202,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,258.68,2026-11-02 08:40:22,
+3,gemini,4,28,M07,중간,계정·로그인,계정·로그인,계정·로그인,True,True,0.6545,204,15,200,,"{
+  ""label"": ""계정·로그인""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,259.34,2026-11-02 08:40:23,
+3,gemini,4,29,H01,어려움,배송,배송,배송,True,True,0.7358,215,12,200,,"{
+  ""label"": ""배송""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,260.08,2026-11-02 08:40:24,
+3,gemini,4,30,E05,쉬움,환불·교환,환불·교환,환불·교환,True,True,0.5757,196,15,200,,"{
+  ""label"": ""환불·교환""
+}","gemini-3.5-flash-lite thinking={""thinkingLevel"": ""minimal""} thoughts=None",,260.65,2026-11-02 08:40:24,239.84
